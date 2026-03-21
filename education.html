@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baby Care Education Center — Newborn &amp; Infant Health | Bundl</title>
+  <meta name="description" content="Evidence-based guides for new parents: newborn basics, sleep and development, health monitoring, and parenting insights — all written with pediatric guidance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── Education page styles ── */
+    .edu-hero {
+      background:
+        linear-gradient(rgba(254,252,232,0.85) 0%, rgba(214,239,247,0.80) 100%),
+        url('../images/lifestyle-babies.png') center / cover no-repeat;
+      padding: 100px 0 72px;
+      text-align: center;
+    }
+    .edu-hero__eyebrow {
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #5C3318;
+      margin-bottom: 1rem;
+    }
+    .edu-hero h1 { font-size: clamp(2rem,4.5vw,3rem); color: #5C3318; margin-bottom: 1rem; }
+    .edu-hero p { max-width: 600px; margin: 0 auto 2rem; color: #6b5c50; font-size: 1.05rem; line-height: 1.7; }
+    .edu-hero__search {
+      display: flex;
+      max-width: 480px;
+      margin: 0 auto;
+      gap: 0;
+    }
+    .edu-hero__search input {
+      flex: 1;
+      padding: .8rem 1.2rem;
+      border: 2px solid #e8d5cb;
+      border-right: none;
+      border-radius: 10px 0 0 10px;
+      font-size: .95rem;
+      outline: none;
+      background: #fff;
+    }
+    .edu-hero__search input:focus { border-color: #A8D5E2; }
+    .edu-hero__search button {
+      padding: .8rem 1.4rem;
+      background: #5C3318;
+      color: #fff;
+      border: none;
+      border-radius: 0 10px 10px 0;
+      cursor: pointer;
+      font-size: .95rem;
+      font-weight: 600;
+    }
+
+    /* Category nav */
+    .edu-categories {
+      background: #fff;
+      border-bottom: 1px solid #f0e8e0;
+      padding: 1.2rem 0;
+      position: sticky;
+      top: 70px;
+      z-index: 90;
+    }
+    .edu-categories__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .edu-cat-btn {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .5em 1.2em;
+      border-radius: 99px;
+      border: 2px solid #e8d5cb;
+      background: #fff;
+      color: #5C3318;
+      font-size: .84rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .edu-cat-btn:hover,
+    .edu-cat-btn.active {
+      background: #5C3318;
+      border-color: #5C3318;
+      color: #fff;
+    }
+    .edu-cat-btn__emoji { font-size: 1rem; }
+
+    /* Section */
+    .edu-section {
+      padding: 72px 0;
+    }
+    .edu-section--alt { background: #fefce8; }
+    .edu-section__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .edu-section__header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+    .edu-section__header-text h2 { color: #5C3318; font-size: clamp(1.5rem,2.5vw,2rem); margin-bottom: .3rem; }
+    .edu-section__header-text p { color: #7a6a60; font-size: .9rem; }
+    .edu-section__view-all {
+      font-size: .85rem;
+      font-weight: 600;
+      color: #5C3318;
+      text-decoration: none;
+      white-space: nowrap;
+      padding-bottom: .2rem;
+      border-bottom: 2px solid #F2B5C8;
+    }
+
+    /* Article card */
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .article-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #f0e8e0;
+      transition: transform .2s, box-shadow .2s;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    .article-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(92,51,24,.1); }
+    .article-card__visual {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+    .article-card__visual--blue { background: linear-gradient(135deg, #d6eff7, #bce0ec); }
+    .article-card__visual--pink { background: linear-gradient(135deg, #fad9e8, #f5c0d5); }
+    .article-card__visual--cream { background: linear-gradient(135deg, #fefce8, #f5f0c8); }
+    .article-card__visual--green { background: linear-gradient(135deg, #e8f5e9, #c8ead0); }
+    .article-card__body { padding: 1.3rem; flex: 1; display: flex; flex-direction: column; }
+    .article-card__category {
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #A8D5E2;
+      margin-bottom: .4rem;
+    }
+    .article-card__title { font-size: .95rem; font-weight: 600; color: #5C3318; margin-bottom: .4rem; line-height: 1.4; }
+    .article-card__excerpt { font-size: .84rem; color: #6b5c50; line-height: 1.6; margin: 0; flex: 1; }
+    .article-card__footer {
+      padding: .8rem 1.3rem;
+      border-top: 1px solid #f0e8e0;
+      display: flex;
+      justify-content: space-between;
+      font-size: .75rem;
+      color: #9a8a80;
+    }
+    .article-card__read-time { font-weight: 500; }
+
+    /* Featured article */
+    .featured-article {
+      background: #5C3318;
+      border-radius: 24px;
+      padding: 0;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 2.5rem;
+    }
+    .featured-article__visual {
+      background: linear-gradient(135deg, #A8D5E2, #6ab0cc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      min-height: 280px;
+    }
+    .featured-article__body {
+      padding: 2.5rem;
+      color: #fff;
+    }
+    .featured-article__badge {
+      display: inline-block;
+      background: #F2B5C8;
+      color: #5C3318;
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      padding: .25em .7em;
+      border-radius: 99px;
+      margin-bottom: 1rem;
+    }
+    .featured-article__body h3 { font-size: 1.5rem; color: #fad9e8; margin-bottom: .8rem; line-height: 1.3; }
+    .featured-article__body p { color: rgba(255,255,255,.8); line-height: 1.7; margin-bottom: 1.5rem; font-size: .92rem; }
+
+    /* Milestone tracker */
+    .milestone-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+    .milestone-timeline::before {
+      content: '';
+      position: absolute;
+      left: 60px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #e8d5cb;
+    }
+    .milestone-item {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      padding: 1.5rem 0;
+      position: relative;
+    }
+    .milestone-age {
+      width: 80px;
+      flex-shrink: 0;
+      text-align: center;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: .95rem;
+      color: #5C3318;
+      padding-top: .2rem;
+    }
+    .milestone-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #5C3318;
+      flex-shrink: 0;
+      margin-top: .3rem;
+      position: relative;
+      z-index: 1;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #5C3318;
+    }
+    .milestone-content { flex: 1; }
+    .milestone-content h4 { color: #5C3318; font-size: .95rem; margin-bottom: .3rem; }
+    .milestone-content p { color: #6b5c50; font-size: .85rem; line-height: 1.6; margin: 0; }
+    .milestone-tags { display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .5rem; }
+    .milestone-tag {
+      font-size: .7rem;
+      padding: .2em .6em;
+      border-radius: 99px;
+      font-weight: 600;
+    }
+    .milestone-tag--physical { background: #d6eff7; color: #1a6b8a; }
+    .milestone-tag--cognitive { background: #fad9e8; color: #8a1a4a; }
+    .milestone-tag--social { background: #fefce8; color: #8a6a0a; }
+
+    /* Growth chart visual */
+    .growth-visual {
+      background: #fff;
+      border: 1px solid #f0e8e0;
+      border-radius: 20px;
+      padding: 2rem;
+    }
+    .growth-visual h4 { color: #5C3318; margin-bottom: 1.5rem; text-align: center; }
+    .growth-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: .5rem;
+      height: 120px;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid #f0e8e0;
+    }
+    .growth-bar-group { flex: 1; display: flex; flex-direction: column; align-items: center; gap: .3rem; }
+    .growth-bar {
+      width: 100%;
+      border-radius: 4px 4px 0 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .growth-bar--weight { background: #A8D5E2; }
+    .growth-bar--height { background: #F2B5C8; }
+    .growth-bar-label { font-size: .68rem; color: #9a8a80; text-align: center; }
+    .growth-legend { display: flex; gap: 1.5rem; justify-content: center; margin-top: 1rem; font-size: .78rem; }
+    .growth-legend-item { display: flex; align-items: center; gap: .4rem; }
+    .growth-legend-dot { width: 10px; height: 10px; border-radius: 2px; }
+
+    /* Feeding guide */
+    .feeding-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .feeding-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      border-left: 4px solid;
+    }
+    .feeding-card--breastfeed { border-color: #F2B5C8; }
+    .feeding-card--formula { border-color: #A8D5E2; }
+    .feeding-card--solid { border-color: #7FBFA0; }
+    .feeding-card--water { border-color: #c5a87a; }
+    .feeding-card h4 { color: #5C3318; font-size: .95rem; margin-bottom: .8rem; }
+    .feeding-card p { color: #6b5c50; font-size: .85rem; line-height: 1.6; margin: 0; }
+    .feeding-card__tip {
+      margin-top: .8rem;
+      padding: .6rem .8rem;
+      background: #fefce8;
+      border-radius: 8px;
+      font-size: .8rem;
+      color: #5a4a30;
+    }
+
+    /* Bundl data tip boxes */
+    .bundl-tip {
+      background: linear-gradient(135deg, #fad9e8, #d6eff7);
+      border-radius: 14px;
+      padding: 1rem 1.4rem;
+      margin-top: 1rem;
+      display: flex;
+      gap: .8rem;
+      align-items: flex-start;
+      font-size: .84rem;
+      color: #5C3318;
+    }
+    .bundl-tip__icon { flex-shrink: 0; font-size: 1.1rem; margin-top: .1rem; }
+    .bundl-tip strong { display: block; margin-bottom: .2rem; }
+
+    @media (max-width: 768px) {
+      .featured-article { grid-template-columns: 1fr; }
+      .edu-section__header { flex-direction: column; align-items: flex-start; gap: .5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo" aria-label="Bundl Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" aria-hidden="true">
+        <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
+        <circle cx="335" cy="48" r="7" fill="#7B5028"/>
+        <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
+        <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
+        <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
+        <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
+      </svg>
+    </a>
+    <nav class="header__nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="product.html">Shop</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="sids-safety.html">SIDS &amp; Safety</a>
+      <a href="education.html" class="active">Baby Care</a>
+      <a href="healthcare.html">For Providers</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <div class="header__actions">
+      <a href="product.html" class="btn btn--primary btn--sm">Shop Now</a>
+      <button class="header__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="product.html">Shop</a>
+  <a href="how-it-works.html">How It Works</a>
+  <a href="sids-safety.html">SIDS &amp; Safety</a>
+  <a href="education.html">Baby Care</a>
+  <a href="healthcare.html">For Providers</a>
+  <a href="support.html">Support</a>
+</nav>
+
+<!-- Hero -->
+<section class="edu-hero">
+  <div class="container">
+    <div class="edu-hero__eyebrow">Baby Care Education Center</div>
+    <h1>Everything You Need to Know.<br>Nothing You Don't.</h1>
+    <p>Evidence-based guides for new parents, written with pediatric guidance and designed for the moments when you need clear answers fast.</p>
+    <form class="edu-hero__search" role="search" onsubmit="return false;">
+      <input type="search" placeholder="Search articles (e.g. 'tummy time')" aria-label="Search articles" />
+      <button type="submit" aria-label="Search">🔍</button>
+    </form>
+  </div>
+</section>
+
+<!-- Category Nav -->
+<div class="edu-categories">
+  <div class="edu-categories__inner">
+    <a href="#newborn-basics" class="edu-cat-btn active">
+      <span class="edu-cat-btn__emoji">👶</span> Newborn Basics
+    </a>
+    <a href="#sleep-development" class="edu-cat-btn">
+      <span class="edu-cat-btn__emoji">🌙</span> Sleep &amp; Development
+    </a>
+    <a href="#health-monitoring" class="edu-cat-btn">
+      <span class="edu-cat-btn__emoji">💓</span> Health Monitoring
+    </a>
+    <a href="#feeding" class="edu-cat-btn">
+      <span class="edu-cat-btn__emoji">🍼</span> Feeding
+    </a>
+    <a href="#milestones" class="edu-cat-btn">
+      <span class="edu-cat-btn__emoji">🌟</span> Milestones
+    </a>
+    <a href="#parenting-insights" class="edu-cat-btn">
+      <span class="edu-cat-btn__emoji">💡</span> Parenting Insights
+    </a>
+  </div>
+</div>
+
+<!-- Newborn Basics -->
+<section class="edu-section" id="newborn-basics">
+  <div class="edu-section__inner">
+    <div class="edu-section__header">
+      <div class="edu-section__header-text">
+        <h2>👶 Newborn Basics</h2>
+        <p>The essential things to know in the first 30 days</p>
+      </div>
+      <a href="#" class="edu-section__view-all">View all articles →</a>
+    </div>
+
+    <div class="featured-article fade-in">
+      <div class="featured-article__visual">🌅</div>
+      <div class="featured-article__body">
+        <span class="featured-article__badge">Featured Guide</span>
+        <h3>Your Baby's First 7 Days: What to Expect Hour by Hour</h3>
+        <p>The first week is overwhelming — a blur of feeds, diaper changes, and contradictory advice. This guide walks you through what's normal, what's worth watching, and what requires a call to your doctor.</p>
+        <a href="#" class="btn btn--outline" style="border-color:rgba(255,255,255,.5);color:#fff;padding:.6em 1.4em;font-size:.88rem;">Read Guide →</a>
+      </div>
+    </div>
+
+    <div class="article-grid">
+      <a href="#" class="article-card fade-in">
+        <div class="article-card__visual article-card__visual--blue">😴</div>
+        <div class="article-card__body">
+          <div class="article-card__category">Newborn Basics</div>
+          <div class="article-card__title">Why Newborns Sleep So Much (And Why That's Normal)</div>
+          <p class="article-card__excerpt">Newborns sleep 16–20 hours a day. Understanding sleep cycles, wake windows, and the difference between deep and light sleep sets the foundation for healthy habits.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>Newborn</span>
+          <span class="article-card__read-time">5 min read</span>
+        </div>
+      </a>
+      <a href="#" class="article-card fade-in">
+        <div class="article-card__visual article-card__visual--pink">🩺</div>
+        <div class="article-card__body">
+          <div class="article-card__category">Newborn Basics</div>
+          <div class="article-card__title">Understanding Your Newborn's Vital Signs</div>
+          <p class="article-card__excerpt">What are normal heart rate, breathing rate, and temperature ranges for a newborn? A plain-language guide to the numbers that matter.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>0–3 months</span>
+          <span class="article-card__read-time">7 min read</span>
+        </div>
+      </a>
+      <a href="#" class="article-card fade-in">
+        <div class="article-card__visual article-card__visual--cream">🦶</div>
+        <div class="article-card__body">
+          <div class="article-card__category">Newborn Basics</div>
+          <div class="article-card__title">Safe Swaddling: Benefits, Technique &amp; When to Stop</div>
+          <p class="article-card__excerpt">Swaddling can soothe a newborn and support better sleep — but improper technique carries risks. Here's the right way to swaddle safely.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>0–3 months</span>
+          <span class="article-card__read-time">4 min read</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Sleep & Development -->
+<section class="edu-section edu-section--alt" id="sleep-development">
+  <div class="edu-section__inner">
+    <div class="edu-section__header">
+      <div class="edu-section__header-text">
+        <h2>🌙 Sleep &amp; Development</h2>
+        <p>Evidence-based sleep guidance from newborn to toddler</p>
+      </div>
+      <a href="#" class="edu-section__view-all">View all articles →</a>
+    </div>
+    <div class="article-grid">
+      <a href="#" class="article-card fade-in">
+        <div class="article-card__visual article-card__visual--blue">🌙</div>
+        <div class="article-card__body">
+          <div class="article-card__category">Sleep</div>
+          <div class="article-card__title">Sleep Regressions Explained: Ages, Causes &amp; How to Cope</div>
+          <p class="article-card__excerpt">The 4-month, 8-month, and 18-month regressions feel like going backward — but they're developmental leaps in disguise. What's happening in baby's brain, and what you can do.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>4–18 months</span>
+          <span class="article-card__read-time">8 min read</span>
+        </div>
+      </a>
+      <a href="#" class="article-card fade-in">
+        <div class="article-card__visual article-card__visual--pink">⏰</div>
+        <div class="article-card__body">
+          <div class="article-card__category">Sleep</div>
+          <div class="article-card__title">Wake Windows by Age: The Simple Guide to Timing Naps</div>
+          <p class="article-card__excerpt">The single most effective tool for preventing overtiredness and improving nap success is understanding your baby's wake window. Here's exactly what to aim for each month.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>0–12 months</span>
+          <span class="article-card__read-time">6 min read</span>
+        </div>
+      </a>
+      <a href="#" class="article-card fade-in">
+        <div class="article-card__visual article-card__visual--green">🛌</div>
+        <div class="article-card__body">
+          <div class="article-card__category">Sleep Environment</div>
+          <div class="article-card__title">Creating a Sleep-Optimal Nursery: Light, Sound &amp; Temperature</div>
+          <p class="article-card__excerpt">Small environmental tweaks can make a measurable difference in how long your baby sleeps. From blackout blinds to white noise machines — what's worth it and what's not.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>All ages</span>
+          <span class="article-card__read-time">5 min read</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="bundl-tip fade-in">
+      <div class="bundl-tip__icon">📱</div>
+      <div>
+        <strong>Bundl Sleep Data Tip</strong>
+        Use your Bundl app's sleep timeline to identify your baby's natural sleep cycle length. Most babies cycle every 45–50 minutes — knowing when they'll surface to light sleep lets you plan your response.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Health Monitoring -->
+<section class="edu-section" id="health-monitoring">
+  <div class="edu-section__inner">
+    <div class="edu-section__header">
+      <div class="edu-section__header-text">
+        <h2>💓 Health Monitoring</h2>
+        <p>Understanding the numbers that tell you how your baby is doing</p>
+      </div>
+      <a href="#" class="edu-section__view-all">View all articles →</a>
+    </div>
+    <div class="article-grid">
+      <a href="#" class="article-card fade-in">
+        <div class="article-card__visual article-card__visual--blue">💓</div>
+        <div class="article-card__body">
+          <div class="article-card__category">Heart Rate</div>
+          <div class="article-card__title">Normal Baby Heart Rates by Age: A Complete Reference</div>
+          <p class="article-card__excerpt">From 120–160 bpm in newborns to 70–120 bpm by age 1, here's what normal looks like — and what patterns warrant a call to your pediatrician.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>0–12 months</span>
+          <span class="article-card__read-time">6 min read</span>
+        </div>
+      </a>
+      <a href="#" class="article-card fade-in">
+        <div class="article-card__visual article-card__visual--pink">🫁</div>
+        <div class="article-card__body">
+          <div class="article-card__category">Oxygen &amp; Breathing</div>
+          <div class="article-card__title">SpO₂ in Infants: What Oxygen Saturation Means &amp; When to Act</div>
+          <p class="article-card__excerpt">Most healthy infants have SpO₂ readings of 95–100%. Understanding what this means, why it fluctuates, and when variations are clinically significant.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>0–12 months</span>
+          <span class="article-card__read-time">7 min read</span>
+        </div>
+      </a>
+      <a href="#" class="article-card fade-in">
+        <div class="article-card__visual article-card__visual--cream">🌡️</div>
+        <div class="article-card__body">
+          <div class="article-card__category">Temperature</div>
+          <div class="article-card__title">Baby Fever 101: Normal Temperatures, When to Worry, &amp; How to Take a Reading</div>
+          <p class="article-card__excerpt">A rectal temperature of 100.4°F (38°C) or above is a fever in a baby. Why fever is different for newborns vs. older infants, and how to respond.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>0–12 months</span>
+          <span class="article-card__read-time">8 min read</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Feeding -->
+<section class="edu-section edu-section--alt" id="feeding">
+  <div class="edu-section__inner">
+    <div class="edu-section__header fade-in">
+      <div class="edu-section__header-text">
+        <h2>🍼 Feeding Your Baby</h2>
+        <p>From first latch to first solids — evidence-based feeding guidance</p>
+      </div>
+    </div>
+    <div class="feeding-grid">
+      <div class="feeding-card feeding-card--breastfeed fade-in">
+        <h4>🤱 Breastfeeding</h4>
+        <p>Breastmilk provides complete nutrition for the first 6 months. Feed on demand (typically every 1.5–3 hours for newborns). Signs of adequate intake: 6+ wet diapers/day and steady weight gain after day 5.</p>
+        <div class="feeding-card__tip">💡 Bundl's sleep data can help you track feeding and sleep patterns together to identify your baby's natural rhythm.</div>
+      </div>
+      <div class="feeding-card feeding-card--formula fade-in">
+        <h4>🍶 Formula Feeding</h4>
+        <p>Commercial formula is a safe, nutritionally complete alternative to breastmilk. Newborns typically take 1–3 oz per feed, building to 4–6 oz by 2 months. Never water down formula — it's nutritionally incomplete when diluted.</p>
+        <div class="feeding-card__tip">💡 Track feeding volumes alongside Bundl's SpO₂ data — some changes in oxygen patterns correlate with feeding position.</div>
+      </div>
+      <div class="feeding-card feeding-card--solid fade-in">
+        <h4>🥕 Starting Solids</h4>
+        <p>The AAP recommends starting single-ingredient purees around 6 months — when baby can sit with support, shows interest in food, and has good head control. Rice cereal is no longer recommended as a first food.</p>
+        <div class="feeding-card__tip">💡 Introduction of solid foods often coincides with sleep pattern changes. Bundl's trend data can help you distinguish developmental shifts from feeding-related disruptions.</div>
+      </div>
+      <div class="feeding-card feeding-card--water fade-in">
+        <h4>💧 Water &amp; Other Drinks</h4>
+        <p>No water for babies under 6 months — breastmilk and formula provide all the hydration they need. Small amounts of water can be introduced with solid foods at 6 months. No juice under 12 months; limit it significantly until age 3.</p>
+        <div class="feeding-card__tip">💡 Dehydration in infants can affect temperature regulation. If Bundl's temperature readings seem elevated, adequate hydration is worth checking.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Milestones -->
+<section class="edu-section" id="milestones">
+  <div class="edu-section__inner">
+    <div class="edu-section__header">
+      <div class="edu-section__header-text">
+        <h2>🌟 Developmental Milestones</h2>
+        <p>What to expect and when to mention it to your doctor</p>
+      </div>
+    </div>
+    <p style="color:#7a6a60;font-size:.88rem;margin-bottom:2rem;">Remember: developmental ranges are wide. These are general guidelines — every baby develops at their own pace. Always discuss concerns with your pediatrician, not the internet.</p>
+    <div class="milestone-timeline fade-in">
+      <div class="milestone-item">
+        <div class="milestone-age">1 month</div>
+        <div class="milestone-dot"></div>
+        <div class="milestone-content">
+          <h4>First Responses</h4>
+          <p>Startles to sounds, focuses on faces 8–12 inches away, moves all limbs equally, cries to communicate needs.</p>
+          <div class="milestone-tags">
+            <span class="milestone-tag milestone-tag--physical">Physical</span>
+            <span class="milestone-tag milestone-tag--social">Social</span>
+          </div>
+        </div>
+      </div>
+      <div class="milestone-item">
+        <div class="milestone-age">2 months</div>
+        <div class="milestone-dot"></div>
+        <div class="milestone-content">
+          <h4>First Smiles</h4>
+          <p>Social smiling begins, begins to follow objects with eyes, makes cooing sounds, holds head up briefly during tummy time.</p>
+          <div class="milestone-tags">
+            <span class="milestone-tag milestone-tag--social">Social</span>
+            <span class="milestone-tag milestone-tag--cognitive">Cognitive</span>
+          </div>
+        </div>
+      </div>
+      <div class="milestone-item">
+        <div class="milestone-age">4 months</div>
+        <div class="milestone-dot"></div>
+        <div class="milestone-content">
+          <h4>Active Engagement</h4>
+          <p>Holds head steady, reaches for objects, laughs and squeals, recognizes familiar faces, pushes up on forearms during tummy time.</p>
+          <div class="milestone-tags">
+            <span class="milestone-tag milestone-tag--physical">Physical</span>
+            <span class="milestone-tag milestone-tag--cognitive">Cognitive</span>
+            <span class="milestone-tag milestone-tag--social">Social</span>
+          </div>
+        </div>
+      </div>
+      <div class="milestone-item">
+        <div class="milestone-age">6 months</div>
+        <div class="milestone-dot"></div>
+        <div class="milestone-content">
+          <h4>Sitting &amp; Babbling</h4>
+          <p>Sits with support, transfers objects hand to hand, begins babbling consonant sounds, recognizes own name, starts solid foods.</p>
+          <div class="milestone-tags">
+            <span class="milestone-tag milestone-tag--physical">Physical</span>
+            <span class="milestone-tag milestone-tag--cognitive">Language</span>
+          </div>
+        </div>
+      </div>
+      <div class="milestone-item">
+        <div class="milestone-age">9 months</div>
+        <div class="milestone-dot"></div>
+        <div class="milestone-content">
+          <h4>Mobility &amp; Object Permanence</h4>
+          <p>Crawls (or finds another way to move), pulls to stand, pincer grasp developing, understands "no", waves bye-bye.</p>
+          <div class="milestone-tags">
+            <span class="milestone-tag milestone-tag--physical">Physical</span>
+            <span class="milestone-tag milestone-tag--cognitive">Cognitive</span>
+          </div>
+        </div>
+      </div>
+      <div class="milestone-item">
+        <div class="milestone-age">12 months</div>
+        <div class="milestone-dot"></div>
+        <div class="milestone-content">
+          <h4>First Steps &amp; Words</h4>
+          <p>May take first steps, says "mama" and "dada" with meaning, uses cups and spoons, follows simple one-step commands, points at objects of interest.</p>
+          <div class="milestone-tags">
+            <span class="milestone-tag milestone-tag--physical">Physical</span>
+            <span class="milestone-tag milestone-tag--cognitive">Language</span>
+            <span class="milestone-tag milestone-tag--social">Social</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lifestyle strip -->
+<div class="lifestyle-strip" aria-hidden="true">
+  <img src="images/lifestyle-babies.png" alt="">
+  <div class="lifestyle-strip__overlay">
+    <div class="lifestyle-strip__text">
+      <h2>Knowledge Grows With Your Baby</h2>
+      <p>Every article, every insight — curated by pediatric experts to help you understand your baby's unique journey.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Parenting Insights -->
+<section class="edu-section edu-section--alt" id="parenting-insights">
+  <div class="edu-section__inner">
+    <div class="edu-section__header">
+      <div class="edu-section__header-text">
+        <h2>💡 Parenting Insights</h2>
+        <p>Perspectives on the emotional and practical side of new parenthood</p>
+      </div>
+      <a href="#" class="edu-section__view-all">View all articles →</a>
+    </div>
+    <div class="article-grid">
+      <a href="#" class="article-card fade-in">
+        <div class="article-card__visual article-card__visual--pink">🧠</div>
+        <div class="article-card__body">
+          <div class="article-card__category">Mental Health</div>
+          <div class="article-card__title">Postpartum Anxiety: What It Is, How to Recognize It, and When to Seek Help</div>
+          <p class="article-card__excerpt">Postpartum anxiety is more common than postpartum depression — and less talked about. Signs, strategies, and resources for parents experiencing persistent worry or fear.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>Parents</span>
+          <span class="article-card__read-time">9 min read</span>
+        </div>
+      </a>
+      <a href="#" class="article-card fade-in">
+        <div class="article-card__visual article-card__visual--cream">🤝</div>
+        <div class="article-card__body">
+          <div class="article-card__category">Relationship</div>
+          <div class="article-card__title">Parenting as a Team: Sharing the Mental Load After Baby</div>
+          <p class="article-card__excerpt">Division of night shifts, feeding duties, and monitoring responsibilities — how couples navigate the first year without burning out or building resentment.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>Partners</span>
+          <span class="article-card__read-time">7 min read</span>
+        </div>
+      </a>
+      <a href="#" class="article-card fade-in">
+        <div class="article-card__visual article-card__visual--blue">🌿</div>
+        <div class="article-card__body">
+          <div class="article-card__category">Wellbeing</div>
+          <div class="article-card__title">Sleep Deprivation in New Parents: Real Effects and Small Strategies</div>
+          <p class="article-card__excerpt">Chronic sleep deprivation affects cognition, emotional regulation, and physical health. Evidence-based micro-strategies to protect your functioning while caring for a newborn.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>Parents</span>
+          <span class="article-card__read-time">6 min read</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter-block">
+  <div class="container">
+    <div class="newsletter-block__inner fade-in">
+      <h2>New Articles Every Month</h2>
+      <p>Evidence-based parenting guides, delivered to your inbox. No overwhelm, no noise — just the things you actually need to know.</p>
+      <form class="newsletter-form" novalidate>
+        <input type="email" placeholder="Your email address" autocomplete="email" required />
+        <button type="submit" class="btn btn--primary">Subscribe</button>
+      </form>
+      <p style="font-size:.78rem;margin-top:.8rem;opacity:.65;">No spam, ever. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Bundl Home">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" aria-hidden="true">
+            <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
+            <circle cx="335" cy="48" r="7" fill="#7B5028"/>
+            <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
+            <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
+            <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
+            <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
+          </svg>
+        </a>
+        <p>For Your Bundl of Joy</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h5>Product</h5>
+          <a href="product.html">Shop Bundl</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="product.html#specs">Specifications</a>
+        </div>
+        <div class="footer__col">
+          <h5>Learn</h5>
+          <a href="sids-safety.html">SIDS &amp; Safety</a>
+          <a href="education.html">Baby Care</a>
+          </div>
+        <div class="footer__col">
+          <h5>Company</h5>
+          <a href="healthcare.html">For Providers</a>
+          <a href="support.html">Support</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 Bundl. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Medical Disclaimer</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

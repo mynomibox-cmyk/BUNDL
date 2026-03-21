@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reviews &amp; Community — Real Parent Stories | Bundl</title>
+  <meta name="description" content="Read what parents and healthcare professionals say about Bundl. Real stories, verified reviews, and community insights from families who use Bundl every night." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── Reviews page styles ── */
+    .reviews-hero {
+      background:
+        linear-gradient(rgba(250,217,232,0.82) 0%, rgba(254,252,232,0.85) 100%),
+        url('../images/lifestyle-babies.png') center / cover no-repeat;
+      padding: 100px 0 72px;
+      text-align: center;
+    }
+    .reviews-hero h1 { font-size: clamp(2rem,4vw,3rem); color: #5C3318; margin-bottom: 1rem; }
+    .reviews-hero p { max-width: 580px; margin: 0 auto; color: #6b5c50; font-size: 1.05rem; line-height: 1.7; }
+
+    /* Rating summary */
+    .rating-summary {
+      background: #fff;
+      border: 1px solid #f0e8e0;
+      border-radius: 24px;
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 3rem;
+      align-items: center;
+      max-width: 780px;
+      margin: 3rem auto 0;
+    }
+    .rating-summary__main { text-align: center; }
+    .rating-summary__score {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: #5C3318;
+      line-height: 1;
+    }
+    .rating-summary__stars { font-size: 1.6rem; color: #f59e0b; margin: .4rem 0; letter-spacing: 2px; }
+    .rating-summary__count { font-size: .85rem; color: #7a6a60; }
+    .rating-bars { flex: 1; }
+    .rating-bar-row {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      margin-bottom: .5rem;
+      font-size: .84rem;
+      color: #5a4a40;
+    }
+    .rating-bar-row__label { width: 40px; text-align: right; white-space: nowrap; flex-shrink: 0; }
+    .rating-bar-row__track {
+      flex: 1;
+      height: 8px;
+      background: #f0e8e0;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .rating-bar-row__fill {
+      height: 100%;
+      background: #f59e0b;
+      border-radius: 99px;
+    }
+    .rating-bar-row__pct { width: 36px; color: #7a6a60; font-size: .78rem; flex-shrink: 0; }
+
+    /* Section container */
+    .reviews-section {
+      padding: 72px 0;
+    }
+    .reviews-section--alt { background: #fefce8; }
+    .reviews-section__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .reviews-section__header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 2.5rem;
+    }
+    .reviews-section__header h2 { color: #5C3318; font-size: clamp(1.6rem,3vw,2.2rem); margin-bottom: .6rem; }
+    .reviews-section__header p { color: #6b5c50; line-height: 1.7; }
+
+    /* Filter bar */
+    .review-filters {
+      display: flex;
+      gap: .6rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+    .review-filter-btn {
+      padding: .4em 1em;
+      border-radius: 99px;
+      border: 2px solid #e8d5cb;
+      background: #fff;
+      color: #5C3318;
+      font-size: .84rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .review-filter-btn.active,
+    .review-filter-btn:hover {
+      border-color: #5C3318;
+      background: #5C3318;
+      color: #fff;
+    }
+
+    /* Reviews grid */
+    .reviews-masonry {
+      columns: 3;
+      column-gap: 1.5rem;
+    }
+    .review-card {
+      background: #fff;
+      border: 1px solid #f0e8e0;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      break-inside: avoid;
+    }
+    .review-card__header {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      margin-bottom: 1rem;
+    }
+    .review-card__avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: .95rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .review-card__meta { flex: 1; }
+    .review-card__name { font-size: .9rem; font-weight: 600; color: #5C3318; }
+    .review-card__info { font-size: .75rem; color: #7a6a60; }
+    .review-card__stars { font-size: .9rem; color: #f59e0b; letter-spacing: 1px; }
+    .review-card__verified {
+      font-size: .7rem;
+      font-weight: 600;
+      color: #4CAF50;
+      background: #e8f5e9;
+      padding: .2em .6em;
+      border-radius: 99px;
+    }
+    .review-card__title { font-weight: 600; color: #5C3318; font-size: .95rem; margin-bottom: .4rem; }
+    .review-card__body { font-size: .88rem; color: #5a4a40; line-height: 1.7; margin: 0; }
+    .review-card__footer {
+      margin-top: 1rem;
+      padding-top: .8rem;
+      border-top: 1px solid #f0e8e0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .review-card__date { font-size: .75rem; color: #9a8a80; }
+    .review-card__helpful { font-size: .75rem; color: #5C3318; cursor: pointer; }
+    .review-card__tag {
+      display: inline-block;
+      font-size: .7rem;
+      background: #d6eff7;
+      color: #5C3318;
+      padding: .2em .6em;
+      border-radius: 99px;
+      margin-top: .6rem;
+    }
+
+    /* Featured story */
+    .featured-story {
+      background:
+        linear-gradient(135deg, rgba(92,51,24,0.93), rgba(122,72,40,0.90)),
+        url('../images/lifestyle-mother-baby.png') center / cover no-repeat;
+      border-radius: 24px;
+      padding: 3rem;
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .featured-story__quote {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      line-height: 1.7;
+      color: #fad9e8;
+      margin-bottom: 1.5rem;
+    }
+    .featured-story__author { display: flex; align-items: center; gap: 1rem; }
+    .featured-story__author-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #F2B5C8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #5C3318;
+      flex-shrink: 0;
+    }
+    .featured-story__author-name { font-weight: 600; color: #fff; }
+    .featured-story__author-info { font-size: .82rem; color: rgba(255,255,255,.6); }
+    .featured-story__stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .featured-story-stat { text-align: center; }
+    .featured-story-stat__val {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #F2B5C8;
+      line-height: 1;
+    }
+    .featured-story-stat__label { font-size: .8rem; color: rgba(255,255,255,.7); margin-top: .3rem; }
+
+    /* Video / Case Studies */
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .case-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #f0e8e0;
+    }
+    .case-card__visual {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      position: relative;
+    }
+    .case-card__visual--blue { background: linear-gradient(135deg, #d6eff7, #A8D5E2); }
+    .case-card__visual--pink { background: linear-gradient(135deg, #fad9e8, #F2B5C8); }
+    .case-card__visual--green { background: linear-gradient(135deg, #e8f5e9, #7FBFA0); }
+    .case-card__play {
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      background: rgba(92,51,24,.85);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+    .case-card__body { padding: 1.5rem; }
+    .case-card__type {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #A8D5E2;
+      margin-bottom: .4rem;
+    }
+    .case-card__body h4 { color: #5C3318; font-size: .95rem; margin-bottom: .4rem; }
+    .case-card__body p { color: #6b5c50; font-size: .85rem; line-height: 1.6; margin: 0; }
+
+    /* Professional quotes */
+    .pro-quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .pro-quote-card {
+      background: #d6eff7;
+      border-radius: 16px;
+      padding: 1.8rem;
+      position: relative;
+    }
+    .pro-quote-card::before {
+      content: '"';
+      font-size: 5rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      color: #A8D5E2;
+      position: absolute;
+      top: .2rem;
+      left: 1.2rem;
+      line-height: 1;
+    }
+    .pro-quote-card__text {
+      padding-top: 2rem;
+      font-style: italic;
+      color: #3a5a70;
+      font-size: .92rem;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+    .pro-quote-card__author { display: flex; align-items: center; gap: .8rem; }
+    .pro-quote-card__avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #5C3318;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: .9rem;
+      flex-shrink: 0;
+    }
+    .pro-quote-card__name { font-size: .88rem; font-weight: 600; color: #5C3318; }
+    .pro-quote-card__title { font-size: .77rem; color: #6b8c9a; }
+
+    /* Write a review */
+    .write-review-box {
+      background: #fff;
+      border: 2px solid #F2B5C8;
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+    }
+    .write-review-box h3 { color: #5C3318; font-size: 1.5rem; margin-bottom: .6rem; }
+    .write-review-box p { color: #6b5c50; font-size: .92rem; line-height: 1.7; max-width: 480px; margin: 0 auto 1.5rem; }
+
+    /* Color assignments for avatars */
+    .av-pink { background: linear-gradient(135deg, #F2B5C8, #e07fa0); }
+    .av-blue { background: linear-gradient(135deg, #A8D5E2, #6ab0cc); }
+    .av-brown { background: linear-gradient(135deg, #c5a87a, #a07a50); }
+    .av-green { background: linear-gradient(135deg, #7FBFA0, #4a9a78); }
+    .av-purple { background: linear-gradient(135deg, #c5a0c8, #8e5a90); }
+    .av-teal { background: linear-gradient(135deg, #6ec8c8, #3a9898); }
+
+    @media (max-width: 900px) {
+      .reviews-masonry { columns: 2; }
+      .featured-story { grid-template-columns: 1fr; }
+      .rating-summary { grid-template-columns: 1fr; text-align: center; }
+    }
+    @media (max-width: 640px) {
+      .reviews-masonry { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo" aria-label="Bundl Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" aria-hidden="true">
+        <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
+        <circle cx="335" cy="48" r="7" fill="#7B5028"/>
+        <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
+        <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
+        <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
+        <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
+      </svg>
+    </a>
+    <nav class="header__nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="product.html">Shop</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="sids-safety.html">SIDS &amp; Safety</a>
+      <a href="education.html">Baby Care</a>
+      <a href="healthcare.html">For Providers</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <div class="header__actions">
+      <a href="product.html" class="btn btn--primary btn--sm">Shop Now</a>
+      <button class="header__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="product.html">Shop</a>
+  <a href="how-it-works.html">How It Works</a>
+  <a href="sids-safety.html">SIDS &amp; Safety</a>
+  <a href="education.html">Baby Care</a>
+  <a href="healthcare.html">For Providers</a>
+  <a href="support.html">Support</a>
+</nav>
+
+<!-- Hero -->
+<section class="reviews-hero">
+  <div class="container">
+    <h1>Heard from the Families<br>Who Matter Most</h1>
+    <p>Real reviews from real parents — and the healthcare professionals who recommend Bundl. Every review is verified and unedited.</p>
+    <div class="rating-summary fade-in">
+      <div class="rating-summary__main">
+        <div class="rating-summary__score">4.9</div>
+        <div class="rating-summary__stars">★★★★★</div>
+        <div class="rating-summary__count">Based on 847 verified reviews</div>
+      </div>
+      <div class="rating-bars">
+        <div class="rating-bar-row">
+          <span class="rating-bar-row__label">5 ★</span>
+          <div class="rating-bar-row__track"><div class="rating-bar-row__fill" style="width:91%"></div></div>
+          <span class="rating-bar-row__pct">91%</span>
+        </div>
+        <div class="rating-bar-row">
+          <span class="rating-bar-row__label">4 ★</span>
+          <div class="rating-bar-row__track"><div class="rating-bar-row__fill" style="width:6%;background:#c8a830"></div></div>
+          <span class="rating-bar-row__pct">6%</span>
+        </div>
+        <div class="rating-bar-row">
+          <span class="rating-bar-row__label">3 ★</span>
+          <div class="rating-bar-row__track"><div class="rating-bar-row__fill" style="width:2%;background:#b09020"></div></div>
+          <span class="rating-bar-row__pct">2%</span>
+        </div>
+        <div class="rating-bar-row">
+          <span class="rating-bar-row__label">2 ★</span>
+          <div class="rating-bar-row__track"><div class="rating-bar-row__fill" style="width:1%;background:#908070"></div></div>
+          <span class="rating-bar-row__pct">1%</span>
+        </div>
+        <div class="rating-bar-row">
+          <span class="rating-bar-row__label">1 ★</span>
+          <div class="rating-bar-row__track"><div class="rating-bar-row__fill" style="width:0.5%;background:#807060"></div></div>
+          <span class="rating-bar-row__pct">&lt;1%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Story -->
+<section class="reviews-section">
+  <div class="reviews-section__inner">
+    <div class="featured-story fade-in">
+      <div>
+        <p class="featured-story__quote">"Our son was born 6 weeks early. The NICU team gave us so much data while he was there, and coming home felt like stepping off a cliff. Bundl gave us back that sense of knowing — we could see his oxygen levels, his heart rate, everything we'd gotten used to watching. We slept. Actually slept. I can't explain what that meant to us."</p>
+        <div class="featured-story__author">
+          <div class="featured-story__author-avatar">A</div>
+          <div>
+            <div class="featured-story__author-name">Amara &amp; Kwame T.</div>
+            <div class="featured-story__author-info">Parents of a preemie, Atlanta GA — Verified Purchase</div>
+          </div>
+        </div>
+      </div>
+      <div class="featured-story__stats">
+        <div class="featured-story-stat">
+          <div class="featured-story-stat__val">6wk</div>
+          <div class="featured-story-stat__label">Premature birth</div>
+        </div>
+        <div class="featured-story-stat">
+          <div class="featured-story-stat__val">4mo</div>
+          <div class="featured-story-stat__label">Using Bundl</div>
+        </div>
+        <div class="featured-story-stat">
+          <div class="featured-story-stat__val">★★★★★</div>
+          <div class="featured-story-stat__label">Rating</div>
+        </div>
+        <div class="featured-story-stat">
+          <div class="featured-story-stat__val">↑</div>
+          <div class="featured-story-stat__label">Shared with pediatrician</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Review Grid -->
+<section class="reviews-section reviews-section--alt">
+  <div class="reviews-section__inner">
+    <div class="reviews-section__header fade-in">
+      <h2>What Parents Are Saying</h2>
+    </div>
+    <div class="review-filters fade-in">
+      <button class="review-filter-btn active">All Reviews</button>
+      <button class="review-filter-btn">5 Stars</button>
+      <button class="review-filter-btn">First-Time Parents</button>
+      <button class="review-filter-btn">Premature Babies</button>
+      <button class="review-filter-btn">Sleep</button>
+      <button class="review-filter-btn">App</button>
+    </div>
+    <div class="reviews-masonry fade-in">
+
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__avatar av-pink">J</div>
+          <div class="review-card__meta">
+            <div class="review-card__name">Jessica M.</div>
+            <div class="review-card__info">First-time mum, London UK</div>
+          </div>
+          <span class="review-card__verified">✓ Verified</span>
+        </div>
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__title">Worth every penny for peace of mind</p>
+        <p class="review-card__body">I was terrified every night for the first two months. With Bundl, I open the app, see her breathing pattern, her heart rate, her temperature — all normal — and I actually go to sleep. I'm a calmer mum because of this. That has to be worth something.</p>
+        <span class="review-card__tag">Sleep</span>
+        <div class="review-card__footer">
+          <span class="review-card__date">January 2025</span>
+          <span class="review-card__helpful">👍 Helpful (42)</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__avatar av-blue">D</div>
+          <div class="review-card__meta">
+            <div class="review-card__name">Darius &amp; Priya K.</div>
+            <div class="review-card__info">Parents of twins, Chicago IL</div>
+          </div>
+          <span class="review-card__verified">✓ Verified</span>
+        </div>
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__title">Game-changer for twin parents</p>
+        <p class="review-card__body">Managing two newborns is chaos. Having Bundl on both babies means I can check in from anywhere in the house — and when I'm feeding one, I'm not panicking about the other. The dual-device app view is brilliant.</p>
+        <span class="review-card__tag">Multiple Babies</span>
+        <div class="review-card__footer">
+          <span class="review-card__date">February 2025</span>
+          <span class="review-card__helpful">👍 Helpful (38)</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__avatar av-green">S</div>
+          <div class="review-card__meta">
+            <div class="review-card__name">Sofia R.</div>
+            <div class="review-card__info">NICU graduate mum, San Francisco CA</div>
+          </div>
+          <span class="review-card__verified">✓ Verified</span>
+        </div>
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__title">After the NICU, Bundl was our bridge</p>
+        <p class="review-card__body">Lena spent 3 weeks in the NICU. Coming home was wonderful and terrifying. The nurses had monitors on her round the clock, and suddenly... nothing. Bundl filled that gap. The SpO₂ monitoring especially — we could finally breathe because we knew she was.</p>
+        <span class="review-card__tag">Premature Baby</span>
+        <div class="review-card__footer">
+          <span class="review-card__date">December 2024</span>
+          <span class="review-card__helpful">👍 Helpful (71)</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__avatar av-brown">T</div>
+          <div class="review-card__meta">
+            <div class="review-card__name">Tom &amp; Claire W.</div>
+            <div class="review-card__info">Second-time parents, Melbourne AU</div>
+          </div>
+          <span class="review-card__verified">✓ Verified</span>
+        </div>
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__title">I wish we'd had this for our first</p>
+        <p class="review-card__body">After our anxious first year with baby no. 1, we vowed to try Bundl with our second. It's a completely different experience. The sleep data alone has been invaluable — we spotted a pattern of shallow sleep that our paediatrician found very interesting.</p>
+        <span class="review-card__tag">Sleep Data</span>
+        <div class="review-card__footer">
+          <span class="review-card__date">January 2025</span>
+          <span class="review-card__helpful">👍 Helpful (29)</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__avatar av-purple">M</div>
+          <div class="review-card__meta">
+            <div class="review-card__name">Maya O.</div>
+            <div class="review-card__info">First-time mum, Toronto CA</div>
+          </div>
+          <span class="review-card__verified">✓ Verified</span>
+        </div>
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__title">The app is genuinely beautiful</p>
+        <p class="review-card__body">I've tried other monitoring apps. They're either overwhelming with alarms or so vague they're useless. Bundl's app strikes exactly the right balance — clean dashboard, clear data, alerts that actually mean something. It's the first baby tech product that doesn't feel like it was designed by someone without children.</p>
+        <span class="review-card__tag">App</span>
+        <div class="review-card__footer">
+          <span class="review-card__date">February 2025</span>
+          <span class="review-card__helpful">👍 Helpful (44)</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__avatar av-teal">R</div>
+          <div class="review-card__meta">
+            <div class="review-card__name">Rahul N.</div>
+            <div class="review-card__info">Dad with high-risk pregnancy history, Boston MA</div>
+          </div>
+          <span class="review-card__verified">✓ Verified</span>
+        </div>
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__title">Our pediatrician loves the data</p>
+        <p class="review-card__body">We shared 8 weeks of Bundl heart rate and SpO₂ trend data with our pediatrician at the 2-month visit. She said it was the most complete picture of a patient's first weeks she'd seen outside a clinical setting. She's now recommending it to other patients.</p>
+        <span class="review-card__tag">Healthcare</span>
+        <div class="review-card__footer">
+          <span class="review-card__date">November 2024</span>
+          <span class="review-card__helpful">👍 Helpful (58)</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__avatar av-pink">L</div>
+          <div class="review-card__meta">
+            <div class="review-card__name">Lena &amp; James F.</div>
+            <div class="review-card__info">Parents of 3, Seattle WA</div>
+          </div>
+          <span class="review-card__verified">✓ Verified</span>
+        </div>
+        <div class="review-card__stars">★★★★☆</div>
+        <p class="review-card__title">Very good — a small note on battery</p>
+        <p class="review-card__body">Honestly, 4 stars only because I forgot to charge it one night and it died at 3 AM. Totally my fault. The band itself is soft, stays on, no skin issues at all even with extended wear. Baby barely notices it. Would absolutely buy again — just recommend a charging habit reminder.</p>
+        <span class="review-card__tag">Design</span>
+        <div class="review-card__footer">
+          <span class="review-card__date">January 2025</span>
+          <span class="review-card__helpful">👍 Helpful (17)</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__avatar av-green">K</div>
+          <div class="review-card__meta">
+            <div class="review-card__name">Keisha B.</div>
+            <div class="review-card__info">Mum with postpartum anxiety, Houston TX</div>
+          </div>
+          <span class="review-card__verified">✓ Verified</span>
+        </div>
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__title">Helped my postpartum anxiety more than anything</p>
+        <p class="review-card__body">My therapist and I talked about how much of my postpartum anxiety was rooted in not knowing if my baby was okay. Bundl didn't replace therapy, but having real data — not just my anxious imagination — changed everything. I check it, I see normal, I breathe. It's a tool that works.</p>
+        <span class="review-card__tag">Mental Health</span>
+        <div class="review-card__footer">
+          <span class="review-card__date">October 2024</span>
+          <span class="review-card__helpful">👍 Helpful (93)</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Professional Quotes -->
+<section class="reviews-section">
+  <div class="reviews-section__inner">
+    <div class="reviews-section__header fade-in">
+      <h2>Trusted by Healthcare Professionals</h2>
+      <p>Pediatricians, neonatologists, and sleep consultants share their perspective on Bundl as a parental wellness tool.</p>
+    </div>
+    <div class="pro-quotes-grid">
+      <div class="pro-quote-card fade-in">
+        <p class="pro-quote-card__text">The trend data parents bring from Bundl has made my well-baby visits significantly more informative. I can see patterns over 8 weeks rather than extrapolating from a single office reading. It's changed how I counsel families.</p>
+        <div class="pro-quote-card__author">
+          <div class="pro-quote-card__avatar">P</div>
+          <div>
+            <div class="pro-quote-card__name">Dr. Priya Nair, MD</div>
+            <div class="pro-quote-card__title">Pediatric Sleep Specialist, Boston Children's</div>
+          </div>
+        </div>
+      </div>
+      <div class="pro-quote-card fade-in">
+        <p class="pro-quote-card__text">As a neonatal nurse, I'm careful about overpromising what consumer monitors can do. But Bundl's commitment to honest communication about what the device is and isn't — that's exactly what I want to see in this space. I recommend it to NICU discharge families.</p>
+        <div class="pro-quote-card__author">
+          <div class="pro-quote-card__avatar">A</div>
+          <div>
+            <div class="pro-quote-card__name">Alicia Grant, RN, MSN</div>
+            <div class="pro-quote-card__title">Neonatal Nurse Practitioner, Stanford</div>
+          </div>
+        </div>
+      </div>
+      <div class="pro-quote-card fade-in">
+        <p class="pro-quote-card__text">Parent anxiety is a real clinical concern. Tools that reduce anxious checking behavior — rather than amplifying it — have genuine value. Bundl's calm dashboard design appears to support reassurance rather than alarm. That's a meaningful design choice.</p>
+        <div class="pro-quote-card__author">
+          <div class="pro-quote-card__avatar">M</div>
+          <div>
+            <div class="pro-quote-card__name">Dr. Marcus Chen, PsyD</div>
+            <div class="pro-quote-card__title">Perinatal Mental Health Specialist</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lifestyle strip -->
+<div class="lifestyle-strip" aria-hidden="true">
+  <img src="images/lifestyle-babies.png" alt="">
+  <div class="lifestyle-strip__overlay">
+    <div class="lifestyle-strip__text">
+      <h2>Join Over 10,000 Families Who Sleep Better with Bundl</h2>
+      <p>Real parents. Real peace of mind. Real results — night after night.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Case Studies / Video Placeholders -->
+<section class="reviews-section reviews-section--alt">
+  <div class="reviews-section__inner">
+    <div class="reviews-section__header fade-in">
+      <h2>Parent Stories in Depth</h2>
+      <p>Long-form stories from families who've been using Bundl for 3+ months.</p>
+    </div>
+    <div class="case-grid">
+      <div class="case-card fade-in">
+        <div class="case-card__visual case-card__visual--blue">
+          👶
+          <div class="case-card__play">▶</div>
+        </div>
+        <div class="case-card__body">
+          <div class="case-card__type">Video Story</div>
+          <h4>Amara &amp; Kwame: Life After the NICU</h4>
+          <p>How a family of preemie parents found confidence coming home with a 6-week-early baby and Bundl by their side.</p>
+        </div>
+      </div>
+      <div class="case-card fade-in">
+        <div class="case-card__visual case-card__visual--pink">
+          🌙
+          <div class="case-card__play">▶</div>
+        </div>
+        <div class="case-card__body">
+          <div class="case-card__type">Written Story</div>
+          <h4>How Keisha Reclaimed Her Sleep</h4>
+          <p>A first-time mum's journey through postpartum anxiety — and how real data helped quiet the worst-case thoughts.</p>
+        </div>
+      </div>
+      <div class="case-card fade-in">
+        <div class="case-card__visual case-card__visual--green">
+          📊
+          <div class="case-card__play">▶</div>
+        </div>
+        <div class="case-card__body">
+          <div class="case-card__type">Case Study</div>
+          <h4>8 Weeks of Data, One Pediatrician Conversation</h4>
+          <p>How Rahul's family used Bundl trend data to have a more informed 2-month well-baby visit than they ever expected.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Write a review -->
+<section class="reviews-section">
+  <div class="reviews-section__inner">
+    <div class="write-review-box fade-in">
+      <h3>Share Your Bundl Experience</h3>
+      <p>Your story could help another parent decide to give their family a calmer night. We read every review and take all feedback seriously.</p>
+      <a href="support.html#contact" class="btn btn--primary">Write a Review</a>
+      <p style="font-size:.78rem;margin-top:1rem;color:#7a6a60;">You must be a verified purchaser to submit a review. Reviews are moderated for authenticity only — never filtered for sentiment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter-block">
+  <div class="container">
+    <div class="newsletter-block__inner fade-in">
+      <h2>Join the Bundl Community</h2>
+      <p>Monthly parenting insights, product tips, and real stories from families who use Bundl every day.</p>
+      <form class="newsletter-form" novalidate>
+        <input type="email" placeholder="Your email address" autocomplete="email" required />
+        <button type="submit" class="btn btn--primary">Subscribe</button>
+      </form>
+      <p style="font-size:.78rem;margin-top:.8rem;opacity:.65;">No spam, ever. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Bundl Home">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" aria-hidden="true">
+            <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
+            <circle cx="335" cy="48" r="7" fill="#7B5028"/>
+            <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
+            <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
+            <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
+            <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
+          </svg>
+        </a>
+        <p>For Your Bundl of Joy</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h5>Product</h5>
+          <a href="product.html">Shop Bundl</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="product.html#specs">Specifications</a>
+        </div>
+        <div class="footer__col">
+          <h5>Learn</h5>
+          <a href="sids-safety.html">SIDS &amp; Safety</a>
+          <a href="education.html">Baby Care</a>
+          </div>
+        <div class="footer__col">
+          <h5>Company</h5>
+          <a href="healthcare.html">For Providers</a>
+          <a href="support.html">Support</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 Bundl. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Medical Disclaimer</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

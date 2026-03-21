@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Bundl Works — Technology, Monitoring &amp; Data</title>
+  <meta name="description" content="Learn how Bundl's smart ankle band monitors your baby's vitals using medical-grade sensors, Bluetooth Low Energy, and a companion app designed for parents." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo" aria-label="Bundl Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" aria-hidden="true">
+        <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
+        <circle cx="335" cy="48" r="7" fill="#7B5028"/>
+        <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
+        <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
+        <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
+        <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
+      </svg>
+    </a>
+    <nav class="header__nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="product.html">Shop</a>
+      <a href="how-it-works.html" class="active">How It Works</a>
+      <a href="sids-safety.html">SIDS &amp; Safety</a>
+      <a href="education.html">Baby Care</a>
+      <a href="healthcare.html">For Providers</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <div class="header__actions">
+      <a href="product.html" class="btn btn--primary btn--sm">Shop Now</a>
+      <button class="header__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a><a href="product.html">Shop</a><a href="how-it-works.html">How It Works</a>
+  <a href="sids-safety.html">SIDS &amp; Baby Safety</a><a href="education.html">Baby Care Education</a>
+  <a href="healthcare.html">For Healthcare Providers</a><a href="support.html">Support</a>
+  <div class="mobile-nav__cta"><a href="product.html" class="btn btn--primary btn--full">Shop Now</a></div>
+</nav>
+
+<main>
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-labelledby="hiw-hero-heading">
+    <div class="container">
+      <span class="eyebrow">The Technology</span>
+      <h1 id="hiw-hero-heading">How Bundl Works — <em>From Ankle to App</em></h1>
+      <p>Medical-grade sensors. Bluetooth Low Energy. A companion app built for sleep-deprived parents. Here's how it all comes together.</p>
+    </div>
+  </section>
+
+  <!-- 4 STEPS -->
+  <section class="section section--cream" aria-labelledby="steps-heading">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="eyebrow">The Process</span>
+        <h2 id="steps-heading">Simple for Parents. Sophisticated Inside.</h2>
+        <p>Four steps from setup to insight — and Bundl handles everything in between.</p>
+      </div>
+      <div class="steps-wrapper">
+        <div class="steps">
+          <div class="step fade-in"><div class="step__circle">🤱</div><span class="step__num">Step 01</span><h4>Wear</h4><ul class="step__bullets"><li>Slips gently onto your baby's ankle</li><li>Fits newborns through 24 months</li><li>Tamper-resistant safety lock</li><li>Soft velcro adjustment</li></ul></div>
+          <div class="step fade-in fade-in--delay-1"><div class="step__circle">📡</div><span class="step__num">Step 02</span><h4>Monitor</h4><ul class="step__bullets"><li>BLE transmits live vitals to the app</li><li>Tracks heart rate &amp; SpO2</li><li>Monitors temperature &amp; motion</li><li>Detects sleep stages continuously</li></ul></div>
+          <div class="step fade-in fade-in--delay-2"><div class="step__circle">🔔</div><span class="step__num">Step 03</span><h4>Get Alerts</h4><ul class="step__bullets"><li>Instant push notifications</li><li>Alerts when readings fall outside normal ranges</li><li>Calibrated to minimise false alarms</li><li>Works through Do Not Disturb</li></ul></div>
+          <div class="step fade-in fade-in--delay-3"><div class="step__circle">🏥</div><span class="step__num">Step 04</span><h4>Share Insights</h4><ul class="step__bullets"><li>Export full health history in one tap</li><li>Share formatted reports with your pediatrician</li><li>Supports data-backed check-ups</li><li>Secure &amp; encrypted export</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SENSOR SYSTEM -->
+  <section class="section section--white" aria-labelledby="sensor-heading">
+    <div class="container">
+      <div class="grid-2">
+        <div class="fade-in">
+          <span class="eyebrow">Inside the Band</span>
+          <h2 id="sensor-heading" style="margin-top:12px;">The Sensor Module</h2>
+          <p style="margin:16px 0 24px;">A single integrated unit — lightweight, enclosed in a waterproof casting, and built for continuous wear without discomfort.</p>
+          <ul class="tech-list">
+            <li><span class="tech-icon">💗</span><div><strong style="color:var(--brown);">PPG Sensor</strong> — Photoplethysmography for heart rate and SpO2 measurement</div></li>
+            <li><span class="tech-icon">🌡️</span><div><strong style="color:var(--brown);">NTC Thermistor</strong> — Continuous skin temperature monitoring, accurate to ±0.3°C</div></li>
+            <li><span class="tech-icon">🤸</span><div><strong style="color:var(--brown);">3-Axis Accelerometer</strong> — Motion detection for activity and sleep stage analysis</div></li>
+            <li><span class="tech-icon">📡</span><div><strong style="color:var(--brown);">Bluetooth Low Energy 5.0</strong> — Real-time data transmission, 30+ foot range</div></li>
+            <li><span class="tech-icon">🔒</span><div><strong style="color:var(--brown);">AES-256 Encryption</strong> — Data encrypted before transmission, every time</div></li>
+            <li><span class="tech-icon">🔋</span><div><strong style="color:var(--brown);">Li-Po Battery</strong> — 24–36 hours continuous use, 72 hours standby</div></li>
+          </ul>
+        </div>
+        <div class="fade-in fade-in--delay-1" style="display:flex;align-items:center;justify-content:center;">
+          <div style="background:linear-gradient(135deg,var(--cream),var(--blue-light));border-radius:var(--radius-xl);padding:32px;text-align:center;max-width:380px;width:100%;box-shadow:var(--shadow-md);">
+            <img src="images/product-green-band.png"
+                 alt="Bundl ankle band and charging dock"
+                 style="max-width:220px;width:100%;object-fit:contain;display:block;margin:0 auto 16px;filter:drop-shadow(0 8px 20px rgba(92,51,24,0.14));">
+            <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+              <span class="badge badge--blue">IPX3 Sealed</span>
+              <span class="badge badge--cream">BLE 5.0</span>
+              <span class="badge badge--green">AES-256</span>
+            </div>
+            <p style="font-size:0.82rem;color:var(--text-medium);margin-top:14px;font-weight:500;">Single integrated module — no loose parts. Non-detachable sensor for safety.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT BUNDL TRACKS -->
+  <section class="section section--cream" aria-labelledby="tracking-heading">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="eyebrow">What Bundl Tracks</span>
+        <h2 id="tracking-heading">Every Reading That Matters</h2>
+        <p>Bundl monitors the five vitals most relevant to infant health and SIDS awareness — continuously, from their ankle.</p>
+      </div>
+      <div class="grid-3">
+        <div class="feature-card fade-in"><div class="feature-card__icon feature-card__icon--pink">💗</div><h3>Heart Rate</h3><p>Normal infant range: 100–160 BPM. Bundl alerts you if readings fall below 80 or exceed 200 BPM for sustained periods. Rolling 30-second averages smooth out natural variation.</p></div>
+        <div class="feature-card fade-in fade-in--delay-1"><div class="feature-card__icon feature-card__icon--blue">💧</div><h3>Blood Oxygen (SpO2)</h3><p>Healthy infant range: 95–100%. Low oxygen alerts trigger immediately if SpO2 drops below 90% — one of the most critical indicators in SIDS prevention research.</p></div>
+        <div class="feature-card fade-in fade-in--delay-2"><div class="feature-card__icon feature-card__icon--cream">🌡️</div><h3>Skin Temperature</h3><p>Normal range: 95.9–99.5°F. Alerts for unusual rises or drops. Detects early signs of fever and overheating — a recognized SIDS risk factor.</p></div>
+        <div class="feature-card fade-in"><div class="feature-card__icon feature-card__icon--pink">🤸</div><h3>Motion &amp; Activity</h3><p>Detects movement frequency and intensity. Distinguishes restful stillness from prolonged inactivity. Flags unexpected motionless periods over 20 seconds during sleep.</p></div>
+        <div class="feature-card fade-in fade-in--delay-1"><div class="feature-card__icon feature-card__icon--blue">😴</div><h3>Sleep Stage Detection</h3><p>Combines heart rate and motion data to classify awake, light sleep, and deep sleep phases — building a clear picture of your baby's sleep architecture over time.</p></div>
+        <div class="feature-card fade-in fade-in--delay-2"><div class="feature-card__icon feature-card__icon--mint">🔋</div><h3>Battery &amp; Device Health</h3><p>Low battery alerts keep the monitor always charged. Device status visible at a glance in the app. Never miss a reading due to a dead battery.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALERT THRESHOLDS -->
+  <section class="section section--white" aria-labelledby="alerts-heading">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="eyebrow">Smart Alerts</span>
+        <h2 id="alerts-heading">Alerts That Actually Matter</h2>
+        <p>Bundl's thresholds are based on established pediatric guidelines — designed to flag genuine concerns, not generate unnecessary anxiety.</p>
+      </div>
+      <div class="grid-2" style="margin-bottom:32px;">
+        <div class="info-card fade-in" style="border-left:4px solid var(--blue);">
+          <h3 style="font-size:1.1rem;margin-bottom:10px;">💗 Heart Rate Alert</h3>
+          <p>Alert triggers when heart rate falls below <strong>80 BPM</strong> or exceeds <strong>200 BPM</strong> for more than 15 consecutive seconds during a sleep period.</p>
+        </div>
+        <div class="info-card fade-in fade-in--delay-1" style="border-left:4px solid var(--pink);">
+          <h3 style="font-size:1.1rem;margin-bottom:10px;">💧 Blood Oxygen Alert</h3>
+          <p>Alert triggers immediately when SpO2 drops below <strong>90%</strong> — a threshold associated with oxygen desaturation requiring parental awareness.</p>
+        </div>
+        <div class="info-card fade-in fade-in--delay-2" style="border-left:4px solid var(--brown-light);">
+          <h3 style="font-size:1.1rem;margin-bottom:10px;">🌡️ Temperature Alert</h3>
+          <p>Alert triggers when skin temperature rises above <strong>99.5°F</strong> or falls below <strong>95.9°F</strong> — consistent with early fever or hypothermia risk indicators.</p>
+        </div>
+        <div class="info-card fade-in fade-in--delay-3" style="border-left:4px solid #4CAF50;">
+          <h3 style="font-size:1.1rem;margin-bottom:10px;">🤸 Inactivity Alert</h3>
+          <p>Alert triggers after <strong>20 consecutive seconds</strong> without detectable movement during a detected sleep period — prompting a visual check.</p>
+        </div>
+      </div>
+      <div class="disclaimer-box fade-in">
+        <div class="disclaimer-box__icon">⚠️</div>
+        <p>Alert thresholds are based on general pediatric guidelines and are for informational awareness only. Bundl is not a medical device. Always consult your pediatrician if you receive an alert or have any health concerns about your baby.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLEEP ANALYSIS -->
+  <section class="section section--cream" aria-labelledby="sleep-heading">
+    <div class="container">
+      <div class="grid-2">
+        <div class="fade-in">
+          <span class="eyebrow">Sleep Intelligence</span>
+          <h2 id="sleep-heading" style="margin-top:12px;">Understanding Your Baby's Sleep</h2>
+          <p style="margin:16px 0 24px;">By combining heart rate patterns with motion data, Bundl classifies your baby's sleep into three stages — giving you real insight into how your baby is actually resting.</p>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div class="differentiator" style="padding:18px 20px;">
+              <div class="differentiator__icon differentiator__icon--blue" style="font-size:1.3rem;">🌙</div>
+              <div class="differentiator__content"><h4>Deep Sleep</h4><p>Heart rate slows and motion is minimal. Critical for growth and brain development. Bundl tracks the duration and quality of each deep sleep period.</p></div>
+            </div>
+            <div class="differentiator" style="padding:18px 20px;">
+              <div class="differentiator__icon differentiator__icon--pink" style="font-size:1.3rem;">💤</div>
+              <div class="differentiator__content"><h4>Light Sleep</h4><p>Heart rate slightly elevated, occasional movement. Natural REM-adjacent phase. Normal transitions between stages are completely expected.</p></div>
+            </div>
+            <div class="differentiator" style="padding:18px 20px;">
+              <div class="differentiator__icon differentiator__icon--cream" style="font-size:1.3rem;">☀️</div>
+              <div class="differentiator__content"><h4>Awake Periods</h4><p>Higher heart rate and frequent motion. The app logs awake periods to help identify feeding windows, sleep readiness, and overtiredness signals.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in fade-in--delay-1">
+          <div class="info-card" style="height:100%;display:flex;flex-direction:column;justify-content:center;">
+            <h3 style="margin-bottom:20px;">Last Night's Sleep Summary</h3>
+            <div style="background:var(--cream);border-radius:var(--radius-md);padding:16px;margin-bottom:16px;">
+              <div style="font-size:0.8rem;font-weight:600;color:var(--text-muted);margin-bottom:8px;">11:00 PM — 7:42 AM</div>
+              <div style="display:flex;gap:2px;height:24px;border-radius:var(--radius-full);overflow:hidden;margin-bottom:10px;">
+                <div style="width:8%;background:var(--blue-light);"></div>
+                <div style="width:32%;background:#7ABDD4;"></div>
+                <div style="width:15%;background:var(--blue-light);"></div>
+                <div style="width:5%;background:var(--cream-dark);"></div>
+                <div style="width:28%;background:#7ABDD4;"></div>
+                <div style="width:12%;background:var(--blue-light);"></div>
+              </div>
+              <div style="display:flex;gap:16px;">
+                <div style="display:flex;align-items:center;gap:5px;font-size:0.75rem;color:var(--text-medium);"><div style="width:10px;height:10px;background:#7ABDD4;border-radius:2px;"></div>Deep</div>
+                <div style="display:flex;align-items:center;gap:5px;font-size:0.75rem;color:var(--text-medium);"><div style="width:10px;height:10px;background:var(--blue-light);border-radius:2px;"></div>Light</div>
+                <div style="display:flex;align-items:center;gap:5px;font-size:0.75rem;color:var(--text-medium);"><div style="width:10px;height:10px;background:var(--cream-dark);border-radius:2px;"></div>Awake</div>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+              <div style="text-align:center;background:var(--cream);border-radius:var(--radius-md);padding:14px 10px;"><div style="font-family:var(--font-heading);font-size:1.4rem;color:var(--brown);font-weight:700;">6h 42m</div><div style="font-size:0.72rem;color:var(--text-muted);margin-top:3px;">Total Sleep</div></div>
+              <div style="text-align:center;background:var(--blue-light);border-radius:var(--radius-md);padding:14px 10px;"><div style="font-family:var(--font-heading);font-size:1.4rem;color:var(--brown);font-weight:700;">3h 18m</div><div style="font-size:0.72rem;color:var(--text-muted);margin-top:3px;">Deep Sleep</div></div>
+              <div style="text-align:center;background:var(--pink-light);border-radius:var(--radius-md);padding:14px 10px;"><div style="font-family:var(--font-heading);font-size:1.4rem;color:var(--brown);font-weight:700;">3</div><div style="font-size:0.72rem;color:var(--text-muted);margin-top:3px;">Awake Periods</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATA SHARING -->
+  <section class="section section--white" aria-labelledby="sharing-heading">
+    <div class="container">
+      <div class="grid-2">
+        <div class="fade-in" style="display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;background:linear-gradient(135deg,var(--cream),var(--pink-light));border-radius:var(--radius-xl);padding:48px 40px;max-width:360px;width:100%;box-shadow:var(--shadow-md);">
+            <div style="display:flex;align-items:center;justify-content:center;gap:16px;font-size:2.5rem;margin-bottom:24px;">
+              <span>📱</span>
+              <div style="width:40px;height:2px;background:var(--brown-light);border-radius:2px;"></div>
+              <span>☁️</span>
+              <div style="width:40px;height:2px;background:var(--brown-light);border-radius:2px;"></div>
+              <span>🩺</span>
+            </div>
+            <h4 style="margin-bottom:10px;">Your data travels securely</h4>
+            <p style="font-size:0.88rem;color:var(--text-medium);">AES-256 encrypted at every step — from band to app to your care team.</p>
+            <div style="display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap;">
+              <span class="badge badge--green">Encrypted</span>
+              <span class="badge badge--blue">HIPAA-Ready</span>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in fade-in--delay-1">
+          <span class="eyebrow">Data Sharing</span>
+          <h2 id="sharing-heading" style="margin-top:12px;">Sharing Data With Your Care Team</h2>
+          <p style="margin:16px 0 24px;">With one tap, export a formatted health summary to share with your pediatrician via email or a secure app link. More data means more informed care.</p>
+          <ul class="tech-list">
+            <li><span class="tech-icon">🔐</span><div>AES-256 end-to-end encrypted data transmission</div></li>
+            <li><span class="tech-icon">📋</span><div>Formatted reports compatible with pediatric review workflows</div></li>
+            <li><span class="tech-icon">📅</span><div>Historical data export: daily, weekly, or monthly</div></li>
+            <li><span class="tech-icon">🏥</span><div>HIPAA-ready framework (future clinical compliance)</div></li>
+            <li><span class="tech-icon">🩺</span><div>Supported by pediatric professionals during development</div></li>
+            <li><span class="tech-icon">👨‍👩‍👧</span><div>Multi-child profiles — manage every little one in one place</div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="section section--cream" id="faq" aria-labelledby="faq-hiw-heading">
+    <div class="container container--sm">
+      <div class="section-header fade-in">
+        <span class="eyebrow">Questions</span>
+        <h2 id="faq-hiw-heading">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list fade-in">
+        <div class="faq-item"><button class="faq-question">Does Bundl require WiFi? <span class="faq-chevron">▾</span></button><div class="faq-answer"><div class="faq-answer-inner">Bundl uses Bluetooth Low Energy to connect to your phone. Live monitoring works over Bluetooth only, within typical 30+ foot range. Cloud syncing for data storage and data sharing requires an internet connection.</div></div></div>
+        <div class="faq-item"><button class="faq-question">How accurate is the SpO2 sensor? <span class="faq-chevron">▾</span></button><div class="faq-answer"><div class="faq-answer-inner">Bundl's PPG sensor provides continuous SpO2 readings accurate to within ±2% under normal conditions. Factors like excessive movement, cold extremities, or poor skin contact can affect readings. Results are wellness trend indicators, not clinical diagnostics.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Can I use Bundl with twins? <span class="faq-chevron">▾</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes. The Bundl app supports multiple child profiles. Each Bundl device pairs to an individual child's profile, and you can switch between dashboards with a single tap from the app home screen.</div></div></div>
+        <div class="faq-item"><button class="faq-question">What happens if my phone is on silent? <span class="faq-chevron">▾</span></button><div class="faq-answer"><div class="faq-answer-inner">Even with your phone on silent, Bundl alerts can bypass Do Not Disturb for designated critical notifications (where permitted by your phone's OS settings). We strongly recommend categorizing Bundl alerts as critical or emergency notifications in your device settings.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Is my baby's health data private? <span class="faq-chevron">▾</span></button><div class="faq-answer"><div class="faq-answer-inner">Absolutely. All data is encrypted with AES-256 before transmission and stored securely in the cloud. We never sell, share, or use personal health data for advertising purposes. See our Privacy Policy for complete details.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--white" aria-label="Call to action">
+    <div class="container">
+      <div class="newsletter-block fade-in">
+        <span class="eyebrow">Ready to Monitor</span>
+        <h2 style="margin-top:12px;">Ready to Monitor with Confidence?</h2>
+        <p>Join thousands of families who sleep better knowing Bundl is watching.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+          <a href="product.html" class="btn btn--primary btn--lg">Shop Bundl</a>
+          </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" aria-label="Bundl Home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" aria-hidden="true">
+            <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
+            <circle cx="335" cy="48" r="7" fill="#7B5028"/>
+            <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
+            <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
+            <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
+            <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
+          </svg></a>
+        <p>Smart wearable baby-monitoring ankle band. Tracks vitals, sends alerts, and shares insights.</p>
+        <div class="footer__social"><a href="https://www.instagram.com/bundl_official_" class="footer__social-link" aria-label="Instagram">📷</a><a href="#" class="footer__social-link" aria-label="Facebook">f</a><a href="#" class="footer__social-link" aria-label="LinkedIn">in</a></div>
+      </div>
+      <div class="footer__col"><h5>Product</h5><ul><li><a href="product.html">Shop Bundl</a></li><li><a href="how-it-works.html">How It Works</a></li><li><a href="product.html">Specifications</a></li><li><a href="product.html">FAQ</a></li></ul></div>
+      <div class="footer__col"><h5>Learn</h5><ul><li><a href="sids-safety.html">SIDS &amp; Baby Safety</a></li><li><a href="education.html">Baby Care Education</a></li><li><a href="healthcare.html">For Providers</a></li><li></li></ul></div>
+      <div class="footer__col"><h5>Company</h5><ul><li></li></ul></div>
+      <div class="footer__col"><h5>Support</h5><ul><li><a href="support.html">Help Center</a></li><li><a href="support.html">Contact Us</a></li><li><a href="support.html">Returns</a></li><li><a href="support.html">App Support</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><p>© 2025 Bundl. All rights reserved.</p><div class="footer__legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Medical Disclaimer</a><a href="#">Refund Policy</a></div></div>
+    <div class="footer__disclaimer"><p>Bundl is a wellness monitoring device, not a medical device. Not intended to diagnose, treat, cure, or prevent any medical condition. Always consult your pediatrician for health concerns.</p></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

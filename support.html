@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support &amp; Help Center — Bundl</title>
+  <meta name="description" content="Get help with your Bundl smart ankle band. Browse FAQs, troubleshooting guides, setup instructions, warranty info, and contact our support team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── Support page styles ── */
+    .support-hero {
+      background:
+        linear-gradient(rgba(254,252,232,0.86) 0%, rgba(214,239,247,0.82) 100%),
+        url('../images/lifestyle-babies.png') center / cover no-repeat;
+      padding: 90px 0 60px;
+      text-align: center;
+    }
+    .support-hero h1 { font-size: clamp(1.8rem,4vw,2.8rem); color: #5C3318; margin-bottom: .8rem; }
+    .support-hero p { max-width: 540px; margin: 0 auto 2rem; color: #6b5c50; font-size: 1rem; line-height: 1.7; }
+    .support-search {
+      display: flex;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .support-search input {
+      flex: 1;
+      padding: .9rem 1.3rem;
+      border: 2px solid #e8d5cb;
+      border-right: none;
+      border-radius: 12px 0 0 12px;
+      font-size: .95rem;
+      outline: none;
+      background: #fff;
+    }
+    .support-search input:focus { border-color: #A8D5E2; }
+    .support-search button {
+      padding: .9rem 1.6rem;
+      background: #5C3318;
+      color: #fff;
+      border: none;
+      border-radius: 0 12px 12px 0;
+      cursor: pointer;
+      font-size: .95rem;
+      font-weight: 600;
+    }
+
+    /* Quick links */
+    .support-quicklinks {
+      background: #fff;
+      border-bottom: 1px solid #f0e8e0;
+      padding: 1.2rem 0;
+      position: sticky;
+      top: 70px;
+      z-index: 90;
+    }
+    .support-quicklinks__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      gap: .8rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .support-quicklinks a {
+      font-size: .82rem;
+      color: #5C3318;
+      text-decoration: none;
+      padding: .35em .9em;
+      border-radius: 99px;
+      background: #fefce8;
+      border: 1px solid #e8d5cb;
+      white-space: nowrap;
+      transition: all .2s;
+    }
+    .support-quicklinks a:hover { background: #5C3318; color: #fff; border-color: #5C3318; }
+
+    /* Sections */
+    .support-section {
+      padding: 64px 0;
+    }
+    .support-section--alt { background: #fefce8; }
+    .support-section__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .support-section__header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 2.5rem;
+    }
+    .support-section__header h2 { color: #5C3318; font-size: clamp(1.4rem,2.5vw,1.9rem); margin-bottom: .5rem; }
+    .support-section__header p { color: #6b5c50; font-size: .9rem; line-height: 1.7; }
+
+    /* Support card grid */
+    .support-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+    }
+    .support-card {
+      background: #fff;
+      border: 1px solid #f0e8e0;
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color .2s, transform .2s;
+    }
+    .support-card:hover { border-color: #A8D5E2; transform: translateY(-3px); }
+    .support-card__icon { font-size: 2rem; display: block; margin-bottom: .8rem; }
+    .support-card h4 { color: #5C3318; font-size: .95rem; margin-bottom: .3rem; }
+    .support-card p { color: #7a6a60; font-size: .82rem; line-height: 1.5; margin: 0; }
+
+    /* Setup steps */
+    .setup-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .setup-step {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      border: 1px solid #f0e8e0;
+      position: relative;
+    }
+    .setup-step__num {
+      width: 40px;
+      height: 40px;
+      background: #5C3318;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .setup-step h4 { color: #5C3318; font-size: .95rem; margin-bottom: .4rem; }
+    .setup-step p { color: #6b5c50; font-size: .84rem; line-height: 1.6; margin: 0; }
+    .setup-step__detail {
+      margin-top: .8rem;
+      padding: .6rem .8rem;
+      background: #d6eff7;
+      border-radius: 8px;
+      font-size: .78rem;
+      color: #2a5a70;
+    }
+
+    /* FAQ section */
+    .faq-categories {
+      display: flex;
+      gap: .6rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .faq-cat-btn {
+      padding: .4em 1em;
+      border-radius: 99px;
+      border: 2px solid #e8d5cb;
+      background: #fff;
+      color: #5C3318;
+      font-size: .82rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .faq-cat-btn.active,
+    .faq-cat-btn:hover { border-color: #5C3318; background: #5C3318; color: #fff; }
+
+    /* Troubleshooting */
+    .troubleshoot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    .troubleshoot-card {
+      background: #fff;
+      border-radius: 14px;
+      border: 1px solid #f0e8e0;
+      overflow: hidden;
+    }
+    .troubleshoot-card__header {
+      background: #fefce8;
+      padding: .9rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+    .troubleshoot-card__header__icon { font-size: 1.1rem; }
+    .troubleshoot-card__header h4 { font-size: .9rem; color: #5C3318; margin: 0; }
+    .troubleshoot-card__body { padding: 1rem 1.2rem; }
+    .troubleshoot-card__body ol {
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+    .troubleshoot-card__body ol li {
+      font-size: .84rem;
+      color: #5a4a40;
+      padding: .25rem 0;
+      line-height: 1.5;
+    }
+
+    /* App tips */
+    .app-tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+    }
+    .app-tip-card {
+      background: linear-gradient(135deg, #d6eff7, #fad9e8);
+      border-radius: 14px;
+      padding: 1.4rem;
+    }
+    .app-tip-card__icon { font-size: 1.6rem; margin-bottom: .6rem; }
+    .app-tip-card h4 { font-size: .9rem; color: #5C3318; margin-bottom: .4rem; }
+    .app-tip-card p { font-size: .82rem; color: #4a3a30; line-height: 1.6; margin: 0; }
+
+    /* Warranty */
+    .warranty-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .warranty-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 2rem;
+      border: 2px solid #A8D5E2;
+    }
+    .warranty-box h4 { color: #5C3318; font-size: 1rem; margin-bottom: 1rem; }
+    .warranty-row {
+      display: flex;
+      justify-content: space-between;
+      padding: .6rem 0;
+      border-bottom: 1px solid #f0e8e0;
+      font-size: .88rem;
+    }
+    .warranty-row:last-child { border-bottom: none; }
+    .warranty-row__label { color: #7a6a60; }
+    .warranty-row__value { font-weight: 600; color: #5C3318; }
+    .returns-box {
+      background: #fefce8;
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid #e8d5cb;
+    }
+    .returns-box h4 { color: #5C3318; font-size: 1rem; margin-bottom: 1rem; }
+    .returns-box p { font-size: .88rem; color: #5a4a40; line-height: 1.7; margin-bottom: .8rem; }
+    .returns-box p:last-child { margin-bottom: 0; }
+
+    /* Contact form */
+    .contact-form-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .contact-info h3 { color: #5C3318; font-size: 1.3rem; margin-bottom: 1.2rem; }
+    .contact-method {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    .contact-method__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .contact-method__icon--email { background: #d6eff7; }
+    .contact-method__icon--chat { background: #fad9e8; }
+    .contact-method__icon--response { background: #fefce8; }
+    .contact-method h5 { color: #5C3318; font-size: .9rem; margin-bottom: .2rem; }
+    .contact-method p { color: #7a6a60; font-size: .84rem; line-height: 1.5; margin: 0; }
+    .contact-form-box {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid #f0e8e0;
+      box-shadow: 0 4px 24px rgba(92,51,24,.07);
+    }
+    .contact-form-box h4 { color: #5C3318; font-size: 1.1rem; margin-bottom: 1.5rem; }
+    .form-field { display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1rem; }
+    .form-field label { font-size: .82rem; font-weight: 600; color: #5C3318; }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      padding: .75rem 1rem;
+      border: 2px solid #e8d5cb;
+      border-radius: 10px;
+      font-size: .88rem;
+      outline: none;
+      font-family: inherit;
+      color: #3a2a20;
+      background: #fff;
+      transition: border-color .2s;
+    }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus { border-color: #A8D5E2; }
+    .form-field textarea { resize: vertical; min-height: 110px; }
+
+    /* Status indicator */
+    .status-banner {
+      background: #e8f5e9;
+      border: 1px solid #4CAF50;
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .status-banner__dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #4CAF50;
+      flex-shrink: 0;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .4; }
+    }
+    .status-banner h5 { font-size: .9rem; color: #2e7d32; margin: 0 0 .1rem; }
+    .status-banner p { font-size: .8rem; color: #4a7a50; margin: 0; }
+
+    @media (max-width: 768px) {
+      .troubleshoot-grid { grid-template-columns: 1fr; }
+      .warranty-layout { grid-template-columns: 1fr; }
+      .contact-form-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo" aria-label="Bundl Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" aria-hidden="true">
+        <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
+        <circle cx="335" cy="48" r="7" fill="#7B5028"/>
+        <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
+        <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
+        <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
+        <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
+      </svg>
+    </a>
+    <nav class="header__nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="product.html">Shop</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="sids-safety.html">SIDS &amp; Safety</a>
+      <a href="education.html">Baby Care</a>
+      <a href="healthcare.html">For Providers</a>
+      <a href="support.html" class="active">Support</a>
+    </nav>
+    <div class="header__actions">
+      <a href="product.html" class="btn btn--primary btn--sm">Shop Now</a>
+      <button class="header__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="product.html">Shop</a>
+  <a href="how-it-works.html">How It Works</a>
+  <a href="sids-safety.html">SIDS &amp; Safety</a>
+  <a href="education.html">Baby Care</a>
+  <a href="healthcare.html">For Providers</a>
+  <a href="support.html">Support</a>
+</nav>
+
+<!-- Hero -->
+<section class="support-hero">
+  <div class="container">
+    <h1>How Can We Help?</h1>
+    <p>Quick answers, setup guides, and a direct line to our team.</p>
+    <form class="support-search" role="search" onsubmit="return false;">
+      <input type="search" placeholder="Search (e.g. 'band not connecting')" aria-label="Search help articles" />
+      <button type="submit" aria-label="Search">🔍</button>
+    </form>
+  </div>
+</section>
+
+<!-- Quick links -->
+<div class="support-quicklinks">
+  <div class="support-quicklinks__inner">
+    <a href="#getting-started">Getting Started</a>
+    <a href="#faq">FAQ</a>
+    <a href="#troubleshooting">Troubleshooting</a>
+    <a href="#app-tips">App Tips</a>
+    <a href="#warranty">Warranty &amp; Returns</a>
+    <a href="#contact">Contact Us</a>
+  </div>
+</div>
+
+<!-- Topic cards -->
+<section class="support-section">
+  <div class="support-section__inner">
+    <div class="support-cards fade-in">
+      <a href="#getting-started" class="support-card">
+        <span class="support-card__icon">📦</span>
+        <h4>Getting Started</h4>
+        <p>Unboxing, first charge, pairing &amp; app setup</p>
+      </a>
+      <a href="#faq" class="support-card">
+        <span class="support-card__icon">❓</span>
+        <h4>FAQ</h4>
+        <p>Common questions about Bundl answered</p>
+      </a>
+      <a href="#troubleshooting" class="support-card">
+        <span class="support-card__icon">🔧</span>
+        <h4>Troubleshooting</h4>
+        <p>Fix connectivity, readings &amp; alert issues</p>
+      </a>
+      <a href="#app-tips" class="support-card">
+        <span class="support-card__icon">📱</span>
+        <h4>App Tips</h4>
+        <p>Get the most from the Bundl companion app</p>
+      </a>
+      <a href="#warranty" class="support-card">
+        <span class="support-card__icon">🛡️</span>
+        <h4>Warranty &amp; Returns</h4>
+        <p>12-month warranty, returns &amp; replacement bands</p>
+      </a>
+      <a href="#contact" class="support-card">
+        <span class="support-card__icon">💬</span>
+        <h4>Contact Us</h4>
+        <p>Reach our team — response within 24 hours</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Getting Started -->
+<section class="support-section support-section--alt" id="getting-started">
+  <div class="support-section__inner">
+    <div class="support-section__header fade-in">
+      <h2>Getting Started with Bundl</h2>
+      <p>From box to monitoring in under 10 minutes.</p>
+    </div>
+    <div class="setup-steps">
+      <div class="setup-step fade-in">
+        <div class="setup-step__num">1</div>
+        <h4>Charge Your Band</h4>
+        <p>Connect the magnetic cable. Full charge takes ~90 minutes.</p>
+        <div class="setup-step__detail">💡 Amber = charging · Green = full</div>
+      </div>
+      <div class="setup-step fade-in">
+        <div class="setup-step__num">2</div>
+        <h4>Download the App</h4>
+        <p>Search "Bundl Baby" on App Store or Google Play. Free. iOS 14+ / Android 9+.</p>
+        <div class="setup-step__detail">💡 Data is encrypted from first use</div>
+      </div>
+      <div class="setup-step fade-in">
+        <div class="setup-step__num">3</div>
+        <h4>Pair via Bluetooth</h4>
+        <p>Open app → tap "Add Device" → hold band near phone → tap to pair.</p>
+        <div class="setup-step__detail">💡 Stay within 1m during first pairing</div>
+      </div>
+      <div class="setup-step fade-in">
+        <div class="setup-step__num">4</div>
+        <h4>Set Up Baby's Profile</h4>
+        <p>Enter date of birth, weight, and gestational age. Calibrates alert thresholds automatically.</p>
+        <div class="setup-step__detail">💡 Editable anytime in app settings</div>
+      </div>
+      <div class="setup-step fade-in">
+        <div class="setup-step__num">5</div>
+        <h4>Fit the Band</h4>
+        <p>Sensor on inner ankle. Velcro snug — one finger should slide underneath.</p>
+        <div class="setup-step__detail">💡 Never tight. Check skin daily.</div>
+      </div>
+      <div class="setup-step fade-in">
+        <div class="setup-step__num">6</div>
+        <h4>Configure Alerts</h4>
+        <p>Review thresholds and enable push notifications. Consult your pediatrician before adjusting defaults.</p>
+        <div class="setup-step__detail">💡 Defaults follow pediatric guidelines</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="support-section" id="faq">
+  <div class="support-section__inner">
+    <div class="support-section__header fade-in">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-categories fade-in">
+      <button class="faq-cat-btn active">All</button>
+      <button class="faq-cat-btn">Band &amp; Fit</button>
+      <button class="faq-cat-btn">Sensors &amp; Readings</button>
+      <button class="faq-cat-btn">App &amp; Connectivity</button>
+      <button class="faq-cat-btn">Safety</button>
+      <button class="faq-cat-btn">Battery &amp; Charging</button>
+    </div>
+
+    <div class="faq-list fade-in">
+
+      <div class="faq-item">
+        <button class="faq-question">What age range is Bundl suitable for? <span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Newborn through 18 months. Three sizes: Newborn (0–3m), Infant (3–12m), Toddler (12–18m). Replacement bands available separately.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Is Bundl safe to wear all night? <span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Yes. GOTS-certified materials, low-power BLE, no radiation. Check fit is snug (not tight) and inspect skin daily.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How accurate are the vital sign readings? <span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Medical-grade PPG, NTC thermistor, and accelerometer. Designed for wellness trend monitoring — not clinical diagnosis. Always verify unusual readings with your pediatrician.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What's the Bluetooth range? <span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Up to 30m (100ft) in open conditions. Data stores locally when out of range and syncs on reconnect.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How long does the battery last? <span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>24–36 hours continuous monitoring, 72 hours standby. App alerts at 20%. Charge daily or every other day.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can Bundl get wet? <span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>IPX3 splash resistant — fine for nappy changes and minor spills. Not waterproof. Remove before baths. Band fabric can be hand-washed without the sensor.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Will Bundl prevent SIDS? <span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>No. Bundl is a wellness monitor — it does not prevent, diagnose, or treat any condition. See our <a href="sids-safety.html" style="color:#5C3318;font-weight:600;">SIDS &amp; Safety page</a> for guidance.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Is my baby's data private and secure? <span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>AES-256 encrypted in transit and at rest. We never sell your data. Delete your account and all data anytime from app settings.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How many caregivers can access the app? <span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Up to 5 caregivers via shared login or email invite. All see the same live data and receive the same alerts.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What is included in the box? <span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Sensor module, band, magnetic charging cable, quick start guide, safety card, and one replacement band. More accessories on the <a href="product.html" style="color:#5C3318;font-weight:600;">Shop page</a>.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Troubleshooting -->
+<section class="support-section support-section--alt" id="troubleshooting">
+  <div class="support-section__inner">
+    <div class="support-section__header fade-in">
+      <h2>Troubleshooting</h2>
+      <p>Most issues can be resolved in under 2 minutes. Try these steps first.</p>
+    </div>
+    <div class="troubleshoot-grid">
+      <div class="troubleshoot-card fade-in">
+        <div class="troubleshoot-card__header">
+          <span class="troubleshoot-card__header__icon">📡</span>
+          <h4>Band Won't Connect to App</h4>
+        </div>
+        <div class="troubleshoot-card__body">
+          <ol>
+            <li>Ensure Bluetooth is enabled on your phone</li>
+            <li>Close and reopen the Bundl app</li>
+            <li>Move phone within 1 metre of the band</li>
+            <li>Press and hold the band's button for 3 seconds to restart it</li>
+            <li>In app settings, tap "Forget Device" then re-pair</li>
+            <li>If still failing, restart your phone and try again</li>
+          </ol>
+        </div>
+      </div>
+      <div class="troubleshoot-card fade-in">
+        <div class="troubleshoot-card__header">
+          <span class="troubleshoot-card__header__icon">💓</span>
+          <h4>Heart Rate Reading Seems Wrong</h4>
+        </div>
+        <div class="troubleshoot-card__body">
+          <ol>
+            <li>Check band fit — sensor must be on inner ankle, snug not tight</li>
+            <li>Ensure baby is calm and relatively still during reading</li>
+            <li>Clean the sensor window with a soft dry cloth</li>
+            <li>Outlier readings during movement are normal — check trend averages</li>
+            <li>Persistent unusual readings: consult your pediatrician</li>
+          </ol>
+        </div>
+      </div>
+      <div class="troubleshoot-card fade-in">
+        <div class="troubleshoot-card__header">
+          <span class="troubleshoot-card__header__icon">🔋</span>
+          <h4>Battery Draining Too Fast</h4>
+        </div>
+        <div class="troubleshoot-card__body">
+          <ol>
+            <li>Check that the band is not too far from phone (range exceeding 10m reduces efficiency)</li>
+            <li>Reduce app sync frequency in Settings → Band → Sync Rate</li>
+            <li>Ensure no other Bluetooth devices are competing for connection</li>
+            <li>If battery life is consistently under 18 hours, contact support for a replacement check</li>
+          </ol>
+        </div>
+      </div>
+      <div class="troubleshoot-card fade-in">
+        <div class="troubleshoot-card__header">
+          <span class="troubleshoot-card__header__icon">🔔</span>
+          <h4>Not Receiving Alerts</h4>
+        </div>
+        <div class="troubleshoot-card__body">
+          <ol>
+            <li>Check phone notifications are enabled for the Bundl app</li>
+            <li>Ensure Do Not Disturb does not block Bundl (add to "Allow" list)</li>
+            <li>Verify alert thresholds are configured in app Settings → Alerts</li>
+            <li>Check band is connected — alerts only fire when connected</li>
+            <li>On iOS: check that Background App Refresh is enabled for Bundl</li>
+          </ol>
+        </div>
+      </div>
+      <div class="troubleshoot-card fade-in">
+        <div class="troubleshoot-card__header">
+          <span class="troubleshoot-card__header__icon">🌡️</span>
+          <h4>Temperature Reading Looks High</h4>
+        </div>
+        <div class="troubleshoot-card__body">
+          <ol>
+            <li>Skin temperature is typically 0.5–1°C lower than core body temperature</li>
+            <li>Check room temperature — warm rooms raise skin readings</li>
+            <li>Ensure band isn't covered by blanket (insulation causes elevation)</li>
+            <li>Check baby for signs of overheating: sweaty neck, flushed cheeks</li>
+            <li>If core temperature concern: use an accurate rectal or axillary thermometer</li>
+          </ol>
+        </div>
+      </div>
+      <div class="troubleshoot-card fade-in">
+        <div class="troubleshoot-card__header">
+          <span class="troubleshoot-card__header__icon">📱</span>
+          <h4>App Crashing or Freezing</h4>
+        </div>
+        <div class="troubleshoot-card__body">
+          <ol>
+            <li>Force-close the app and reopen it</li>
+            <li>Check for and install app updates from App Store / Play Store</li>
+            <li>Restart your phone</li>
+            <li>If crashing persists: uninstall, reinstall — your data is saved to cloud</li>
+            <li>Ensure your OS is updated to at least iOS 14 or Android 9</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- App tips -->
+<section class="support-section" id="app-tips">
+  <div class="support-section__inner">
+    <div class="support-section__header fade-in">
+      <h2>Getting the Most from the App</h2>
+      <p>Tips to help you use Bundl's data more effectively.</p>
+    </div>
+    <div class="app-tips-grid">
+      <div class="app-tip-card fade-in">
+        <div class="app-tip-card__icon">📊</div>
+        <h4>Read Trends, Not Single Points</h4>
+        <p>Use the 7 or 30-day view for a true picture of your baby's baseline.</p>
+      </div>
+      <div class="app-tip-card fade-in">
+        <div class="app-tip-card__icon">🩺</div>
+        <h4>Export Before Appointments</h4>
+        <p>Settings → Export Report. Share a 4–8 week PDF with your pediatrician.</p>
+      </div>
+      <div class="app-tip-card fade-in">
+        <div class="app-tip-card__icon">👥</div>
+        <h4>Add All Caregivers</h4>
+        <p>Invite via Settings → Family Sharing. Up to 5 people, all on the same feed.</p>
+      </div>
+      <div class="app-tip-card fade-in">
+        <div class="app-tip-card__icon">🔔</div>
+        <h4>Tune Alerts with Your Pediatrician</h4>
+        <p>Defaults follow general guidelines — adjust with your doctor, especially for premature infants.</p>
+      </div>
+      <div class="app-tip-card fade-in">
+        <div class="app-tip-card__icon">😴</div>
+        <h4>Use Sleep Insights for Scheduling</h4>
+        <p>The sleep timeline shows natural cycle length — use it to time naps confidently.</p>
+      </div>
+      <div class="app-tip-card fade-in">
+        <div class="app-tip-card__icon">📝</div>
+        <h4>Log Notes Alongside Data</h4>
+        <p>Journal feeds, illnesses, and milestones. Correlate events with vitals over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Warranty & Returns -->
+<section class="support-section support-section--alt" id="warranty">
+  <div class="support-section__inner">
+    <div class="support-section__header fade-in">
+      <h2>Warranty &amp; Returns</h2>
+    </div>
+    <div class="warranty-layout fade-in">
+      <div class="warranty-box">
+        <h4>🛡️ 12-Month Warranty</h4>
+        <div class="warranty-row">
+          <span class="warranty-row__label">Coverage period</span>
+          <span class="warranty-row__value">12 months from purchase</span>
+        </div>
+        <div class="warranty-row">
+          <span class="warranty-row__label">Covers</span>
+          <span class="warranty-row__value">Manufacturing defects</span>
+        </div>
+        <div class="warranty-row">
+          <span class="warranty-row__label">Sensor module</span>
+          <span class="warranty-row__value">Full replacement</span>
+        </div>
+        <div class="warranty-row">
+          <span class="warranty-row__label">Bands (wear)</span>
+          <span class="warranty-row__value">Normal wear excluded</span>
+        </div>
+        <div class="warranty-row">
+          <span class="warranty-row__label">Water damage</span>
+          <span class="warranty-row__value">Not covered (IPX3 splash only)</span>
+        </div>
+        <div class="warranty-row">
+          <span class="warranty-row__label">Process</span>
+          <span class="warranty-row__value">Contact support with receipt</span>
+        </div>
+        <p style="font-size:.8rem;color:#7a6a60;margin-top:1rem;">Contact support with your order number. We arrange free return shipping.</p>
+      </div>
+      <div class="returns-box">
+        <h4>↩️ Returns Policy</h4>
+        <p><strong>30-day returns</strong> — full refund, original packaging required.</p>
+        <p><strong>Used bands</strong> cannot be returned for hygiene reasons.</p>
+        <p><strong>How to return</strong> — email support with your order number. Prepaid label provided. Refund within 5–7 business days.</p>
+        <p><strong>Size exchange</strong> — trade up to the next size at 30% off. Contact support to arrange.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact -->
+<section class="support-section" id="contact">
+  <div class="support-section__inner">
+    <div class="support-section__header fade-in">
+      <h2>Contact Us</h2>
+      <p>Real humans. We respond within 24 hours on business days.</p>
+    </div>
+
+    <div class="status-banner fade-in">
+      <div class="status-banner__dot"></div>
+      <div>
+        <h5>All Systems Operational</h5>
+        <p>Servers, app, and data sync running normally.</p>
+      </div>
+    </div>
+
+    <div class="contact-form-layout">
+      <div class="contact-info fade-in">
+        <div class="contact-method">
+          <div class="contact-method__icon contact-method__icon--email">📧</div>
+          <div>
+            <h5>Email</h5>
+            <p>support@bundl.com · Mon–Fri, 24hr response</p>
+          </div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method__icon contact-method__icon--chat">💬</div>
+          <div>
+            <h5>Live Chat</h5>
+            <p>In-app · Mon–Fri, 9 AM – 6 PM EST</p>
+          </div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method__icon contact-method__icon--response">⚡</div>
+          <div>
+            <h5>Emergency</h5>
+            <p>Call 911 immediately for any urgent medical concern.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-box fade-in">
+        <h4>Send Us a Message</h4>
+        <form class="contact-form" novalidate>
+          <div class="form-field">
+            <label for="contact-name">Your Name *</label>
+            <input type="text" id="contact-name" placeholder="First &amp; last name" required />
+          </div>
+          <div class="form-field">
+            <label for="contact-email">Email Address *</label>
+            <input type="email" id="contact-email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-field">
+            <label for="contact-order">Order Number (if applicable)</label>
+            <input type="text" id="contact-order" placeholder="BDL-XXXXXX" />
+          </div>
+          <div class="form-field">
+            <label for="contact-topic">Topic *</label>
+            <select id="contact-topic" required>
+              <option value="">Select a topic…</option>
+              <option>Setup &amp; Getting Started</option>
+              <option>Band Fit &amp; Comfort</option>
+              <option>Connectivity Issues</option>
+              <option>Sensor Readings</option>
+              <option>App &amp; Software</option>
+              <option>Battery &amp; Charging</option>
+              <option>Alerts &amp; Notifications</option>
+              <option>Warranty Claim</option>
+              <option>Returns &amp; Exchanges</option>
+              <option>Order &amp; Shipping</option>
+              <option>Healthcare Provider Inquiry</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="contact-message">Message *</label>
+            <textarea id="contact-message" placeholder="Describe your issue. Include baby's age and steps already tried." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;">Send Message</button>
+          <p style="font-size:.76rem;color:#9a8a80;text-align:center;margin-top:.8rem;">24hr response · Urgent safety concerns: call 911</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter-block">
+  <div class="container">
+    <div class="newsletter-block__inner fade-in">
+      <h2>Stay Up to Date</h2>
+      <p>Get notified about firmware updates, new features, and important product announcements.</p>
+      <form class="newsletter-form" novalidate>
+        <input type="email" placeholder="Your email address" autocomplete="email" required />
+        <button type="submit" class="btn btn--primary">Subscribe</button>
+      </form>
+      <p style="font-size:.78rem;margin-top:.8rem;opacity:.65;">No spam, ever. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Bundl Home">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" aria-hidden="true">
+            <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
+            <circle cx="335" cy="48" r="7" fill="#7B5028"/>
+            <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
+            <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
+            <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
+            <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
+          </svg>
+        </a>
+        <p>For Your Bundl of Joy</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h5>Product</h5>
+          <a href="product.html">Shop Bundl</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="product.html#specs">Specifications</a>
+        </div>
+        <div class="footer__col">
+          <h5>Learn</h5>
+          <a href="sids-safety.html">SIDS &amp; Safety</a>
+          <a href="education.html">Baby Care</a>
+          </div>
+        <div class="footer__col">
+          <h5>Company</h5>
+          <a href="healthcare.html">For Providers</a>
+          <a href="support.html">Support</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 Bundl. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Medical Disclaimer</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

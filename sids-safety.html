@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIDS &amp; Baby Safety — Understanding &amp; Prevention | Bundl</title>
+  <meta name="description" content="Comprehensive SIDS education and safe sleep guidelines. Learn how to reduce risk, create a safe sleep environment, and how Bundl monitoring supports informed parenting." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── Page-specific styles ── */
+    .sids-hero {
+      background:
+        linear-gradient(rgba(254,252,232,0.86) 0%, rgba(214,239,247,0.80) 50%, rgba(250,217,232,0.82) 100%),
+        url('../images/lifestyle-mother-baby.png') center / cover no-repeat;
+      padding: 100px 0 72px;
+      text-align: center;
+    }
+    .sids-hero__badge {
+      display: inline-block;
+      background: #fff;
+      color: #5C3318;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .35em .9em;
+      border-radius: 99px;
+      margin-bottom: 1.2rem;
+    }
+    .sids-hero h1 { font-size: clamp(2rem,4vw,3rem); color: #5C3318; margin-bottom: 1rem; }
+    .sids-hero p { max-width: 640px; margin: 0 auto 2rem; color: #6b5c50; font-size: 1.1rem; line-height: 1.7; }
+    .sids-hero__disclaimer {
+      display: inline-block;
+      background: rgba(255,255,255,.7);
+      border: 1px solid #e8d5cb;
+      border-radius: 10px;
+      padding: .8rem 1.4rem;
+      font-size: .82rem;
+      color: #7a6a60;
+      max-width: 600px;
+    }
+
+    /* Quick Nav */
+    .sids-quicknav {
+      background: #fff;
+      border-bottom: 1px solid #f0e8e0;
+      padding: 1rem 0;
+      position: sticky;
+      top: 70px;
+      z-index: 90;
+    }
+    .sids-quicknav__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .sids-quicknav__label {
+      font-size: .78rem;
+      font-weight: 600;
+      color: #5C3318;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      white-space: nowrap;
+    }
+    .sids-quicknav a {
+      font-size: .82rem;
+      color: #5C3318;
+      text-decoration: none;
+      padding: .3em .8em;
+      border-radius: 99px;
+      background: #fefce8;
+      white-space: nowrap;
+      transition: background .2s;
+    }
+    .sids-quicknav a:hover { background: #A8D5E2; }
+
+    /* Stat boxes */
+    .sids-stats {
+      background: #5C3318;
+      padding: 56px 0;
+    }
+    .sids-stats__grid {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+    .sids-stat__number {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #F2B5C8;
+      line-height: 1;
+      margin-bottom: .3rem;
+    }
+    .sids-stat__label {
+      font-size: .85rem;
+      color: rgba(255,255,255,.8);
+      line-height: 1.4;
+    }
+
+    /* Sections */
+    .sids-section {
+      padding: 72px 0;
+    }
+    .sids-section--alt { background: #fefce8; }
+    .sids-section__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .sids-section__header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3rem;
+    }
+    .sids-section__header h2 { color: #5C3318; font-size: clamp(1.6rem,3vw,2.2rem); margin-bottom: .8rem; }
+    .sids-section__header p { color: #6b5c50; line-height: 1.7; }
+
+    /* What is SIDS */
+    .sids-explainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .sids-explainer__text h3 { color: #5C3318; font-size: 1.4rem; margin-bottom: 1rem; }
+    .sids-explainer__text p { color: #5a4a40; line-height: 1.8; margin-bottom: 1rem; }
+    .sids-info-box {
+      background: #d6eff7;
+      border-radius: 16px;
+      padding: 2rem;
+    }
+    .sids-info-box h4 { color: #5C3318; margin-bottom: 1rem; font-size: 1rem; }
+    .sids-info-box ul { list-style: none; padding: 0; margin: 0; }
+    .sids-info-box ul li {
+      display: flex;
+      gap: .7rem;
+      align-items: flex-start;
+      padding: .5rem 0;
+      border-bottom: 1px solid rgba(92,51,24,.1);
+      font-size: .9rem;
+      color: #4a3a30;
+      line-height: 1.5;
+    }
+    .sids-info-box ul li:last-child { border-bottom: none; }
+    .sids-info-box ul li::before { content: "•"; color: #A8D5E2; font-size: 1.2rem; flex-shrink: 0; margin-top: -.1rem; }
+
+    /* Risk Factors */
+    .risk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .risk-card {
+      background: #fff;
+      border: 1px solid #f0e8e0;
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .risk-card__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .risk-card__icon--age { background: #fad9e8; }
+    .risk-card__icon--sleep { background: #d6eff7; }
+    .risk-card__icon--smoke { background: #fefce8; }
+    .risk-card__icon--heat { background: #ffe4cc; }
+    .risk-card__icon--prenatal { background: #e8f5e9; }
+    .risk-card__icon--bed { background: #f3e5f5; }
+    .risk-card h4 { color: #5C3318; font-size: 1rem; margin-bottom: .5rem; }
+    .risk-card p { color: #6b5c50; font-size: .88rem; line-height: 1.6; margin: 0; }
+
+    /* Safe Sleep Guidelines */
+    .safe-sleep-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .safe-sleep-rule {
+      background: #fff;
+      border-radius: 16px;
+      border: 2px solid transparent;
+      padding: 1.5rem;
+      transition: border-color .2s, transform .2s;
+    }
+    .safe-sleep-rule:hover { border-color: #A8D5E2; transform: translateY(-3px); }
+    .safe-sleep-rule__num {
+      width: 36px;
+      height: 36px;
+      background: #5C3318;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: .9rem;
+      margin-bottom: 1rem;
+    }
+    .safe-sleep-rule h4 { color: #5C3318; font-size: 1rem; margin-bottom: .4rem; }
+    .safe-sleep-rule p { color: #6b5c50; font-size: .88rem; line-height: 1.6; margin: 0; }
+
+    /* Back to Sleep */
+    .back-to-sleep {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .position-card {
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .position-card--back { background: #d6eff7; border: 2px solid #A8D5E2; }
+    .position-card--stomach { background: #fefce8; border: 2px solid #e8d5cb; }
+    .position-card__visual {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .position-card h4 { font-size: 1.1rem; color: #5C3318; margin-bottom: .5rem; }
+    .position-card p { font-size: .88rem; color: #6b5c50; line-height: 1.6; margin: 0; }
+    .position-badge {
+      display: inline-block;
+      padding: .3em .8em;
+      border-radius: 99px;
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-top: .8rem;
+    }
+    .position-badge--safe { background: #4CAF50; color: #fff; }
+    .position-badge--caution { background: #FF9800; color: #fff; }
+
+    /* Temperature guide */
+    .temp-guide {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid #f0e8e0;
+    }
+    .temp-guide h3 { color: #5C3318; margin-bottom: 1.5rem; text-align: center; }
+    .temp-scale {
+      display: flex;
+      gap: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .temp-zone {
+      flex: 1;
+      padding: 1rem .5rem;
+      text-align: center;
+      font-size: .8rem;
+      font-weight: 600;
+    }
+    .temp-zone--cold { background: #d6eff7; color: #1a6b8a; }
+    .temp-zone--ideal { background: #4CAF50; color: #fff; }
+    .temp-zone--warm { background: #FF9800; color: #fff; }
+    .temp-zone--hot { background: #f44336; color: #fff; }
+    .temp-zone__label { font-size: .7rem; font-weight: 400; display: block; margin-top: .2rem; opacity: .85; }
+    .temp-tips { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .temp-tip { font-size: .85rem; color: #5a4a40; display: flex; gap: .5rem; align-items: flex-start; }
+    .temp-tip::before { content: "✓"; color: #4CAF50; font-weight: 700; flex-shrink: 0; }
+
+    /* How Bundl Helps */
+    .bundl-helps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .bundl-helps-card {
+      background: #5C3318;
+      color: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .bundl-helps-card__icon {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .bundl-helps-card h4 { font-size: 1rem; margin-bottom: .5rem; color: #fad9e8; }
+    .bundl-helps-card p { font-size: .88rem; line-height: 1.6; color: rgba(255,255,255,.8); margin: 0; }
+
+    /* Warning Signs */
+    .warning-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .warning-card {
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .warning-card--urgent { background: #fde8e8; border: 2px solid #f44336; }
+    .warning-card--soon { background: #fff8e1; border: 2px solid #FF9800; }
+    .warning-card--routine { background: #e8f5e9; border: 2px solid #4CAF50; }
+    .warning-card__header {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      margin-bottom: 1rem;
+    }
+    .warning-card__badge {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      padding: .25em .6em;
+      border-radius: 99px;
+    }
+    .warning-card--urgent .warning-card__badge { background: #f44336; color: #fff; }
+    .warning-card--soon .warning-card__badge { background: #FF9800; color: #fff; }
+    .warning-card--routine .warning-card__badge { background: #4CAF50; color: #fff; }
+    .warning-card h4 { font-size: .95rem; color: #5C3318; margin: 0; }
+    .warning-card ul { list-style: none; padding: 0; margin: 0; }
+    .warning-card ul li {
+      font-size: .88rem;
+      color: #4a3a30;
+      padding: .35rem 0;
+      border-bottom: 1px solid rgba(0,0,0,.06);
+      line-height: 1.5;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .warning-card ul li:last-child { border-bottom: none; }
+    .warning-card ul li::before { content: "→"; position: absolute; left: 0; color: #5C3318; font-size: .85rem; }
+
+    /* Resources */
+    .resource-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .resource-link-card {
+      background: #fff;
+      border: 1px solid #f0e8e0;
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      transition: border-color .2s, transform .2s;
+    }
+    .resource-link-card:hover { border-color: #A8D5E2; transform: translateY(-2px); }
+    .resource-link-card__icon { font-size: 1.6rem; flex-shrink: 0; }
+    .resource-link-card__text h5 { font-size: .9rem; color: #5C3318; margin: 0 0 .2rem; }
+    .resource-link-card__text p { font-size: .8rem; color: #7a6a60; margin: 0; }
+
+    /* Medical disclaimer */
+    .medical-disclaimer {
+      background: #fff8e1;
+      border: 2px solid #FF9800;
+      border-radius: 16px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .medical-disclaimer__icon { font-size: 1.5rem; flex-shrink: 0; margin-top: .1rem; }
+    .medical-disclaimer h4 { color: #e65100; font-size: .95rem; margin-bottom: .4rem; }
+    .medical-disclaimer p { color: #5a4a30; font-size: .85rem; line-height: 1.7; margin: 0; }
+
+    @media (max-width: 768px) {
+      .sids-explainer { grid-template-columns: 1fr; gap: 2rem; }
+      .back-to-sleep { grid-template-columns: 1fr; }
+      .temp-tips { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo" aria-label="Bundl Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" aria-hidden="true">
+        <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
+        <circle cx="335" cy="48" r="7" fill="#7B5028"/>
+        <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
+        <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+        <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
+        <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
+        <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
+      </svg>
+    </a>
+    <nav class="header__nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="product.html">Shop</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="sids-safety.html" class="active">SIDS &amp; Safety</a>
+      <a href="education.html">Baby Care</a>
+      <a href="healthcare.html">For Providers</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <div class="header__actions">
+      <a href="product.html" class="btn btn--primary btn--sm">Shop Now</a>
+      <button class="header__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="product.html">Shop</a>
+  <a href="how-it-works.html">How It Works</a>
+  <a href="sids-safety.html">SIDS &amp; Safety</a>
+  <a href="education.html">Baby Care</a>
+  <a href="healthcare.html">For Providers</a>
+  <a href="support.html">Support</a>
+</nav>
+
+<!-- Hero -->
+<section class="sids-hero">
+  <div class="container">
+    <span class="sids-hero__badge">Education &amp; Safety</span>
+    <h1>Understanding SIDS<br>&amp; Safe Sleep</h1>
+    <p>Knowledge is the most powerful tool a parent can have. Here you'll find evidence-based information about SIDS, safe sleep practices, and how continuous monitoring can support informed care.</p>
+    <div class="sids-hero__disclaimer">
+      <strong>Medical Disclaimer:</strong> This page is for educational purposes only. Bundl is not a medical device and does not diagnose, treat, or prevent any condition including SIDS. Always consult your pediatrician with any health concerns.
+    </div>
+  </div>
+</section>
+
+<!-- Quick Navigation -->
+<div class="sids-quicknav">
+  <div class="sids-quicknav__inner">
+    <span class="sids-quicknav__label">Jump to:</span>
+    <a href="#what-is-sids">What is SIDS</a>
+    <a href="#risk-factors">Risk Factors</a>
+    <a href="#safe-sleep">Safe Sleep</a>
+    <a href="#back-to-sleep">Back to Sleep</a>
+    <a href="#temperature">Temperature</a>
+    <a href="#how-bundl-helps">How Bundl Helps</a>
+    <a href="#when-to-call">When to Call</a>
+    <a href="#resources">Resources</a>
+  </div>
+</div>
+
+<!-- Stats -->
+<section class="sids-stats">
+  <div class="sids-stats__grid">
+    <div class="fade-in">
+      <div class="sids-stat__number">3,500+</div>
+      <div class="sids-stat__label">Sudden unexpected infant deaths annually in the US</div>
+    </div>
+    <div class="fade-in">
+      <div class="sids-stat__number">1–4</div>
+      <div class="sids-stat__label">Months — peak SIDS risk age range</div>
+    </div>
+    <div class="fade-in">
+      <div class="sids-stat__number">50%+</div>
+      <div class="sids-stat__label">Reduction in SIDS rates since Back-to-Sleep campaign began</div>
+    </div>
+    <div class="fade-in">
+      <div class="sids-stat__number">#1</div>
+      <div class="sids-stat__label">Preventable risk factor: stomach sleeping position</div>
+    </div>
+  </div>
+</section>
+
+<!-- What is SIDS -->
+<section class="sids-section" id="what-is-sids">
+  <div class="sids-section__inner">
+    <div class="sids-section__header fade-in">
+      <h2>What is SIDS?</h2>
+      <p>Sudden Infant Death Syndrome (SIDS) is the sudden, unexplained death of an apparently healthy baby less than one year old. It is sometimes called "crib death" because it often occurs during sleep.</p>
+    </div>
+    <div class="sids-explainer fade-in">
+      <div class="sids-explainer__text">
+        <h3>The Triple Risk Model</h3>
+        <p>Current research suggests SIDS results from the convergence of three factors — known as the "Triple Risk Model." No single factor causes SIDS on its own.</p>
+        <p>Understanding this model helps explain why SIDS cannot be fully predicted or prevented with any single measure, but why risk reduction strategies are meaningful and important.</p>
+        <p>The three factors are: a vulnerable infant (subtle biological differences in brainstem development), a critical developmental period (typically 1–4 months), and an outside stressor such as stomach sleeping or soft bedding that might trigger failure of an arousal reflex.</p>
+        <div class="medical-disclaimer" style="margin-top:1.5rem">
+          <div class="medical-disclaimer__icon">⚠️</div>
+          <div>
+            <h4>Important Note</h4>
+            <p>SIDS cannot currently be predicted, diagnosed before death, or definitively prevented. These educational guidelines are designed to reduce risk — not eliminate it. A SIDS death is never a parent's fault.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="sids-info-box">
+          <h4>Key Facts About SIDS</h4>
+          <ul>
+            <li>SIDS is the leading cause of death in infants 1–12 months</li>
+            <li>It typically occurs during sleep, often between midnight and 6 AM</li>
+            <li>More common in male infants (60% of cases)</li>
+            <li>Higher risk in premature or low birth weight babies</li>
+            <li>Most SIDS deaths occur between 1 and 4 months of age</li>
+            <li>African American and Native American infants face higher rates</li>
+            <li>SIDS is not caused by suffocation, choking, or vomiting</li>
+            <li>It is not contagious or hereditary</li>
+            <li>Vaccines do not cause SIDS</li>
+            <li>Apnea monitors are not proven to prevent SIDS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Risk Factors -->
+<section class="sids-section sids-section--alt" id="risk-factors">
+  <div class="sids-section__inner">
+    <div class="sids-section__header fade-in">
+      <h2>Risk Factors</h2>
+      <p>Understanding risk factors can help parents make informed decisions. Many risk factors are modifiable — meaning you can take steps to reduce them.</p>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-card fade-in">
+        <div class="risk-card__icon risk-card__icon--age">👶</div>
+        <h4>Age</h4>
+        <p>Risk is highest between 1 and 4 months of age. About 90% of SIDS deaths occur in the first 6 months of life. The risk decreases significantly after 6 months.</p>
+      </div>
+      <div class="risk-card fade-in">
+        <div class="risk-card__icon risk-card__icon--sleep">😴</div>
+        <h4>Sleep Position</h4>
+        <p>Stomach sleeping increases risk significantly. Side sleeping is also riskier than back sleeping. Always place babies on their backs to sleep until age 1.</p>
+      </div>
+      <div class="risk-card fade-in">
+        <div class="risk-card__icon risk-card__icon--smoke">🚫</div>
+        <h4>Smoke Exposure</h4>
+        <p>Prenatal or postnatal exposure to cigarette smoke significantly increases SIDS risk. This includes secondhand smoke exposure in the home environment.</p>
+      </div>
+      <div class="risk-card fade-in">
+        <div class="risk-card__icon risk-card__icon--heat">🌡️</div>
+        <h4>Overheating</h4>
+        <p>Babies who become too hot during sleep face elevated risk. Overdressing, heavy blankets, and warm room temperatures are contributing factors.</p>
+      </div>
+      <div class="risk-card fade-in">
+        <div class="risk-card__icon risk-card__icon--prenatal">🏥</div>
+        <h4>Prenatal Factors</h4>
+        <p>Premature birth, low birth weight, multiple birth (twins, triplets), and inadequate prenatal care are associated with higher SIDS risk.</p>
+      </div>
+      <div class="risk-card fade-in">
+        <div class="risk-card__icon risk-card__icon--bed">🛏️</div>
+        <h4>Sleep Environment</h4>
+        <p>Soft bedding, pillows, bumper pads, loose objects in the crib, and bed-sharing on soft surfaces all increase risk. A firm, flat surface is safest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Safe Sleep Guidelines -->
+<section class="sids-section" id="safe-sleep">
+  <div class="sids-section__inner">
+    <div class="sids-section__header fade-in">
+      <h2>Safe Sleep Guidelines</h2>
+      <p>The American Academy of Pediatrics (AAP) recommends these evidence-based safe sleep practices. Together, they represent the most effective risk-reduction strategy available.</p>
+    </div>
+    <div class="safe-sleep-grid">
+      <div class="safe-sleep-rule fade-in">
+        <div class="safe-sleep-rule__num">1</div>
+        <h4>Back to Sleep, Every Time</h4>
+        <p>Always place your baby on their back to sleep — for naps and at night — until their first birthday. Even if baby can roll over, start them on their back.</p>
+      </div>
+      <div class="safe-sleep-rule fade-in">
+        <div class="safe-sleep-rule__num">2</div>
+        <h4>Firm, Flat Sleep Surface</h4>
+        <p>Use a firm, flat sleep surface such as a safety-approved crib, bassinet, or play yard with a tight-fitting sheet. Avoid inclined sleepers and positioners.</p>
+      </div>
+      <div class="safe-sleep-rule fade-in">
+        <div class="safe-sleep-rule__num">3</div>
+        <h4>Room-Share, Don't Bed-Share</h4>
+        <p>Share your room — ideally for at least 6 months — but on a separate sleep surface. Room-sharing reduces SIDS risk by up to 50% without the risks of bed-sharing.</p>
+      </div>
+      <div class="safe-sleep-rule fade-in">
+        <div class="safe-sleep-rule__num">4</div>
+        <h4>Keep the Crib Bare</h4>
+        <p>No pillows, blankets, bumper pads, soft toys, or positioners in the sleep space. A wearable blanket (sleep sack) is a safe alternative to loose blankets.</p>
+      </div>
+      <div class="safe-sleep-rule fade-in">
+        <div class="safe-sleep-rule__num">5</div>
+        <h4>Avoid Smoke &amp; Alcohol Exposure</h4>
+        <p>Do not smoke during pregnancy or allow smoking near your baby. Avoid alcohol and sedating medications when you will be sharing a sleep space with your baby.</p>
+      </div>
+      <div class="safe-sleep-rule fade-in">
+        <div class="safe-sleep-rule__num">6</div>
+        <h4>Breastfeed if Possible</h4>
+        <p>Breastfeeding, even for a short time, can reduce SIDS risk by up to 50%. The protective effect is stronger with exclusive breastfeeding for at least 2 months.</p>
+      </div>
+      <div class="safe-sleep-rule fade-in">
+        <div class="safe-sleep-rule__num">7</div>
+        <h4>Consider a Pacifier</h4>
+        <p>Offering a pacifier at sleep time reduces SIDS risk. If breastfeeding, wait until 3–4 weeks. Don't force it — if baby doesn't want it, that's okay.</p>
+      </div>
+      <div class="safe-sleep-rule fade-in">
+        <div class="safe-sleep-rule__num">8</div>
+        <h4>Keep Vaccinations Current</h4>
+        <p>Evidence shows that vaccinations are protective against SIDS, reducing risk by about 50%. Vaccines do not cause SIDS — this is a thoroughly debunked myth.</p>
+      </div>
+      <div class="safe-sleep-rule fade-in">
+        <div class="safe-sleep-rule__num">9</div>
+        <h4>Avoid Sleep Devices &amp; Monitors Marketed to Prevent SIDS</h4>
+        <p>No commercial device, including home monitors, has been proven to prevent SIDS. The AAP does not recommend these products as SIDS prevention tools.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Back to Sleep -->
+<section class="sids-section sids-section--alt" id="back-to-sleep">
+  <div class="sids-section__inner">
+    <div class="sids-section__header fade-in">
+      <h2>Back to Sleep vs. Tummy Time</h2>
+      <p>Back sleeping for sleep doesn't mean avoiding tummy time altogether. Supervised tummy time during wake hours is important for your baby's development.</p>
+    </div>
+    <div class="back-to-sleep fade-in">
+      <div class="position-card position-card--back">
+        <div class="position-card__visual">🛌</div>
+        <h4>Back Sleeping</h4>
+        <p>For all sleep — naps and nighttime. Back sleeping allows better arousal from sleep and reduces risk of airway obstruction. This applies for the entire first year, even once baby can roll.</p>
+        <span class="position-badge position-badge--safe">✓ Safest for Sleep</span>
+      </div>
+      <div class="position-card position-card--stomach">
+        <div class="position-card__visual">⏰</div>
+        <h4>Tummy Time</h4>
+        <p>Supervised, awake tummy time starting from birth (a few minutes, 2–3 times daily, building up to 30+ minutes total by 3 months). Essential for neck strength, motor skills, and head shape. Never leave baby unattended during tummy time.</p>
+        <span class="position-badge position-badge--caution">Awake &amp; Supervised Only</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Temperature -->
+<section class="sids-section" id="temperature">
+  <div class="sids-section__inner">
+    <div class="sids-section__header fade-in">
+      <h2>Room Temperature &amp; Overheating</h2>
+      <p>Overheating is a recognized SIDS risk factor. Keeping your baby comfortably warm — not hot — is an important part of safe sleep.</p>
+    </div>
+    <div class="temp-guide fade-in">
+      <h3>Ideal Sleep Temperature Range</h3>
+      <div class="temp-scale">
+        <div class="temp-zone temp-zone--cold">
+          &lt;65°F / 18°C
+          <span class="temp-zone__label">Too Cool</span>
+        </div>
+        <div class="temp-zone temp-zone--ideal">
+          65–70°F / 18–21°C
+          <span class="temp-zone__label">Ideal Range</span>
+        </div>
+        <div class="temp-zone temp-zone--warm">
+          71–74°F / 22–23°C
+          <span class="temp-zone__label">Too Warm</span>
+        </div>
+        <div class="temp-zone temp-zone--hot">
+          &gt;74°F / 23°C
+          <span class="temp-zone__label">Danger Zone</span>
+        </div>
+      </div>
+      <div class="temp-tips">
+        <div class="temp-tip">Dress baby in one more layer than you'd wear to be comfortable</div>
+        <div class="temp-tip">Check the back of baby's neck — it should feel warm but not sweaty</div>
+        <div class="temp-tip">Use a sleep sack instead of loose blankets</div>
+        <div class="temp-tip">Avoid hats during indoor sleep — babies release heat through their heads</div>
+        <div class="temp-tip">No electric blankets, heating pads, or heated mattresses</div>
+        <div class="temp-tip">Keep crib away from direct sunlight, radiators, and vents</div>
+      </div>
+    </div>
+    <p style="margin-top:1.5rem; font-size:.85rem; color:#7a6a60; text-align:center;">
+      Bundl monitors skin temperature continuously, alerting parents when readings trend outside your configured comfort range. This supports awareness — not diagnosis.
+    </p>
+  </div>
+</section>
+
+<!-- How Bundl Helps -->
+<section class="sids-section sids-section--alt" id="how-bundl-helps">
+  <div class="sids-section__inner">
+    <div class="sids-section__header fade-in">
+      <h2>How Bundl Supports Informed Parenting</h2>
+      <p>Bundl does not prevent SIDS. No consumer device can. But Bundl helps parents stay aware, informed, and connected to their baby's wellbeing — so you can respond quickly when something doesn't seem right.</p>
+    </div>
+    <div class="bundl-helps-grid">
+      <div class="bundl-helps-card fade-in">
+        <div class="bundl-helps-card__icon">💓</div>
+        <h4>Continuous Heart Rate Awareness</h4>
+        <p>Tracks heart rate through the night, giving you real-time insight and alerting you when readings drift outside normal ranges for your baby's age.</p>
+      </div>
+      <div class="bundl-helps-card fade-in">
+        <div class="bundl-helps-card__icon">🫁</div>
+        <h4>Oxygen Saturation (SpO₂) Monitoring</h4>
+        <p>Monitors blood oxygen levels continuously. Low SpO₂ alerts can indicate breathing changes that may warrant attention. Always confirm with your pediatrician.</p>
+      </div>
+      <div class="bundl-helps-card fade-in">
+        <div class="bundl-helps-card__icon">🌡️</div>
+        <h4>Skin Temperature Tracking</h4>
+        <p>Continuous skin temperature monitoring helps you detect overheating trends early — one of the modifiable SIDS risk factors — before they become concerning.</p>
+      </div>
+      <div class="bundl-helps-card fade-in">
+        <div class="bundl-helps-card__icon">🏃</div>
+        <h4>Movement Detection</h4>
+        <p>Detects when baby is still for extended periods or shows unusual movement patterns, prompting parents to check in. Not a substitute for in-person supervision.</p>
+      </div>
+      <div class="bundl-helps-card fade-in">
+        <div class="bundl-helps-card__icon">😴</div>
+        <h4>Sleep Pattern Insights</h4>
+        <p>Tracks sleep phases, wake events, and total sleep duration over time — giving you data to share with your pediatrician at well-baby visits.</p>
+      </div>
+      <div class="bundl-helps-card fade-in">
+        <div class="bundl-helps-card__icon">📊</div>
+        <h4>Shareable Health Reports</h4>
+        <p>Generates trend reports you can share with your baby's doctor. More data means more informed conversations and better care — no guesswork at appointments.</p>
+      </div>
+    </div>
+    <div class="medical-disclaimer" style="margin-top:2.5rem">
+      <div class="medical-disclaimer__icon">⚠️</div>
+      <div>
+        <h4>Important: Bundl is a Wellness Monitor, Not a Medical Device</h4>
+        <p>Bundl has not been evaluated by the FDA and is not intended to diagnose, treat, cure, or prevent any disease or condition, including SIDS. Alert thresholds are informational and should not be used as the sole basis for medical decisions. Always consult your pediatrician or call 911 in an emergency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lifestyle strip -->
+<div class="lifestyle-strip" aria-hidden="true">
+  <img src="images/lifestyle-mother-baby.png" alt="">
+  <div class="lifestyle-strip__overlay">
+    <div class="lifestyle-strip__text">
+      <h2>Safe Sleep Starts with Information</h2>
+      <p>Bundl monitors while you rest, so you can focus on holding your baby close — safely, confidently, and with peace of mind.</p>
+    </div>
+  </div>
+</div>
+
+<!-- When to Call Your Doctor -->
+<section class="sids-section" id="when-to-call">
+  <div class="sids-section__inner">
+    <div class="sids-section__header fade-in">
+      <h2>When to Seek Medical Attention</h2>
+      <p>Your instincts as a parent matter. When in doubt, call. These are general guidelines — if something feels wrong, don't wait.</p>
+    </div>
+    <div class="warning-grid">
+      <div class="warning-card warning-card--urgent fade-in">
+        <div class="warning-card__header">
+          <span class="warning-card__badge">Call 911 Immediately</span>
+        </div>
+        <h4>Emergency Signs</h4>
+        <ul>
+          <li>Baby is not breathing or breathing is very irregular</li>
+          <li>Skin is blue, gray, or pale (cyanosis)</li>
+          <li>Baby is limp and unresponsive</li>
+          <li>Seizure activity or sustained abnormal movements</li>
+          <li>Baby is choking and cannot breathe</li>
+        </ul>
+      </div>
+      <div class="warning-card warning-card--soon fade-in">
+        <div class="warning-card__header">
+          <span class="warning-card__badge">Call Your Doctor Today</span>
+        </div>
+        <h4>Concerning but Not Immediate</h4>
+        <ul>
+          <li>Persistent low fever (especially in newborns under 3 months)</li>
+          <li>Persistent unusual breathing sounds</li>
+          <li>Unusual lethargy or difficulty waking</li>
+          <li>Consistently low SpO₂ readings on Bundl app</li>
+          <li>Significant changes in sleep pattern or feeding</li>
+        </ul>
+      </div>
+      <div class="warning-card warning-card--routine fade-in">
+        <div class="warning-card__header">
+          <span class="warning-card__badge">Mention at Next Visit</span>
+        </div>
+        <h4>Worth Discussing</h4>
+        <ul>
+          <li>Frequent nighttime waking beyond expected pattern</li>
+          <li>Difficulty settling for sleep consistently</li>
+          <li>Temperature trends you've noticed on Bundl</li>
+          <li>Heart rate patterns you'd like explained</li>
+          <li>General concerns about baby's sleep development</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- External Resources -->
+<section class="sids-section sids-section--alt" id="resources">
+  <div class="sids-section__inner">
+    <div class="sids-section__header fade-in">
+      <h2>Trusted Resources</h2>
+      <p>We encourage parents to learn from the most authoritative sources. Below are organizations dedicated to infant safety and SIDS research.</p>
+    </div>
+    <div class="resource-links fade-in">
+      <div class="resource-link-card">
+        <div class="resource-link-card__icon">🏥</div>
+        <div class="resource-link-card__text">
+          <h5>American Academy of Pediatrics</h5>
+          <p>Safe sleep guidelines and infant health resources</p>
+        </div>
+      </div>
+      <div class="resource-link-card">
+        <div class="resource-link-card__icon">🔬</div>
+        <div class="resource-link-card__text">
+          <h5>National Institute of Child Health</h5>
+          <p>NICHD Safe to Sleep® public education campaign</p>
+        </div>
+      </div>
+      <div class="resource-link-card">
+        <div class="resource-link-card__icon">💛</div>
+        <div class="resource-link-card__text">
+          <h5>First Candle</h5>
+          <p>SIDS and infant death support and education</p>
+        </div>
+      </div>
+      <div class="resource-link-card">
+        <div class="resource-link-card__icon">🌐</div>
+        <div class="resource-link-card__text">
+          <h5>CDC — Sudden Unexpected Infant Death</h5>
+          <p>National statistics and prevention guidance</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="newsletter-block">
+  <div class="container">
+    <div class="newsletter-block__inner fade-in">
+      <h2>Stay Informed. Stay Connected.</h2>
+      <p>Subscribe for monthly baby health insights, safe sleep tips, and Bundl updates — sent directly to your inbox.</p>
+      <form class="newsletter-form" novalidate>
+        <input type="email" placeholder="Your email address" autocomplete="email" required />
+        <button type="submit" class="btn btn--primary">Subscribe</button>
+      </form>
+      <p style="font-size:.78rem;margin-top:.8rem;opacity:.65;">No spam, ever. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Bundl Home">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" aria-hidden="true">
+            <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
+            <circle cx="335" cy="48" r="7" fill="#7B5028"/>
+            <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
+            <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+            <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
+            <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
+            <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
+          </svg>
+        </a>
+        <p>For Your Bundl of Joy</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h5>Product</h5>
+          <a href="product.html">Shop Bundl</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="product.html#specs">Specifications</a>
+        </div>
+        <div class="footer__col">
+          <h5>Learn</h5>
+          <a href="sids-safety.html">SIDS &amp; Safety</a>
+          <a href="education.html">Baby Care</a>
+          </div>
+        <div class="footer__col">
+          <h5>Company</h5>
+          <a href="healthcare.html">For Providers</a>
+          <a href="support.html">Support</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 Bundl. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Medical Disclaimer</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
