@@ -1,349 +1,166 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support &amp; Help Center — Bundl</title>
-  <meta name="description" content="Get help with your Bundl smart ankle band. Browse FAQs, troubleshooting guides, setup instructions, warranty info, and contact our support team." />
+  <title>Support Us — Help Make Bundl Real | Bundl</title>
+  <meta name="description" content="Meet the team behind Bundl and join our mission. Help us build the next generation of infant wellness monitoring — join our waitlist or donate today." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/mailerlite.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q9GLGL28F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6Q9GLGL28F');
+  </script>
   <style>
-    /* ── Support page styles ── */
-    .support-hero {
+    /* ── Support Us page styles ── */
+    .supportus-hero {
       background:
-        linear-gradient(rgba(254,252,232,0.86) 0%, rgba(214,239,247,0.82) 100%),
-        url('../images/lifestyle-babies.png') center / cover no-repeat;
-      padding: 90px 0 60px;
+        linear-gradient(rgba(254,252,232,0.86) 0%, rgba(250,217,232,0.80) 50%, rgba(214,239,247,0.82) 100%),
+        url('../images/lifestyle-mother-baby.png') center / cover no-repeat;
+      padding: 100px 0 72px;
       text-align: center;
     }
-    .support-hero h1 { font-size: clamp(1.8rem,4vw,2.8rem); color: #5C3318; margin-bottom: .8rem; }
-    .support-hero p { max-width: 540px; margin: 0 auto 2rem; color: #6b5c50; font-size: 1rem; line-height: 1.7; }
-    .support-search {
-      display: flex;
-      max-width: 520px;
-      margin: 0 auto;
+    .supportus-hero__eyebrow {
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #5C3318;
+      margin-bottom: 1rem;
     }
-    .support-search input {
-      flex: 1;
-      padding: .9rem 1.3rem;
-      border: 2px solid #e8d5cb;
-      border-right: none;
-      border-radius: 12px 0 0 12px;
-      font-size: .95rem;
-      outline: none;
-      background: #fff;
+    .supportus-hero h1 { font-size: clamp(2rem,4.5vw,3rem); color: #5C3318; margin-bottom: 1rem; }
+    .supportus-hero p { max-width: 580px; margin: 0 auto; color: #6b5c50; font-size: 1.05rem; line-height: 1.7; }
+
+    /* Story layout */
+    .story-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
     }
-    .support-search input:focus { border-color: #A8D5E2; }
-    .support-search button {
-      padding: .9rem 1.6rem;
-      background: #5C3318;
-      color: #fff;
-      border: none;
-      border-radius: 0 12px 12px 0;
-      cursor: pointer;
-      font-size: .95rem;
+    .story-layout__text h2 { color: #5C3318; font-size: clamp(1.6rem,3vw,2.2rem); margin-bottom: 1.2rem; }
+    .story-layout__text p { color: #5a4a40; line-height: 1.8; margin-bottom: 1rem; }
+    .story-layout__text p:last-child { margin-bottom: 0; }
+    .story-visual {
+      background: linear-gradient(145deg, #d6eff7, #fad9e8);
+      border-radius: 24px;
+      padding: 3rem;
+      text-align: center;
+    }
+    .story-visual__emoji { font-size: 4rem; display: block; margin-bottom: 1rem; }
+    .story-visual__quote {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #5C3318;
+      line-height: 1.6;
+    }
+    .story-visual__attribution {
+      margin-top: 1rem;
+      font-size: .85rem;
+      color: #7a6a60;
       font-weight: 600;
     }
 
-    /* Quick links */
-    .support-quicklinks {
-      background: #fff;
-      border-bottom: 1px solid #f0e8e0;
-      padding: 1.2rem 0;
-      position: sticky;
-      top: 70px;
-      z-index: 90;
-    }
-    .support-quicklinks__inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      gap: .8rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .support-quicklinks a {
-      font-size: .82rem;
-      color: #5C3318;
-      text-decoration: none;
-      padding: .35em .9em;
-      border-radius: 99px;
-      background: #fefce8;
-      border: 1px solid #e8d5cb;
-      white-space: nowrap;
-      transition: all .2s;
-    }
-    .support-quicklinks a:hover { background: #5C3318; color: #fff; border-color: #5C3318; }
-
-    /* Sections */
-    .support-section {
-      padding: 64px 0;
-    }
-    .support-section--alt { background: #fefce8; }
-    .support-section__inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .support-section__header {
-      text-align: center;
-      max-width: 640px;
-      margin: 0 auto 2.5rem;
-    }
-    .support-section__header h2 { color: #5C3318; font-size: clamp(1.4rem,2.5vw,1.9rem); margin-bottom: .5rem; }
-    .support-section__header p { color: #6b5c50; font-size: .9rem; line-height: 1.7; }
-
-    /* Support card grid */
-    .support-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.2rem;
-    }
-    .support-card {
-      background: #fff;
-      border: 1px solid #f0e8e0;
-      border-radius: 16px;
-      padding: 1.5rem;
-      text-align: center;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color .2s, transform .2s;
-    }
-    .support-card:hover { border-color: #A8D5E2; transform: translateY(-3px); }
-    .support-card__icon { font-size: 2rem; display: block; margin-bottom: .8rem; }
-    .support-card h4 { color: #5C3318; font-size: .95rem; margin-bottom: .3rem; }
-    .support-card p { color: #7a6a60; font-size: .82rem; line-height: 1.5; margin: 0; }
-
-    /* Setup steps */
-    .setup-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-    }
-    .setup-step {
-      background: #fff;
-      border-radius: 16px;
-      padding: 1.5rem;
-      border: 1px solid #f0e8e0;
-      position: relative;
-    }
-    .setup-step__num {
-      width: 40px;
-      height: 40px;
-      background: #5C3318;
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-    .setup-step h4 { color: #5C3318; font-size: .95rem; margin-bottom: .4rem; }
-    .setup-step p { color: #6b5c50; font-size: .84rem; line-height: 1.6; margin: 0; }
-    .setup-step__detail {
-      margin-top: .8rem;
-      padding: .6rem .8rem;
-      background: #d6eff7;
-      border-radius: 8px;
-      font-size: .78rem;
-      color: #2a5a70;
-    }
-
-    /* FAQ section */
-    .faq-categories {
-      display: flex;
-      gap: .6rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-    }
-    .faq-cat-btn {
-      padding: .4em 1em;
-      border-radius: 99px;
-      border: 2px solid #e8d5cb;
-      background: #fff;
-      color: #5C3318;
-      font-size: .82rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all .2s;
-    }
-    .faq-cat-btn.active,
-    .faq-cat-btn:hover { border-color: #5C3318; background: #5C3318; color: #fff; }
-
-    /* Troubleshooting */
-    .troubleshoot-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-    }
-    .troubleshoot-card {
-      background: #fff;
-      border-radius: 14px;
-      border: 1px solid #f0e8e0;
-      overflow: hidden;
-    }
-    .troubleshoot-card__header {
-      background: #fefce8;
-      padding: .9rem 1.2rem;
-      display: flex;
-      align-items: center;
-      gap: .6rem;
-    }
-    .troubleshoot-card__header__icon { font-size: 1.1rem; }
-    .troubleshoot-card__header h4 { font-size: .9rem; color: #5C3318; margin: 0; }
-    .troubleshoot-card__body { padding: 1rem 1.2rem; }
-    .troubleshoot-card__body ol {
-      padding-left: 1.2rem;
-      margin: 0;
-    }
-    .troubleshoot-card__body ol li {
-      font-size: .84rem;
-      color: #5a4a40;
-      padding: .25rem 0;
-      line-height: 1.5;
-    }
-
-    /* App tips */
-    .app-tips-grid {
+    /* Values */
+    .values-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.2rem;
+      gap: 1.5rem;
     }
-    .app-tip-card {
-      background: linear-gradient(135deg, #d6eff7, #fad9e8);
-      border-radius: 14px;
-      padding: 1.4rem;
-    }
-    .app-tip-card__icon { font-size: 1.6rem; margin-bottom: .6rem; }
-    .app-tip-card h4 { font-size: .9rem; color: #5C3318; margin-bottom: .4rem; }
-    .app-tip-card p { font-size: .82rem; color: #4a3a30; line-height: 1.6; margin: 0; }
-
-    /* Warranty */
-    .warranty-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      align-items: start;
-    }
-    .warranty-box {
+    .value-card {
       background: #fff;
       border-radius: 16px;
       padding: 2rem;
-      border: 2px solid #A8D5E2;
+      border-bottom: 4px solid transparent;
+      transition: border-color .2s, transform .2s;
     }
-    .warranty-box h4 { color: #5C3318; font-size: 1rem; margin-bottom: 1rem; }
-    .warranty-row {
-      display: flex;
-      justify-content: space-between;
-      padding: .6rem 0;
-      border-bottom: 1px solid #f0e8e0;
-      font-size: .88rem;
-    }
-    .warranty-row:last-child { border-bottom: none; }
-    .warranty-row__label { color: #7a6a60; }
-    .warranty-row__value { font-weight: 600; color: #5C3318; }
-    .returns-box {
-      background: #fefce8;
-      border-radius: 16px;
-      padding: 2rem;
-      border: 1px solid #e8d5cb;
-    }
-    .returns-box h4 { color: #5C3318; font-size: 1rem; margin-bottom: 1rem; }
-    .returns-box p { font-size: .88rem; color: #5a4a40; line-height: 1.7; margin-bottom: .8rem; }
-    .returns-box p:last-child { margin-bottom: 0; }
+    .value-card:hover { transform: translateY(-4px); }
+    .value-card--blue { border-color: #A8D5E2; }
+    .value-card--pink { border-color: #F2B5C8; }
+    .value-card--brown { border-color: #5C3318; }
+    .value-card--green { border-color: #7FBFA0; }
+    .value-card__icon { font-size: 2rem; margin-bottom: 1rem; }
+    .value-card h4 { color: #5C3318; font-size: 1rem; margin-bottom: .5rem; }
+    .value-card p { color: #6b5c50; font-size: .88rem; line-height: 1.6; margin: 0; }
 
-    /* Contact form */
-    .contact-form-layout {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 3rem;
-      align-items: start;
-    }
-    .contact-info h3 { color: #5C3318; font-size: 1.3rem; margin-bottom: 1.2rem; }
-    .contact-method {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-      margin-bottom: 1.5rem;
-    }
-    .contact-method__icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-    .contact-method__icon--email { background: #d6eff7; }
-    .contact-method__icon--chat { background: #fad9e8; }
-    .contact-method__icon--response { background: #fefce8; }
-    .contact-method h5 { color: #5C3318; font-size: .9rem; margin-bottom: .2rem; }
-    .contact-method p { color: #7a6a60; font-size: .84rem; line-height: 1.5; margin: 0; }
-    .contact-form-box {
+    /* FAQ section */
+    .faq-section {
+      padding: 72px 0;
       background: #fff;
-      border-radius: 20px;
-      padding: 2rem;
-      border: 1px solid #f0e8e0;
-      box-shadow: 0 4px 24px rgba(92,51,24,.07);
     }
-    .contact-form-box h4 { color: #5C3318; font-size: 1.1rem; margin-bottom: 1.5rem; }
-    .form-field { display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1rem; }
-    .form-field label { font-size: .82rem; font-weight: 600; color: #5C3318; }
-    .form-field input,
-    .form-field select,
-    .form-field textarea {
-      padding: .75rem 1rem;
-      border: 2px solid #e8d5cb;
-      border-radius: 10px;
-      font-size: .88rem;
-      outline: none;
-      font-family: inherit;
-      color: #3a2a20;
-      background: #fff;
-      transition: border-color .2s;
+    .faq-section__inner {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
-    .form-field input:focus,
-    .form-field select:focus,
-    .form-field textarea:focus { border-color: #A8D5E2; }
-    .form-field textarea { resize: vertical; min-height: 110px; }
-
-    /* Status indicator */
-    .status-banner {
-      background: #e8f5e9;
-      border: 1px solid #4CAF50;
-      border-radius: 12px;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+    .faq-section__header {
+      text-align: center;
       margin-bottom: 2.5rem;
     }
-    .status-banner__dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: #4CAF50;
+    .faq-section__header h2 { color: #5C3318; font-size: clamp(1.5rem,2.5vw,2rem); margin-bottom: .5rem; }
+    .faq-section__header p { color: #6b5c50; font-size: .9rem; line-height: 1.7; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+
+    .faq-item {
+      border-bottom: 1px solid #f0e8e0;
+    }
+    .faq-item:first-child { border-top: 1px solid #f0e8e0; }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.2rem 0;
+      text-align: left;
+      font-family: inherit;
+      font-size: .95rem;
+      font-weight: 600;
+      color: #5C3318;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      transition: color .2s;
+    }
+    .faq-question:hover { color: #A8D5E2; }
+    .faq-chevron {
+      font-size: .85rem;
+      color: #A8D5E2;
       flex-shrink: 0;
-      animation: pulse 2s infinite;
+      transition: transform .3s ease;
     }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: .4; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
     }
-    .status-banner h5 { font-size: .9rem; color: #2e7d32; margin: 0 0 .1rem; }
-    .status-banner p { font-size: .8rem; color: #4a7a50; margin: 0; }
+    .faq-item.open .faq-answer { max-height: 400px; }
+    .faq-answer-inner {
+      padding: 0 0 1.2rem;
+    }
+    .faq-answer-inner p {
+      color: #5a4a40;
+      font-size: .9rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+    .faq-answer-inner p + p { margin-top: .75rem; }
 
     @media (max-width: 768px) {
-      .troubleshoot-grid { grid-template-columns: 1fr; }
-      .warranty-layout { grid-template-columns: 1fr; }
-      .contact-form-layout { grid-template-columns: 1fr; }
+      .story-layout { grid-template-columns: 1fr; gap: 2rem; }
     }
   </style>
 </head>
@@ -352,31 +169,18 @@
 <header class="header" id="header">
   <div class="header__inner">
     <a href="index.html" class="header__logo" aria-label="Bundl Home">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" aria-hidden="true">
-        <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
-        <circle cx="335" cy="48" r="7" fill="#7B5028"/>
-        <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
-        <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
-        <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
-        <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
-      </svg>
+      <img src="images/bundl-logo.png" class="header__logo-img" alt="Bundl" />
     </a>
     <nav class="header__nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="product.html">Shop</a>
+      <a href="product.html">Product</a>
       <a href="how-it-works.html">How It Works</a>
       <a href="sids-safety.html">SIDS &amp; Safety</a>
       <a href="education.html">Baby Care</a>
       <a href="healthcare.html">For Providers</a>
-      <a href="support.html" class="active">Support</a>
+      <a href="support.html" class="active">Support Us</a>
     </nav>
     <div class="header__actions">
-      <a href="product.html" class="btn btn--primary btn--sm">Shop Now</a>
       <button class="header__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -384,191 +188,320 @@
 
 <nav class="mobile-nav" aria-label="Mobile navigation">
   <a href="index.html">Home</a>
-  <a href="product.html">Shop</a>
+  <a href="product.html">Product</a>
   <a href="how-it-works.html">How It Works</a>
   <a href="sids-safety.html">SIDS &amp; Safety</a>
   <a href="education.html">Baby Care</a>
   <a href="healthcare.html">For Providers</a>
-  <a href="support.html">Support</a>
+  <a href="support.html" class="active">Support Us</a>
 </nav>
 
 <!-- Hero -->
-<section class="support-hero">
+<section class="supportus-hero">
   <div class="container">
-    <h1>How Can We Help?</h1>
-    <p>Quick answers, setup guides, and a direct line to our team.</p>
-    <form class="support-search" role="search" onsubmit="return false;">
-      <input type="search" placeholder="Search (e.g. 'band not connecting')" aria-label="Search help articles" />
-      <button type="submit" aria-label="Search">🔍</button>
-    </form>
+    <div class="supportus-hero__eyebrow">Pre-Launch · Student-Built</div>
+    <h1>Built by Students,<br>Driven by Purpose.</h1>
+    <p>A four-member student-led startup from Liberty Hill, Texas, building technology that helps families feel a little more supported.</p>
   </div>
 </section>
 
-<!-- Quick links -->
-<div class="support-quicklinks">
-  <div class="support-quicklinks__inner">
-    <a href="#getting-started">Getting Started</a>
-    <a href="#faq">FAQ</a>
-    <a href="#troubleshooting">Troubleshooting</a>
-    <a href="#app-tips">App Tips</a>
-    <a href="#warranty">Warranty &amp; Returns</a>
-    <a href="#contact">Contact Us</a>
-  </div>
-</div>
+<!-- ============================================================
+     MEET THE TEAM
+     ============================================================ -->
+<section class="section section--cream" id="team" aria-labelledby="team-heading">
+  <div class="container">
 
-<!-- Topic cards -->
-<section class="support-section">
-  <div class="support-section__inner">
-    <div class="support-cards fade-in">
-      <a href="#getting-started" class="support-card">
-        <span class="support-card__icon">📦</span>
-        <h4>Getting Started</h4>
-        <p>Unboxing, first charge, pairing &amp; app setup</p>
-      </a>
-      <a href="#faq" class="support-card">
-        <span class="support-card__icon">❓</span>
-        <h4>FAQ</h4>
-        <p>Common questions about Bundl answered</p>
-      </a>
-      <a href="#troubleshooting" class="support-card">
-        <span class="support-card__icon">🔧</span>
-        <h4>Troubleshooting</h4>
-        <p>Fix connectivity, readings &amp; alert issues</p>
-      </a>
-      <a href="#app-tips" class="support-card">
-        <span class="support-card__icon">📱</span>
-        <h4>App Tips</h4>
-        <p>Get the most from the Bundl companion app</p>
-      </a>
-      <a href="#warranty" class="support-card">
-        <span class="support-card__icon">🛡️</span>
-        <h4>Warranty &amp; Returns</h4>
-        <p>12-month warranty, returns &amp; replacement bands</p>
-      </a>
-      <a href="#contact" class="support-card">
-        <span class="support-card__icon">💬</span>
-        <h4>Contact Us</h4>
-        <p>Reach our team — response within 24 hours</p>
-      </a>
+    <div class="section-header fade-in">
+      <h2 id="team-heading">Meet the Team</h2>
+      <p>Four students. One shared mission. Endless heart.</p>
+    </div>
+
+    <div class="team-cards-row">
+      <div class="team-member-card fade-in">
+        <div class="team-member-card__avatar"><img src="images/roo1.jpeg" alt="Roopali Rahul" loading="lazy"></div>
+        <div class="team-member-card__name">Roopali Rahul</div>
+        <div class="team-member-card__role">CEO</div>
+        <p class="team-member-card__bio">"Sometimes the littlest things take up the most room in your heart"<span class="team-member-card__quote-attr">— Winnie the Pooh</span></p>
+      </div>
+      <div class="team-member-card fade-in fade-in--delay-1">
+        <div class="team-member-card__avatar"><img src="images/meg1.jpeg" alt="Meghana Malkareddy" loading="lazy"></div>
+        <div class="team-member-card__name">Meghana Malkareddy</div>
+        <div class="team-member-card__role">CMO</div>
+        <p class="team-member-card__bio">"Babies are such a nice way to start people"<span class="team-member-card__quote-attr">— Finding Nemo</span></p>
+      </div>
+      <div class="team-member-card fade-in fade-in--delay-2">
+        <div class="team-member-card__avatar"><img src="images/flo1.jpeg" alt="Floristan Schwindt" loading="lazy"></div>
+        <div class="team-member-card__name">Floristan Schwindt</div>
+        <div class="team-member-card__role">CFO</div>
+        <p class="team-member-card__bio">"A baby fills a hole in your heart that you never knew was there"<span class="team-member-card__quote-attr">— One Tree Hill</span></p>
+      </div>
+      <div class="team-member-card fade-in fade-in--delay-3">
+        <div class="team-member-card__avatar"><img src="images/samantha1.jpeg" alt="Samantha Fraunhofer" loading="lazy"></div>
+        <div class="team-member-card__name">Samantha Fraunhofer</div>
+        <div class="team-member-card__role">COO</div>
+        <p class="team-member-card__bio">"You know what the great thing about babies is? They are like little bundles of hope."<span class="team-member-card__quote-attr">— Lish McBride</span></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY WE STARTED BUNDL
+     ============================================================ -->
+<section class="section section--white" aria-labelledby="story-heading">
+  <div class="container">
+    <div class="story-layout fade-in">
+      <div class="story-layout__text">
+        <h2 id="story-heading">Why We Started Bundl</h2>
+        <p>As students, we noticed how stressful and emotionally exhausting it can be for parents, especially parents of infants, to constantly worry about their baby's comfort, safety, and overall well-being throughout the day and night.</p>
+        <p>Many existing baby-monitoring and wellness products are expensive and out of reach for a lot of families. We want to help create a future where parents don't have to spend overwhelming amounts of money just to feel informed and reassured about their child's well-being.</p>
+      </div>
+      <div class="story-visual" style="padding:0;overflow:hidden;">
+        <img src="images/grp2.jpg" alt="The Bundl team" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:24px;" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Getting Started -->
-<section class="support-section support-section--alt" id="getting-started">
-  <div class="support-section__inner">
-    <div class="support-section__header fade-in">
-      <h2>Getting Started with Bundl</h2>
-      <p>From box to monitoring in under 10 minutes.</p>
-    </div>
-    <div class="setup-steps">
-      <div class="setup-step fade-in">
-        <div class="setup-step__num">1</div>
-        <h4>Charge Your Band</h4>
-        <p>Connect the magnetic cable. Full charge takes ~90 minutes.</p>
-        <div class="setup-step__detail">💡 Amber = charging · Green = full</div>
+<!-- ============================================================
+     MISSION & GOALS
+     ============================================================ -->
+<section class="section section--cream" aria-labelledby="mission-heading">
+  <div class="container">
+    <div class="story-layout fade-in">
+      <div class="story-visual" style="padding:0;overflow:hidden;position:relative;min-height:340px;">
+        <img src="images/grp3.jpg" alt="The Bundl team" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:24px;filter:saturate(0.88) brightness(1.05) contrast(0.95);box-shadow:0 20px 60px rgba(92,51,24,0.18),0 4px 16px rgba(92,51,24,0.10);">
       </div>
-      <div class="setup-step fade-in">
-        <div class="setup-step__num">2</div>
-        <h4>Download the App</h4>
-        <p>Search "Bundl Baby" on App Store or Google Play. Free. iOS 14+ / Android 9+.</p>
-        <div class="setup-step__detail">💡 Data is encrypted from first use</div>
-      </div>
-      <div class="setup-step fade-in">
-        <div class="setup-step__num">3</div>
-        <h4>Pair via Bluetooth</h4>
-        <p>Open app → tap "Add Device" → hold band near phone → tap to pair.</p>
-        <div class="setup-step__detail">💡 Stay within 1m during first pairing</div>
-      </div>
-      <div class="setup-step fade-in">
-        <div class="setup-step__num">4</div>
-        <h4>Set Up Baby's Profile</h4>
-        <p>Enter date of birth, weight, and gestational age. Calibrates alert thresholds automatically.</p>
-        <div class="setup-step__detail">💡 Editable anytime in app settings</div>
-      </div>
-      <div class="setup-step fade-in">
-        <div class="setup-step__num">5</div>
-        <h4>Fit the Band</h4>
-        <p>Sensor on inner ankle. Velcro snug — one finger should slide underneath.</p>
-        <div class="setup-step__detail">💡 Never tight. Check skin daily.</div>
-      </div>
-      <div class="setup-step fade-in">
-        <div class="setup-step__num">6</div>
-        <h4>Configure Alerts</h4>
-        <p>Review thresholds and enable push notifications. Consult your pediatrician before adjusting defaults.</p>
-        <div class="setup-step__detail">💡 Defaults follow pediatric guidelines</div>
+      <div class="story-layout__text">
+        <h2 id="mission-heading">Mission &amp; Goals</h2>
+        <p>We genuinely believe in what we're building, and in the need for it. Too many parents spend their nights wondering if their baby is okay. We want to change that, and we know it's possible.</p>
+        <p>Right now, we're actively progressing toward building our prototype. Our primary focus is securing the funds and support needed to bring Bundl to life. We're also developing our Kickstarter campaign, and every waitlist sign-up is a real step forward for us: proof that families want this, and that we should keep going.</p>
+        <p>We want to make parenting feel more human, more informed, and more connected. Bundl isn't just a product; it's a journey we're building in real time, and we're grateful to have people alongside us for it.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     JOIN WAITLIST + DONATE
+     ============================================================ -->
+<section class="section section--white" id="waitlist" aria-labelledby="join-heading">
+  <div class="container">
+
+    <div class="section-header fade-in">
+      <span class="eyebrow">Be Part of Something Meaningful</span>
+      <h2 id="join-heading">Join Us: Two Ways to Help Bundl Happen.</h2>
+      <p>Whether you sign up for updates or help fund our mission, every action moves us closer to helping families feel more at ease.</p>
+    </div>
+
+    <div class="join-donate-layout">
+
+      <!-- LEFT: Waitlist signup -->
+      <div class="join-donate-layout__left fade-in">
+        <div class="join-panel">
+          <div class="join-panel__header">
+            <h3>Join the Waitlist</h3>
+            <p>Be first to know when Bundl launches: Kickstarter alerts, launch updates, and early access opportunities.</p>
+          </div>
+
+          <!-- ================================================
+               MAILERLITE EMBED
+               Replace the form below with your MailerLite embed code.
+               Go to: MailerLite → Forms → Embedded Forms → Copy Code
+               Paste it inside the .mailerlite-embed div below.
+               ================================================ -->
+          <div class="mailerlite-embed">
+            <div id="mlb2-42009777" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-42009777">
+              <div class="ml-form-align-center">
+                <div class="ml-form-embedWrapper embedForm">
+                  <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2387799/forms/189016167294174785/subscribe" data-code="" method="post" target="_blank">
+                      <div class="ml-form-formContent">
+                        <div class="ml-form-fieldRow">
+                          <div class="ml-field-group ml-field-name ml-validate-required">
+                            <label>How are you interested in Bundl?</label>
+                            <select class="custom-select" name="fields[name]" aria-label="name" aria-required="true">
+                              <option value="">-</option>
+                              <option>Parent / Expecting Parent</option>
+                              <option>Friend / Family Supporter</option>
+                              <option>Healthcare Professional</option>
+                              <option>Interested in partnership / investment opportunities</option>
+                              <option>Other</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="ml-form-fieldRow ml-last-item">
+                          <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                            <label>Email</label>
+                            <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="email">
+                          </div>
+                        </div>
+                      </div>
+                      <input type="hidden" name="ml-submit" value="1">
+                      <div class="ml-form-embedSubmit">
+                        <button type="submit" class="primary">Subscribe</button>
+                        <button disabled="disabled" style="display: none;" type="button" class="loading">
+                          <div class="ml-form-embedSubmitLoad"></div>
+                          <span class="sr-only">Loading...</span>
+                        </button>
+                      </div>
+                      <input type="hidden" name="anticsrf" value="true">
+                    </form>
+                  </div>
+                  <div class="ml-form-successBody row-success" style="display: none">
+                    <div class="ml-form-successContent">
+                      <h4>Thank you!</h4>
+                      <p>You have successfully joined our waitlist.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end .mailerlite-embed -->
+
+          <div class="waitlist-perks">
+            <div class="waitlist-perk">Early access to launch</div>
+            <div class="waitlist-perk">Kickstarter alerts</div>
+            <div class="waitlist-perk">Fundraiser announcements</div>
+            <div class="waitlist-perk">Exclusive supporter perks</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Donate / GoFundMe -->
+      <div class="join-donate-layout__right fade-in fade-in--delay-1" id="support">
+        <div class="donate-panel">
+          <div class="donate-panel__header">
+            <div class="gofundme-card__badge">
+              <span class="gofundme-card__badge-dot"></span>
+              Currently: Prototype Stage
+            </div>
+            <h3>Support Our Mission</h3>
+            <p>We're a student startup building Bundl with limited resources but unlimited determination. Your contribution, large or small, helps us get one step closer.</p>
+          </div>
+
+          <div class="donate-panel__image">
+            <img src="images/grp1.jpg" alt="A baby sleeping peacefully" loading="lazy" />
+          </div>
+
+          <div class="gofundme-funding-list">
+            <div class="gofundme-funding-item">Prototype development and testing</div>
+            <div class="gofundme-funding-item">Manufacturing and material sourcing</div>
+            <div class="gofundme-funding-item">Safety validation and compliance testing</div>
+            <div class="gofundme-funding-item">App development and beta testing</div>
+            <div class="gofundme-funding-item">Kickstarter campaign preparation and launch</div>
+          </div>
+
+          <div class="donate-panel__actions">
+            <!-- Replace href below with your actual GoFundMe URL -->
+            <a href="https://gofund.me/33b133596" class="btn btn--primary btn--full" target="_blank" rel="noopener" aria-label="Donate on GoFundMe">Donate on GoFundMe →</a>
+          </div>
+
+          <div class="gofundme-impact">
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Backed by a community that cares</div>
+            </div>
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Helps families afford monitoring</div>
+            </div>
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Student-built, community-backed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end .join-donate-layout -->
+
+    <div style="text-align:center;margin-top:40px;">
+      <div style="display:inline-block;padding:20px 40px;border:2px solid var(--brown);border-radius:var(--radius-lg);background:rgba(92,51,24,0.05);">
+        <p style="font-size:1.15rem;font-weight:600;color:var(--brown);margin:0 0 6px;">Have another way you'd like to support Bundl, or just curious about what we're building?</p>
+        <p style="font-size:0.95rem;color:var(--text-medium);margin:0;">Whether you're a healthcare provider, researcher, potential partner, or simply someone who believes in our mission, we'd love to hear from you. <a href="mailto:bundl.team.official@gmail.com" style="color:var(--brown);text-decoration:underline;text-underline-offset:3px;">Contact our team →</a></p>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="support-section" id="faq">
-  <div class="support-section__inner">
-    <div class="support-section__header fade-in">
+<section class="faq-section">
+  <div class="faq-section__inner">
+    <div class="faq-section__header fade-in">
       <h2>Frequently Asked Questions</h2>
-    </div>
-    <div class="faq-categories fade-in">
-      <button class="faq-cat-btn active">All</button>
-      <button class="faq-cat-btn">Band &amp; Fit</button>
-      <button class="faq-cat-btn">Sensors &amp; Readings</button>
-      <button class="faq-cat-btn">App &amp; Connectivity</button>
-      <button class="faq-cat-btn">Safety</button>
-      <button class="faq-cat-btn">Battery &amp; Charging</button>
+      <p>Everything you might want to know about how to support us, who we are, and where things stand.</p>
     </div>
 
     <div class="faq-list fade-in">
 
       <div class="faq-item">
-        <button class="faq-question">What age range is Bundl suitable for? <span class="faq-chevron">▾</span></button>
+        <button class="faq-question">How can I donate to support Bundl? <span class="faq-chevron">▾</span></button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            <p>Newborn through 18 months. Three sizes: Newborn (0–3m), Infant (3–12m), Toddler (12–18m). Replacement bands available separately.</p>
+            <p>We have a GoFundMe campaign where you can contribute directly to our prototype development, material sourcing, safety testing, and Kickstarter preparation. Hit the "Donate on GoFundMe" button above. Every dollar, no matter the size, helps move us forward.</p>
           </div>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">Is Bundl safe to wear all night? <span class="faq-chevron">▾</span></button>
+        <button class="faq-question">Where do donations go? <span class="faq-chevron">▾</span></button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            <p>Yes. GOTS-certified materials, low-power BLE, no radiation. Check fit is snug (not tight) and inspect skin daily.</p>
+            <p>Contributions go toward four main areas: (1) refining and testing our hardware prototype, (2) sourcing safe, baby-grade materials for the band, (3) safety validation and compliance testing with medical advisors, and (4) preparing our Kickstarter campaign so we can reach a wider audience and fund full production.</p>
           </div>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">How accurate are the vital sign readings? <span class="faq-chevron">▾</span></button>
+        <button class="faq-question">How can I get involved beyond donating? <span class="faq-chevron">▾</span></button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            <p>Medical-grade PPG, NTC thermistor, and accelerometer. Designed for wellness trend monitoring — not clinical diagnosis. Always verify unusual readings with your pediatrician.</p>
+            <p>There are several great ways to support us: join our waitlist to stay updated, share our story with friends and family (especially new or expecting parents), and follow us on Instagram <a href="https://www.instagram.com/bundl_official_?igsh=cW13cmk4MHEyYXo%3D&utm_source=qr" style="color:#5C3318;font-weight:600;" target="_blank" rel="noopener">@bundl_official_</a>. If you're a healthcare provider, investor, or potential partner, we'd love to connect.</p>
           </div>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">What's the Bluetooth range? <span class="faq-chevron">▾</span></button>
+        <button class="faq-question">When will Bundl launch? <span class="faq-chevron">▾</span></button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            <p>Up to 30m (100ft) in open conditions. Data stores locally when out of range and syncs on reconnect.</p>
+            <p>We don't have a confirmed launch date yet; we're focused on doing this right, not just fast. Our next milestone is completing prototype testing and launching a Kickstarter campaign. Join our waitlist and you'll be the first to know when we have a timeline to share.</p>
           </div>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">How long does the battery last? <span class="faq-chevron">▾</span></button>
+        <button class="faq-question">Who is building Bundl? <span class="faq-chevron">▾</span></button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            <p>24–36 hours continuous monitoring, 72 hours standby. App alerts at 20%. Charge daily or every other day.</p>
+            <p>Bundl is a student-led startup founded by four students from Liberty Hill, Texas: Roopali Rahul (CEO), Meghana Malkareddy (CMO), Floristan Schwindt (CFO), and Samantha Fraunhofer (COO). We started this because we believe peace of mind for parents should not be a luxury.</p>
           </div>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">Can Bundl get wet? <span class="faq-chevron">▾</span></button>
+        <button class="faq-question">What exactly is Bundl? <span class="faq-chevron">▾</span></button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            <p>IPX3 splash resistant — fine for nappy changes and minor spills. Not waterproof. Remove before baths. Band fabric can be hand-washed without the sensor.</p>
+            <p>Bundl is a smart wearable ankle band designed for infants that monitors key vitals, including heart rate, blood oxygen (SpO₂), skin temperature, motion, and sleep stage, continuously and sends real-time alerts to a parent's phone. We're currently in the prototype phase, working toward a Kickstarter launch.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Is Bundl available to buy right now? <span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Not yet. Bundl is currently in prototype development and is not available for purchase. We are working toward a Kickstarter campaign to fund production. Join our waitlist (above) to be the first to know when we launch and get access to early-backer pricing.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">I'm a healthcare provider: how can I get involved? <span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>We'd love to connect. We're actively seeking feedback from pediatricians, neonatal nurses, and other infant health professionals to help validate our approach and refine our monitoring thresholds. Visit our <a href="healthcare.html" style="color:#5C3318;font-weight:600;">For Providers page</a> or reach out directly at <a href="mailto:bundl.team.official@gmail.com" style="color:#5C3318;font-weight:600;">bundl.team.official@gmail.com</a>.</p>
           </div>
         </div>
       </div>
@@ -577,380 +510,82 @@
         <button class="faq-question">Will Bundl prevent SIDS? <span class="faq-chevron">▾</span></button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            <p>No. Bundl is a wellness monitor — it does not prevent, diagnose, or treat any condition. See our <a href="sids-safety.html" style="color:#5C3318;font-weight:600;">SIDS &amp; Safety page</a> for guidance.</p>
+            <p>No. Bundl is designed as a wellness monitoring tool. It does not prevent, diagnose, or treat any medical condition including SIDS. Its purpose is to give parents real-time information and peace of mind. Always follow safe sleep guidelines. See our <a href="sids-safety.html" style="color:#5C3318;font-weight:600;">SIDS &amp; Safety page</a> for more.</p>
           </div>
         </div>
       </div>
 
-      <div class="faq-item">
-        <button class="faq-question">Is my baby's data private and secure? <span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">
-            <p>AES-256 encrypted in transit and at rest. We never sell your data. Delete your account and all data anytime from app settings.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">How many caregivers can access the app? <span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">
-            <p>Up to 5 caregivers via shared login or email invite. All see the same live data and receive the same alerts.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">What is included in the box? <span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">
-            <p>Sensor module, band, magnetic charging cable, quick start guide, safety card, and one replacement band. More accessories on the <a href="product.html" style="color:#5C3318;font-weight:600;">Shop page</a>.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Troubleshooting -->
-<section class="support-section support-section--alt" id="troubleshooting">
-  <div class="support-section__inner">
-    <div class="support-section__header fade-in">
-      <h2>Troubleshooting</h2>
-      <p>Most issues can be resolved in under 2 minutes. Try these steps first.</p>
-    </div>
-    <div class="troubleshoot-grid">
-      <div class="troubleshoot-card fade-in">
-        <div class="troubleshoot-card__header">
-          <span class="troubleshoot-card__header__icon">📡</span>
-          <h4>Band Won't Connect to App</h4>
-        </div>
-        <div class="troubleshoot-card__body">
-          <ol>
-            <li>Ensure Bluetooth is enabled on your phone</li>
-            <li>Close and reopen the Bundl app</li>
-            <li>Move phone within 1 metre of the band</li>
-            <li>Press and hold the band's button for 3 seconds to restart it</li>
-            <li>In app settings, tap "Forget Device" then re-pair</li>
-            <li>If still failing, restart your phone and try again</li>
-          </ol>
-        </div>
-      </div>
-      <div class="troubleshoot-card fade-in">
-        <div class="troubleshoot-card__header">
-          <span class="troubleshoot-card__header__icon">💓</span>
-          <h4>Heart Rate Reading Seems Wrong</h4>
-        </div>
-        <div class="troubleshoot-card__body">
-          <ol>
-            <li>Check band fit — sensor must be on inner ankle, snug not tight</li>
-            <li>Ensure baby is calm and relatively still during reading</li>
-            <li>Clean the sensor window with a soft dry cloth</li>
-            <li>Outlier readings during movement are normal — check trend averages</li>
-            <li>Persistent unusual readings: consult your pediatrician</li>
-          </ol>
-        </div>
-      </div>
-      <div class="troubleshoot-card fade-in">
-        <div class="troubleshoot-card__header">
-          <span class="troubleshoot-card__header__icon">🔋</span>
-          <h4>Battery Draining Too Fast</h4>
-        </div>
-        <div class="troubleshoot-card__body">
-          <ol>
-            <li>Check that the band is not too far from phone (range exceeding 10m reduces efficiency)</li>
-            <li>Reduce app sync frequency in Settings → Band → Sync Rate</li>
-            <li>Ensure no other Bluetooth devices are competing for connection</li>
-            <li>If battery life is consistently under 18 hours, contact support for a replacement check</li>
-          </ol>
-        </div>
-      </div>
-      <div class="troubleshoot-card fade-in">
-        <div class="troubleshoot-card__header">
-          <span class="troubleshoot-card__header__icon">🔔</span>
-          <h4>Not Receiving Alerts</h4>
-        </div>
-        <div class="troubleshoot-card__body">
-          <ol>
-            <li>Check phone notifications are enabled for the Bundl app</li>
-            <li>Ensure Do Not Disturb does not block Bundl (add to "Allow" list)</li>
-            <li>Verify alert thresholds are configured in app Settings → Alerts</li>
-            <li>Check band is connected — alerts only fire when connected</li>
-            <li>On iOS: check that Background App Refresh is enabled for Bundl</li>
-          </ol>
-        </div>
-      </div>
-      <div class="troubleshoot-card fade-in">
-        <div class="troubleshoot-card__header">
-          <span class="troubleshoot-card__header__icon">🌡️</span>
-          <h4>Temperature Reading Looks High</h4>
-        </div>
-        <div class="troubleshoot-card__body">
-          <ol>
-            <li>Skin temperature is typically 0.5–1°C lower than core body temperature</li>
-            <li>Check room temperature — warm rooms raise skin readings</li>
-            <li>Ensure band isn't covered by blanket (insulation causes elevation)</li>
-            <li>Check baby for signs of overheating: sweaty neck, flushed cheeks</li>
-            <li>If core temperature concern: use an accurate rectal or axillary thermometer</li>
-          </ol>
-        </div>
-      </div>
-      <div class="troubleshoot-card fade-in">
-        <div class="troubleshoot-card__header">
-          <span class="troubleshoot-card__header__icon">📱</span>
-          <h4>App Crashing or Freezing</h4>
-        </div>
-        <div class="troubleshoot-card__body">
-          <ol>
-            <li>Force-close the app and reopen it</li>
-            <li>Check for and install app updates from App Store / Play Store</li>
-            <li>Restart your phone</li>
-            <li>If crashing persists: uninstall, reinstall — your data is saved to cloud</li>
-            <li>Ensure your OS is updated to at least iOS 14 or Android 9</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- App tips -->
-<section class="support-section" id="app-tips">
-  <div class="support-section__inner">
-    <div class="support-section__header fade-in">
-      <h2>Getting the Most from the App</h2>
-      <p>Tips to help you use Bundl's data more effectively.</p>
-    </div>
-    <div class="app-tips-grid">
-      <div class="app-tip-card fade-in">
-        <div class="app-tip-card__icon">📊</div>
-        <h4>Read Trends, Not Single Points</h4>
-        <p>Use the 7 or 30-day view for a true picture of your baby's baseline.</p>
-      </div>
-      <div class="app-tip-card fade-in">
-        <div class="app-tip-card__icon">🩺</div>
-        <h4>Export Before Appointments</h4>
-        <p>Settings → Export Report. Share a 4–8 week PDF with your pediatrician.</p>
-      </div>
-      <div class="app-tip-card fade-in">
-        <div class="app-tip-card__icon">👥</div>
-        <h4>Add All Caregivers</h4>
-        <p>Invite via Settings → Family Sharing. Up to 5 people, all on the same feed.</p>
-      </div>
-      <div class="app-tip-card fade-in">
-        <div class="app-tip-card__icon">🔔</div>
-        <h4>Tune Alerts with Your Pediatrician</h4>
-        <p>Defaults follow general guidelines — adjust with your doctor, especially for premature infants.</p>
-      </div>
-      <div class="app-tip-card fade-in">
-        <div class="app-tip-card__icon">😴</div>
-        <h4>Use Sleep Insights for Scheduling</h4>
-        <p>The sleep timeline shows natural cycle length — use it to time naps confidently.</p>
-      </div>
-      <div class="app-tip-card fade-in">
-        <div class="app-tip-card__icon">📝</div>
-        <h4>Log Notes Alongside Data</h4>
-        <p>Journal feeds, illnesses, and milestones. Correlate events with vitals over time.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Warranty & Returns -->
-<section class="support-section support-section--alt" id="warranty">
-  <div class="support-section__inner">
-    <div class="support-section__header fade-in">
-      <h2>Warranty &amp; Returns</h2>
-    </div>
-    <div class="warranty-layout fade-in">
-      <div class="warranty-box">
-        <h4>🛡️ 12-Month Warranty</h4>
-        <div class="warranty-row">
-          <span class="warranty-row__label">Coverage period</span>
-          <span class="warranty-row__value">12 months from purchase</span>
-        </div>
-        <div class="warranty-row">
-          <span class="warranty-row__label">Covers</span>
-          <span class="warranty-row__value">Manufacturing defects</span>
-        </div>
-        <div class="warranty-row">
-          <span class="warranty-row__label">Sensor module</span>
-          <span class="warranty-row__value">Full replacement</span>
-        </div>
-        <div class="warranty-row">
-          <span class="warranty-row__label">Bands (wear)</span>
-          <span class="warranty-row__value">Normal wear excluded</span>
-        </div>
-        <div class="warranty-row">
-          <span class="warranty-row__label">Water damage</span>
-          <span class="warranty-row__value">Not covered (IPX3 splash only)</span>
-        </div>
-        <div class="warranty-row">
-          <span class="warranty-row__label">Process</span>
-          <span class="warranty-row__value">Contact support with receipt</span>
-        </div>
-        <p style="font-size:.8rem;color:#7a6a60;margin-top:1rem;">Contact support with your order number. We arrange free return shipping.</p>
-      </div>
-      <div class="returns-box">
-        <h4>↩️ Returns Policy</h4>
-        <p><strong>30-day returns</strong> — full refund, original packaging required.</p>
-        <p><strong>Used bands</strong> cannot be returned for hygiene reasons.</p>
-        <p><strong>How to return</strong> — email support with your order number. Prepaid label provided. Refund within 5–7 business days.</p>
-        <p><strong>Size exchange</strong> — trade up to the next size at 30% off. Contact support to arrange.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Contact -->
-<section class="support-section" id="contact">
-  <div class="support-section__inner">
-    <div class="support-section__header fade-in">
-      <h2>Contact Us</h2>
-      <p>Real humans. We respond within 24 hours on business days.</p>
-    </div>
-
-    <div class="status-banner fade-in">
-      <div class="status-banner__dot"></div>
-      <div>
-        <h5>All Systems Operational</h5>
-        <p>Servers, app, and data sync running normally.</p>
-      </div>
-    </div>
-
-    <div class="contact-form-layout">
-      <div class="contact-info fade-in">
-        <div class="contact-method">
-          <div class="contact-method__icon contact-method__icon--email">📧</div>
-          <div>
-            <h5>Email</h5>
-            <p>support@bundl.com · Mon–Fri, 24hr response</p>
-          </div>
-        </div>
-        <div class="contact-method">
-          <div class="contact-method__icon contact-method__icon--chat">💬</div>
-          <div>
-            <h5>Live Chat</h5>
-            <p>In-app · Mon–Fri, 9 AM – 6 PM EST</p>
-          </div>
-        </div>
-        <div class="contact-method">
-          <div class="contact-method__icon contact-method__icon--response">⚡</div>
-          <div>
-            <h5>Emergency</h5>
-            <p>Call 911 immediately for any urgent medical concern.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-form-box fade-in">
-        <h4>Send Us a Message</h4>
-        <form class="contact-form" novalidate>
-          <div class="form-field">
-            <label for="contact-name">Your Name *</label>
-            <input type="text" id="contact-name" placeholder="First &amp; last name" required />
-          </div>
-          <div class="form-field">
-            <label for="contact-email">Email Address *</label>
-            <input type="email" id="contact-email" placeholder="you@example.com" required />
-          </div>
-          <div class="form-field">
-            <label for="contact-order">Order Number (if applicable)</label>
-            <input type="text" id="contact-order" placeholder="BDL-XXXXXX" />
-          </div>
-          <div class="form-field">
-            <label for="contact-topic">Topic *</label>
-            <select id="contact-topic" required>
-              <option value="">Select a topic…</option>
-              <option>Setup &amp; Getting Started</option>
-              <option>Band Fit &amp; Comfort</option>
-              <option>Connectivity Issues</option>
-              <option>Sensor Readings</option>
-              <option>App &amp; Software</option>
-              <option>Battery &amp; Charging</option>
-              <option>Alerts &amp; Notifications</option>
-              <option>Warranty Claim</option>
-              <option>Returns &amp; Exchanges</option>
-              <option>Order &amp; Shipping</option>
-              <option>Healthcare Provider Inquiry</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="contact-message">Message *</label>
-            <textarea id="contact-message" placeholder="Describe your issue. Include baby's age and steps already tried." required></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;">Send Message</button>
-          <p style="font-size:.76rem;color:#9a8a80;text-align:center;margin-top:.8rem;">24hr response · Urgent safety concerns: call 911</p>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Newsletter -->
-<section class="newsletter-block">
-  <div class="container">
-    <div class="newsletter-block__inner fade-in">
-      <h2>Stay Up to Date</h2>
-      <p>Get notified about firmware updates, new features, and important product announcements.</p>
-      <form class="newsletter-form" novalidate>
-        <input type="email" placeholder="Your email address" autocomplete="email" required />
-        <button type="submit" class="btn btn--primary">Subscribe</button>
-      </form>
-      <p style="font-size:.78rem;margin-top:.8rem;opacity:.65;">No spam, ever. Unsubscribe anytime.</p>
     </div>
   </div>
 </section>
 
 <footer class="footer">
   <div class="container">
-    <div class="footer__top">
+    <div class="footer__grid">
       <div class="footer__brand">
-        <a href="index.html" class="footer__logo" aria-label="Bundl Home">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" aria-hidden="true">
-            <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
-            <circle cx="335" cy="48" r="7" fill="#7B5028"/>
-            <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
-            <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
-            <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
-            <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
-          </svg>
+        <a href="index.html" aria-label="Bundl Home">
+          <img src="images/bundl-logo.png" alt="Bundl" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" loading="lazy" />
         </a>
-        <p>For Your Bundl of Joy</p>
+        <p>A student-led startup building smart wearable baby monitoring that helps parents feel more informed, reassured, and at ease, because peace of mind should be accessible to every family.</p>
+                <div class="footer__social">
+          <a href="https://www.instagram.com/bundl_official_?igsh=cW13cmk4MHEyYXo%3D&utm_source=qr" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.facebook.com/share/1ERbwhmzVs/?mibextid=wwXIfr" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.linkedin.com/company/teambundl/" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
       </div>
-      <div class="footer__links">
-        <div class="footer__col">
-          <h5>Product</h5>
-          <a href="product.html">Shop Bundl</a>
-          <a href="how-it-works.html">How It Works</a>
-          <a href="product.html#specs">Specifications</a>
-        </div>
-        <div class="footer__col">
-          <h5>Learn</h5>
-          <a href="sids-safety.html">SIDS &amp; Safety</a>
-          <a href="education.html">Baby Care</a>
-          </div>
-        <div class="footer__col">
-          <h5>Company</h5>
-          <a href="healthcare.html">For Providers</a>
-          <a href="support.html">Support</a>
-        </div>
+      <div class="footer__col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="product.html">The Band</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="product.html#verification">Our Technology</a></li>
+          <li><a href="product.html#insights">Personalized Insights</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Learn</h5>
+        <ul>
+          <li><a href="sids-safety.html">SIDS &amp; Safety</a></li>
+          <li><a href="education.html">Baby Care</a></li>
+          <li><a href="healthcare.html">For Providers</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="support.html">Support Us</a></li>
+          <li><a href="support.html#team">Meet the Team</a></li>
+          <li><a href="support.html#waitlist">Support Our Mission</a></li>
+          <li><a href="mailto:bundl.team.official@gmail.com">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="support.html#waitlist">Join Waitlist</a></li>
+          <li><a href="https://gofund.me/33b133596" target="_blank" rel="noopener">GoFundMe</a></li>
+          <li><a href="support.html">Help Center</a></li>
+          <li><a href="mailto:bundl.team.official@gmail.com">Contact Us</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer__bottom">
-      <p>&copy; 2025 Bundl. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Medical Disclaimer</a></p>
+    <div class="footer__disclaimer">
+      <p>Bundl is a pre-launch startup product currently in prototype development. Bundl is designed to provide parents with real-time wellness data for informational purposes only. It is not a medical device and is not intended to diagnose, treat, cure, or prevent any medical condition. Always consult your pediatrician or qualified healthcare provider regarding your baby's health.</p>
     </div>
   </div>
 </footer>
 
+<script>
+  function ml_webform_success_42009777() {
+    var $ = ml_jQuery || jQuery;
+    $('.ml-subscribe-form-42009777 .row-success').show();
+    $('.ml-subscribe-form-42009777 .row-form').hide();
+  }
+</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
+<script>
+  fetch("https://assets.mailerlite.com/jsonp/2387799/forms/189016167294174785/takel")
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>

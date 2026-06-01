@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,6 +9,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/mailerlite.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q9GLGL28F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6Q9GLGL28F');
+  </script>
   <style>
     /* ── Reviews page styles ── */
     .reviews-hero {
@@ -357,31 +367,18 @@
 <header class="header" id="header">
   <div class="header__inner">
     <a href="index.html" class="header__logo" aria-label="Bundl Home">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" aria-hidden="true">
-        <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
-        <circle cx="335" cy="48" r="7" fill="#7B5028"/>
-        <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
-        <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
-        <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
-        <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
-      </svg>
+      <img src="images/bundl-logo.png" class="header__logo-img" alt="Bundl" />
     </a>
     <nav class="header__nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="product.html">Shop</a>
+      <a href="product.html">Product</a>
       <a href="how-it-works.html">How It Works</a>
       <a href="sids-safety.html">SIDS &amp; Safety</a>
       <a href="education.html">Baby Care</a>
       <a href="healthcare.html">For Providers</a>
-      <a href="support.html">Support</a>
+      <a href="support.html">Support Us</a>
     </nav>
     <div class="header__actions">
-      <a href="product.html" class="btn btn--primary btn--sm">Shop Now</a>
       <button class="header__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -389,19 +386,19 @@
 
 <nav class="mobile-nav" aria-label="Mobile navigation">
   <a href="index.html">Home</a>
-  <a href="product.html">Shop</a>
+  <a href="product.html">Product</a>
   <a href="how-it-works.html">How It Works</a>
   <a href="sids-safety.html">SIDS &amp; Safety</a>
   <a href="education.html">Baby Care</a>
   <a href="healthcare.html">For Providers</a>
-  <a href="support.html">Support</a>
+  <a href="support.html">Support Us</a>
 </nav>
 
 <!-- Hero -->
 <section class="reviews-hero">
   <div class="container">
     <h1>Heard from the Families<br>Who Matter Most</h1>
-    <p>Real reviews from real parents — and the healthcare professionals who recommend Bundl. Every review is verified and unedited.</p>
+    <p>Real reviews from real parents and the healthcare professionals who recommend Bundl. Every review is verified and unedited.</p>
     <div class="rating-summary fade-in">
       <div class="rating-summary__main">
         <div class="rating-summary__score">4.9</div>
@@ -444,7 +441,7 @@
   <div class="reviews-section__inner">
     <div class="featured-story fade-in">
       <div>
-        <p class="featured-story__quote">"Our son was born 6 weeks early. The NICU team gave us so much data while he was there, and coming home felt like stepping off a cliff. Bundl gave us back that sense of knowing — we could see his oxygen levels, his heart rate, everything we'd gotten used to watching. We slept. Actually slept. I can't explain what that meant to us."</p>
+        <p class="featured-story__quote">"Our son was born 6 weeks early. The NICU team gave us so much data while he was there, and coming home felt like stepping off a cliff. Bundl gave us back that sense of knowing: we could see his oxygen levels, his heart rate, everything we'd gotten used to watching. We slept. Actually slept. I can't explain what that meant to us."</p>
         <div class="featured-story__author">
           <div class="featured-story__author-avatar">A</div>
           <div>
@@ -502,7 +499,7 @@
         </div>
         <div class="review-card__stars">★★★★★</div>
         <p class="review-card__title">Worth every penny for peace of mind</p>
-        <p class="review-card__body">I was terrified every night for the first two months. With Bundl, I open the app, see her breathing pattern, her heart rate, her temperature — all normal — and I actually go to sleep. I'm a calmer mum because of this. That has to be worth something.</p>
+        <p class="review-card__body">I was terrified every night for the first two months. With Bundl, I open the app, see her breathing pattern, her heart rate, her temperature, all normal, and I actually go to sleep. I'm a calmer mum because of this. That has to be worth something.</p>
         <span class="review-card__tag">Sleep</span>
         <div class="review-card__footer">
           <span class="review-card__date">January 2025</span>
@@ -521,7 +518,7 @@
         </div>
         <div class="review-card__stars">★★★★★</div>
         <p class="review-card__title">Game-changer for twin parents</p>
-        <p class="review-card__body">Managing two newborns is chaos. Having Bundl on both babies means I can check in from anywhere in the house — and when I'm feeding one, I'm not panicking about the other. The dual-device app view is brilliant.</p>
+        <p class="review-card__body">Managing two newborns is chaos. Having Bundl on both babies means I can check in from anywhere in the house, and when I'm feeding one, I'm not panicking about the other. The dual-device app view is brilliant.</p>
         <span class="review-card__tag">Multiple Babies</span>
         <div class="review-card__footer">
           <span class="review-card__date">February 2025</span>
@@ -540,7 +537,7 @@
         </div>
         <div class="review-card__stars">★★★★★</div>
         <p class="review-card__title">After the NICU, Bundl was our bridge</p>
-        <p class="review-card__body">Lena spent 3 weeks in the NICU. Coming home was wonderful and terrifying. The nurses had monitors on her round the clock, and suddenly... nothing. Bundl filled that gap. The SpO₂ monitoring especially — we could finally breathe because we knew she was.</p>
+        <p class="review-card__body">Lena spent 3 weeks in the NICU. Coming home was wonderful and terrifying. The nurses had monitors on her round the clock, and suddenly... nothing. Bundl filled that gap. The SpO₂ monitoring especially: we could finally breathe because we knew she was.</p>
         <span class="review-card__tag">Premature Baby</span>
         <div class="review-card__footer">
           <span class="review-card__date">December 2024</span>
@@ -559,7 +556,7 @@
         </div>
         <div class="review-card__stars">★★★★★</div>
         <p class="review-card__title">I wish we'd had this for our first</p>
-        <p class="review-card__body">After our anxious first year with baby no. 1, we vowed to try Bundl with our second. It's a completely different experience. The sleep data alone has been invaluable — we spotted a pattern of shallow sleep that our paediatrician found very interesting.</p>
+        <p class="review-card__body">After our anxious first year with baby no. 1, we vowed to try Bundl with our second. It's a completely different experience. The sleep data alone has been invaluable; we spotted a pattern of shallow sleep that our paediatrician found very interesting.</p>
         <span class="review-card__tag">Sleep Data</span>
         <div class="review-card__footer">
           <span class="review-card__date">January 2025</span>
@@ -578,7 +575,7 @@
         </div>
         <div class="review-card__stars">★★★★★</div>
         <p class="review-card__title">The app is genuinely beautiful</p>
-        <p class="review-card__body">I've tried other monitoring apps. They're either overwhelming with alarms or so vague they're useless. Bundl's app strikes exactly the right balance — clean dashboard, clear data, alerts that actually mean something. It's the first baby tech product that doesn't feel like it was designed by someone without children.</p>
+        <p class="review-card__body">I've tried other monitoring apps. They're either overwhelming with alarms or so vague they're useless. Bundl's app strikes exactly the right balance: clean dashboard, clear data, alerts that actually mean something. It's the first baby tech product that doesn't feel like it was designed by someone without children.</p>
         <span class="review-card__tag">App</span>
         <div class="review-card__footer">
           <span class="review-card__date">February 2025</span>
@@ -615,8 +612,8 @@
           <span class="review-card__verified">✓ Verified</span>
         </div>
         <div class="review-card__stars">★★★★☆</div>
-        <p class="review-card__title">Very good — a small note on battery</p>
-        <p class="review-card__body">Honestly, 4 stars only because I forgot to charge it one night and it died at 3 AM. Totally my fault. The band itself is soft, stays on, no skin issues at all even with extended wear. Baby barely notices it. Would absolutely buy again — just recommend a charging habit reminder.</p>
+        <p class="review-card__title">Very good, a small note on battery</p>
+        <p class="review-card__body">Honestly, 4 stars only because I forgot to charge it one night and it died at 3 AM. Totally my fault. The band itself is soft, stays on, no skin issues at all even with extended wear. Baby barely notices it. Would absolutely buy again; just recommend a charging habit reminder.</p>
         <span class="review-card__tag">Design</span>
         <div class="review-card__footer">
           <span class="review-card__date">January 2025</span>
@@ -635,7 +632,7 @@
         </div>
         <div class="review-card__stars">★★★★★</div>
         <p class="review-card__title">Helped my postpartum anxiety more than anything</p>
-        <p class="review-card__body">My therapist and I talked about how much of my postpartum anxiety was rooted in not knowing if my baby was okay. Bundl didn't replace therapy, but having real data — not just my anxious imagination — changed everything. I check it, I see normal, I breathe. It's a tool that works.</p>
+        <p class="review-card__body">My therapist and I talked about how much of my postpartum anxiety was rooted in not knowing if my baby was okay. Bundl didn't replace therapy, but having real data, not just my anxious imagination, changed everything. I check it, I see normal, I breathe. It's a tool that works.</p>
         <span class="review-card__tag">Mental Health</span>
         <div class="review-card__footer">
           <span class="review-card__date">October 2024</span>
@@ -666,7 +663,7 @@
         </div>
       </div>
       <div class="pro-quote-card fade-in">
-        <p class="pro-quote-card__text">As a neonatal nurse, I'm careful about overpromising what consumer monitors can do. But Bundl's commitment to honest communication about what the device is and isn't — that's exactly what I want to see in this space. I recommend it to NICU discharge families.</p>
+        <p class="pro-quote-card__text">As a neonatal nurse, I'm careful about overpromising what consumer monitors can do. But Bundl's commitment to honest communication about what the device is and isn't; that's exactly what I want to see in this space. I recommend it to NICU discharge families.</p>
         <div class="pro-quote-card__author">
           <div class="pro-quote-card__avatar">A</div>
           <div>
@@ -676,7 +673,7 @@
         </div>
       </div>
       <div class="pro-quote-card fade-in">
-        <p class="pro-quote-card__text">Parent anxiety is a real clinical concern. Tools that reduce anxious checking behavior — rather than amplifying it — have genuine value. Bundl's calm dashboard design appears to support reassurance rather than alarm. That's a meaningful design choice.</p>
+        <p class="pro-quote-card__text">Parent anxiety is a real clinical concern. Tools that reduce anxious checking behavior, rather than amplifying it, have genuine value. Bundl's calm dashboard design appears to support reassurance rather than alarm. That's a meaningful design choice.</p>
         <div class="pro-quote-card__author">
           <div class="pro-quote-card__avatar">M</div>
           <div>
@@ -695,7 +692,7 @@
   <div class="lifestyle-strip__overlay">
     <div class="lifestyle-strip__text">
       <h2>Join Over 10,000 Families Who Sleep Better with Bundl</h2>
-      <p>Real parents. Real peace of mind. Real results — night after night.</p>
+      <p>Real parents. Real peace of mind. Real results, night after night.</p>
     </div>
   </div>
 </div>
@@ -727,7 +724,7 @@
         <div class="case-card__body">
           <div class="case-card__type">Written Story</div>
           <h4>How Keisha Reclaimed Her Sleep</h4>
-          <p>A first-time mum's journey through postpartum anxiety — and how real data helped quiet the worst-case thoughts.</p>
+          <p>A first-time mum's journey through postpartum anxiety and how real data helped quiet the worst-case thoughts.</p>
         </div>
       </div>
       <div class="case-card fade-in">
@@ -751,73 +748,220 @@
     <div class="write-review-box fade-in">
       <h3>Share Your Bundl Experience</h3>
       <p>Your story could help another parent decide to give their family a calmer night. We read every review and take all feedback seriously.</p>
-      <a href="support.html#contact" class="btn btn--primary">Write a Review</a>
-      <p style="font-size:.78rem;margin-top:1rem;color:#7a6a60;">You must be a verified purchaser to submit a review. Reviews are moderated for authenticity only — never filtered for sentiment.</p>
+      <a href="mailto:bundl.team.official@gmail.com" class="btn btn--primary">Write a Review</a>
+      <p style="font-size:.78rem;margin-top:1rem;color:#7a6a60;">You must be a verified purchaser to submit a review. Reviews are moderated for authenticity only, never filtered for sentiment.</p>
     </div>
   </div>
 </section>
 
-<!-- Newsletter -->
-<section class="newsletter-block">
+<!-- ============================================================
+     JOIN WAITLIST + DONATE — Combined End-of-Page Section
+     ============================================================ -->
+<section class="section section--cream" id="waitlist" aria-labelledby="join-heading">
   <div class="container">
-    <div class="newsletter-block__inner fade-in">
-      <h2>Join the Bundl Community</h2>
-      <p>Monthly parenting insights, product tips, and real stories from families who use Bundl every day.</p>
-      <form class="newsletter-form" novalidate>
-        <input type="email" placeholder="Your email address" autocomplete="email" required />
-        <button type="submit" class="btn btn--primary">Subscribe</button>
-      </form>
-      <p style="font-size:.78rem;margin-top:.8rem;opacity:.65;">No spam, ever. Unsubscribe anytime.</p>
+
+    <div class="section-header fade-in">
+      <span class="eyebrow">Be Part of Something Meaningful</span>
+      <h2 id="join-heading">Join Us: Two Ways to Help Bundl Happen.</h2>
+      <p>Whether you sign up for updates or help fund our mission, every action moves us closer to helping families feel more at ease.</p>
     </div>
+
+    <div class="join-donate-layout">
+
+      <!-- LEFT: Waitlist signup -->
+      <div class="join-donate-layout__left fade-in">
+        <div class="join-panel">
+          <div class="join-panel__header">
+            <h3>Join the Waitlist</h3>
+            <p>Be first to know when Bundl launches: Kickstarter alerts, launch updates, and early access opportunities.</p>
+          </div>
+
+          <!-- ================================================
+               MAILERLITE EMBED
+               Replace the form below with your MailerLite embed code.
+               Go to: MailerLite → Forms → Embedded Forms → Copy Code
+               Paste it inside the .mailerlite-embed div below.
+               ================================================ -->
+          <div class="mailerlite-embed">
+            <div id="mlb2-42009777" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-42009777">
+              <div class="ml-form-align-center">
+                <div class="ml-form-embedWrapper embedForm">
+                  <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2387799/forms/189016167294174785/subscribe" data-code="" method="post" target="_blank">
+                      <div class="ml-form-formContent">
+                        <div class="ml-form-fieldRow">
+                          <div class="ml-field-group ml-field-name ml-validate-required">
+                            <label>How are you interested in Bundl?</label>
+                            <select class="custom-select" name="fields[name]" aria-label="name" aria-required="true">
+                              <option value="">-</option>
+                              <option>Parent / Expecting Parent</option>
+                              <option>Friend / Family Supporter</option>
+                              <option>Healthcare Professional</option>
+                              <option>Interested in partnership / investment opportunities</option>
+                              <option>Other</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="ml-form-fieldRow ml-last-item">
+                          <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                            <label>Email</label>
+                            <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="email">
+                          </div>
+                        </div>
+                      </div>
+                      <input type="hidden" name="ml-submit" value="1">
+                      <div class="ml-form-embedSubmit">
+                        <button type="submit" class="primary">Subscribe</button>
+                        <button disabled="disabled" style="display: none;" type="button" class="loading">
+                          <div class="ml-form-embedSubmitLoad"></div>
+                          <span class="sr-only">Loading...</span>
+                        </button>
+                      </div>
+                      <input type="hidden" name="anticsrf" value="true">
+                    </form>
+                  </div>
+                  <div class="ml-form-successBody row-success" style="display: none">
+                    <div class="ml-form-successContent">
+                      <h4>Thank you!</h4>
+                      <p>You have successfully joined our waitlist.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end .mailerlite-embed -->
+
+          <div class="waitlist-perks">
+            <div class="waitlist-perk">Early access to launch</div>
+            <div class="waitlist-perk">Kickstarter alerts</div>
+            <div class="waitlist-perk">Fundraiser announcements</div>
+            <div class="waitlist-perk">Exclusive supporter perks</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Donate / GoFundMe -->
+      <div class="join-donate-layout__right fade-in fade-in--delay-1" id="support">
+        <div class="donate-panel">
+          <div class="donate-panel__header">
+            <div class="gofundme-card__badge">
+              <span class="gofundme-card__badge-dot"></span>
+              Currently: Prototype Stage
+            </div>
+            <h3>Support Our Mission</h3>
+            <p>We're a student startup building Bundl with limited resources but unlimited determination. Your contribution, large or small, helps us get one step closer.</p>
+          </div>
+
+          <div class="donate-panel__image">
+            <img src="images/grp1.jpg" alt="A baby sleeping peacefully" loading="lazy" />
+          </div>
+
+          <div class="gofundme-funding-list">
+            <div class="gofundme-funding-item">Prototype development and testing</div>
+            <div class="gofundme-funding-item">Manufacturing and material sourcing</div>
+            <div class="gofundme-funding-item">Safety validation and compliance testing</div>
+            <div class="gofundme-funding-item">App development and beta testing</div>
+            <div class="gofundme-funding-item">Kickstarter campaign preparation and launch</div>
+          </div>
+
+          <div class="donate-panel__actions">
+            <!-- Replace href below with your actual GoFundMe URL -->
+            <a href="https://gofund.me/33b133596" class="btn btn--primary btn--full" target="_blank" rel="noopener" aria-label="Donate on GoFundMe">Donate on GoFundMe →</a>
+          </div>
+
+          <div class="gofundme-impact">
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Backed by a community that cares</div>
+            </div>
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Helps families afford monitoring</div>
+            </div>
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Student-built, community-backed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end .join-donate-layout -->
+
+    <div style="text-align:center;margin-top:40px;">
+      <div style="display:inline-block;padding:20px 40px;border:2px solid var(--brown);border-radius:var(--radius-lg);background:rgba(92,51,24,0.05);">
+        <p style="font-size:1.15rem;font-weight:600;color:var(--brown);margin:0 0 6px;">Have another way you'd like to support Bundl, or just curious about what we're building?</p>
+        <p style="font-size:0.95rem;color:var(--text-medium);margin:0;">Whether you're a healthcare provider, researcher, potential partner, or simply someone who believes in our mission — we'd love to hear from you. <a href="mailto:bundl.team.official@gmail.com" style="color:var(--brown);text-decoration:underline;text-underline-offset:3px;">Contact our team →</a></p>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <footer class="footer">
   <div class="container">
-    <div class="footer__top">
+    <div class="footer__grid">
       <div class="footer__brand">
-        <a href="index.html" class="footer__logo" aria-label="Bundl Home">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" aria-hidden="true">
-            <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
-            <circle cx="335" cy="48" r="7" fill="#7B5028"/>
-            <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
-            <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
-            <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
-            <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
-          </svg>
+        <a href="index.html" aria-label="Bundl Home">
+          <img src="images/bundl-logo.png" alt="Bundl" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" loading="lazy" />
         </a>
-        <p>For Your Bundl of Joy</p>
+        <p>A student-led startup building smart wearable baby monitoring that helps parents feel more informed, reassured, and at ease, because peace of mind should be accessible to every family.</p>
+                <div class="footer__social">
+          <a href="https://www.instagram.com/bundl_official_?igsh=cW13cmk4MHEyYXo%3D&utm_source=qr" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.facebook.com/share/1ERbwhmzVs/?mibextid=wwXIfr" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.linkedin.com/company/teambundl/" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
       </div>
-      <div class="footer__links">
-        <div class="footer__col">
-          <h5>Product</h5>
-          <a href="product.html">Shop Bundl</a>
-          <a href="how-it-works.html">How It Works</a>
-          <a href="product.html#specs">Specifications</a>
-        </div>
-        <div class="footer__col">
-          <h5>Learn</h5>
-          <a href="sids-safety.html">SIDS &amp; Safety</a>
-          <a href="education.html">Baby Care</a>
-          </div>
-        <div class="footer__col">
-          <h5>Company</h5>
-          <a href="healthcare.html">For Providers</a>
-          <a href="support.html">Support</a>
-        </div>
+      <div class="footer__col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="product.html">The Band</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="product.html#verification">Our Technology</a></li>
+          <li><a href="product.html#insights">Personalized Insights</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Learn</h5>
+        <ul>
+          <li><a href="sids-safety.html">SIDS &amp; Safety</a></li>
+          <li><a href="education.html">Baby Care</a></li>
+          <li><a href="healthcare.html">For Providers</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="support.html">Support Us</a></li>
+          <li><a href="support.html#team">Meet the Team</a></li>
+          <li><a href="support.html#waitlist">Support Our Mission</a></li>
+          <li><a href="mailto:bundl.team.official@gmail.com">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="support.html#waitlist">Join Waitlist</a></li>
+          <li><a href="https://gofund.me/33b133596" target="_blank" rel="noopener">GoFundMe</a></li>
+          <li><a href="support.html">Help Center</a></li>
+          <li><a href="mailto:bundl.team.official@gmail.com">Contact Us</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer__bottom">
-      <p>&copy; 2025 Bundl. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Medical Disclaimer</a></p>
+    <div class="footer__disclaimer">
+      <p>Bundl is a pre-launch startup product currently in prototype development. Bundl is designed to provide parents with real-time wellness data for informational purposes only. It is not a medical device and is not intended to diagnose, treat, cure, or prevent any medical condition. Always consult your pediatrician or qualified healthcare provider regarding your baby's health.</p>
     </div>
   </div>
 </footer>
 
+<script>
+  function ml_webform_success_42009777() {
+    var $ = ml_jQuery || jQuery;
+    $('.ml-subscribe-form-42009777 .row-success').show();
+    $('.ml-subscribe-form-42009777 .row-form').hide();
+  }
+</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
+<script>
+  fetch("https://assets.mailerlite.com/jsonp/2387799/forms/189016167294174785/takel")
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>

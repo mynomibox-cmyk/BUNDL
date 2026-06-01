@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,6 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q9GLGL28F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6Q9GLGL28F');
+  </script>
   <style>
     /* ── About page styles ── */
     .about-hero {
@@ -257,31 +266,18 @@
 <header class="header" id="header">
   <div class="header__inner">
     <a href="index.html" class="header__logo" aria-label="Bundl Home">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" aria-hidden="true">
-        <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
-        <circle cx="335" cy="48" r="7" fill="#7B5028"/>
-        <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
-        <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
-        <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
-        <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
-      </svg>
+      <img src="images/bundl-logo.png" class="header__logo-img" alt="Bundl" />
     </a>
     <nav class="header__nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="product.html">Shop</a>
+      <a href="product.html">Product</a>
       <a href="how-it-works.html">How It Works</a>
       <a href="sids-safety.html">SIDS &amp; Safety</a>
       <a href="education.html">Baby Care</a>
       <a href="healthcare.html">For Providers</a>
-      <a href="support.html">Support</a>
+      <a href="support.html">Support Us</a>
     </nav>
     <div class="header__actions">
-      <a href="product.html" class="btn btn--primary btn--sm">Shop Now</a>
       <button class="header__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -289,20 +285,24 @@
 
 <nav class="mobile-nav" aria-label="Mobile navigation">
   <a href="index.html">Home</a>
-  <a href="product.html">Shop</a>
+  <a href="product.html">Product</a>
   <a href="how-it-works.html">How It Works</a>
   <a href="sids-safety.html">SIDS &amp; Safety</a>
   <a href="education.html">Baby Care</a>
   <a href="healthcare.html">For Providers</a>
-  <a href="support.html">Support</a>
+  <a href="support.html">Support Us</a>
+  <div class="mobile-nav__cta">
+    <a href="index.html#waitlist" class="btn btn--primary btn--full">Join the Waitlist</a>
+    <a href="support.html#waitlist" class="btn btn--secondary btn--full">Support Our Mission</a>
+  </div>
 </nav>
 
 <!-- Hero -->
 <section class="about-hero">
   <div class="container">
-    <div class="about-hero__eyebrow">Our Story</div>
-    <h1>Born from a Parent's<br>Need for Peace of Mind</h1>
-    <p class="about-hero__lead">Bundl began the night our co-founder sat beside a bassinet, checking her newborn's breathing every few minutes until sunrise. We knew there had to be a better way.</p>
+    <div class="about-hero__eyebrow">About Us</div>
+    <h1>Built by Students,<br>Driven by Purpose.</h1>
+    <p class="about-hero__lead">A four-member student-led startup from Liberty Hill, Texas, building technology that helps families feel a little more supported.</p>
   </div>
 </section>
 
@@ -311,15 +311,14 @@
   <div class="about-section__inner">
     <div class="story-layout fade-in">
       <div class="story-layout__text">
-        <h2>Why We Built Bundl</h2>
-        <p>The first days and weeks with a newborn are magical — and terrifying. Every parent knows the feeling: you've finally gotten the baby to sleep, but instead of resting yourself, you're leaning over the crib every fifteen minutes just to make sure everything is okay.</p>
-        <p>We are a team of parents, biomedical engineers, and child health advocates who refused to accept that this anxiety was simply the price of parenthood. We believed technology could be gentle, wearable, and genuinely useful — not just another blinking gadget that creates more noise.</p>
-        <p>Bundl was built with one clear goal: give parents real information, in real time, without disrupting a single moment of precious baby sleep. A soft ankle band, a thoughtful app, and five vital signs tracked continuously — all designed with the kind of care you'd expect from someone who's been in that same exhausted, worried place themselves.</p>
+        <h2>Why We Started Bundl</h2>
+        <p>As students, we noticed how stressful and emotionally exhausting it can be for parents, especially parents of infants, to constantly worry about their baby's comfort, safety, and overall well-being throughout the day and night.</p>
+        <p>Many existing baby-monitoring and wellness products are expensive and out of reach for a lot of families. We want to help create a future where parents don't have to spend overwhelming amounts of money just to feel informed and reassured about their child's well-being.</p>
       </div>
       <div class="story-visual">
-        <span class="story-visual__emoji">🌙</span>
-        <p class="story-visual__quote">"I just wanted to know she was breathing. I didn't think that was too much to ask."</p>
-        <p class="story-visual__attribution">— Roopali, Co-founder &amp; CEO</p>
+        <span class="story-visual__emoji">💛</span>
+        <p class="story-visual__quote">"We started Bundl because peace of mind for parents should not feel like a luxury."</p>
+        <p class="story-visual__attribution">— The Bundl Team</p>
       </div>
     </div>
   </div>
@@ -346,7 +345,7 @@
       <div class="value-card value-card--brown fade-in">
         <div class="value-card__icon">🔒</div>
         <h4>Privacy by Default</h4>
-        <p>Your baby's health data belongs to you. We use AES-256 encryption, collect only what's necessary, and never sell data to third parties — ever.</p>
+        <p>Your baby's health data belongs to you. We use strong encryption, collect only what's necessary, and never sell data to third parties. Ever.</p>
       </div>
       <div class="value-card value-card--green fade-in">
         <div class="value-card__icon">🌿</div>
@@ -363,7 +362,7 @@
   <div class="lifestyle-strip__overlay">
     <div class="lifestyle-strip__text">
       <h2>Born from a Parent's Sleepless Night</h2>
-      <p>Every feature in Bundl was designed by parents who understand the weight of responsibility — and the power of peace of mind.</p>
+      <p>Every feature in Bundl was designed by parents who understand the weight of responsibility and the power of peace of mind.</p>
     </div>
   </div>
 </div>
@@ -373,27 +372,13 @@
   <div class="about-section__inner">
     <div class="about-section__header fade-in">
       <h2>The Bundl Band</h2>
-      <p>Thoughtfully crafted in three designs — because every baby deserves something beautiful.</p>
+      <p>Five designs crafted in soft, baby-safe materials, with colors and patterns for every family.</p>
     </div>
-    <div style="display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-top:40px;">
-      <div style="text-align:center;">
-        <img src="images/product-green-band.png" alt="Sage Green Bundl band" style="height:160px;object-fit:contain;display:block;margin:0 auto 12px;filter:drop-shadow(0 6px 16px rgba(92,51,24,0.12));">
-        <div style="font-weight:600;color:var(--brown);font-size:0.9rem;">Sage Green</div>
-        <div style="font-size:0.8rem;color:var(--text-muted);">Original Design</div>
-      </div>
-      <div style="text-align:center;">
-        <img src="images/product-bands-variants.png" alt="Dino print Bundl band" style="height:160px;object-fit:contain;display:block;margin:0 auto 12px;filter:drop-shadow(0 6px 16px rgba(92,51,24,0.12));">
-        <div style="font-weight:600;color:var(--brown);font-size:0.9rem;">Dino Print</div>
-        <div style="font-size:0.8rem;color:var(--text-muted);">Fun Design</div>
-      </div>
-      <div style="text-align:center;">
-        <img src="images/product-floral-band.png" alt="Floral print Bundl band" style="height:160px;object-fit:contain;display:block;margin:0 auto 12px;filter:drop-shadow(0 6px 16px rgba(92,51,24,0.12));">
-        <div style="font-weight:600;color:var(--brown);font-size:0.9rem;">Floral Print</div>
-        <div style="font-size:0.8rem;color:var(--text-muted);">Classic Design</div>
-      </div>
+    <div style="display:flex;justify-content:center;margin-top:40px;">
+      <img src="images/g2.png" alt="Bundl smart ankle band" loading="lazy" style="max-width:520px;width:100%;border-radius:16px;filter:drop-shadow(0 8px 28px rgba(92,51,24,0.13));">
     </div>
     <div style="text-align:center;margin-top:32px;">
-      <a href="product.html" class="btn btn--primary">Shop Now →</a>
+      <a href="product.html" class="btn btn--primary">See All Designs →</a>
     </div>
   </div>
 </section>
@@ -403,32 +388,32 @@
   <div class="about-section__inner">
     <div class="about-section__header fade-in">
       <h2>Meet the Team</h2>
-      <p>We're a small, focused team with big ambitions and personal reasons to get this right.</p>
+      <p>Four students. One shared mission. Endless heart.</p>
     </div>
     <div class="team-grid">
       <div class="team-card fade-in">
-        <div class="team-card__avatar team-card__avatar--roopali">R</div>
-        <h3>Roopali</h3>
-        <div class="team-card__role">Co-Founder &amp; CEO</div>
-        <p>Former pediatric nurse turned entrepreneur. After her daughter's birth, Roopali channeled years of clinical experience into building the monitoring solution she wished she'd had. She leads strategy, partnerships, and product vision.</p>
+        <div class="team-member-card__avatar" style="margin:0 auto 1.2rem;"><img src="images/roo1.jpeg" alt="Roopali Rahul" loading="lazy"></div>
+        <h3>Roopali Rahul</h3>
+        <div class="team-card__role">CEO</div>
+        <p>Leading Bundl's vision and strategy, passionate about making healthcare technology more accessible for everyday families.</p>
       </div>
       <div class="team-card fade-in">
-        <div class="team-card__avatar team-card__avatar--floristan">F</div>
-        <h3>Floristan</h3>
-        <div class="team-card__role">Co-Founder &amp; CFO</div>
-        <p>Biomedical engineer and father of twins. Floristan designed the core sensor architecture and led hardware development. He ensures every circuit and algorithm meets the standards he holds for his own children's safety.</p>
-      </div>
-      <div class="team-card fade-in">
-        <div class="team-card__avatar team-card__avatar--meghana">M</div>
-        <h3>Meghana</h3>
+        <div class="team-member-card__avatar" style="margin:0 auto 1.2rem;"><img src="images/meg1.jpeg" alt="Meghana Malkareddy" loading="lazy" style="object-position:center 35%;"></div>
+        <h3>Meghana Malkareddy</h3>
         <div class="team-card__role">CMO</div>
-        <p>Brand strategist and new parent. Meghana crafts Bundl's voice — warm, honest, and science-backed. She believes that the best marketing for a baby health product is simply telling the truth about what it does and doesn't do.</p>
+        <p>Crafting Bundl's story and community, bringing warmth, authenticity, and heart to everything we share with the world.</p>
       </div>
       <div class="team-card fade-in">
-        <div class="team-card__avatar team-card__avatar--samantha">S</div>
-        <h3>Samantha</h3>
-        <div class="team-card__role">CRO</div>
-        <p>Revenue and growth lead with a background in consumer health startups. Samantha oversees sales, retail partnerships, and healthcare provider relationships, building bridges between Bundl and the families who need it most.</p>
+        <div class="team-member-card__avatar" style="margin:0 auto 1.2rem;"><img src="images/flo1.jpeg" alt="Floristan Schwindt" loading="lazy"></div>
+        <h3>Floristan Schwindt</h3>
+        <div class="team-card__role">CFO</div>
+        <p>Keeping Bundl financially grounded and sustainable, ensuring every dollar brings us closer to making this product a reality.</p>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-member-card__avatar" style="margin:0 auto 1.2rem;"><img src="images/samantha1.jpeg" alt="Samantha Fraunhofer" loading="lazy"></div>
+        <h3>Samantha Fraunhofer</h3>
+        <div class="team-card__role">COO</div>
+        <p>Turning plans into action, managing operations, timelines, and partnerships to keep the team moving forward every day.</p>
       </div>
     </div>
   </div>
@@ -439,13 +424,13 @@
   <div class="about-section__inner">
     <div class="about-section__header fade-in">
       <h2>Built with Care for the Planet</h2>
-      <p>Sustainable isn't a marketing word for us — it's a responsibility. Your baby will inherit this world. We take that seriously.</p>
+      <p>Sustainable isn't a marketing word for us; it's a responsibility. Your baby will inherit this world. We take that seriously.</p>
     </div>
     <div class="sustainability-grid">
       <div class="sustainability-item fade-in">
         <span class="sustainability-item__icon">🌱</span>
         <h4>GOTS Certified</h4>
-        <p>Our organic cotton is certified by the Global Organic Textile Standard — the world's leading standard for organic fibers.</p>
+        <p>Our organic cotton is certified by the Global Organic Textile Standard, the world's leading standard for organic fibers.</p>
       </div>
       <div class="sustainability-item fade-in">
         <span class="sustainability-item__icon">🌲</span>
@@ -485,7 +470,7 @@
       </div>
       <div class="cert-badge">
         <div class="cert-badge__icon">🔒</div>
-        AES-256 Encrypted
+        Encrypted
       </div>
       <div class="cert-badge">
         <div class="cert-badge__icon">📡</div>
@@ -529,7 +514,7 @@
     <div class="careers-cta fade-in">
       <h3>Join the Bundl Team</h3>
       <p>We're a small team with enormous purpose. If you're passionate about infant health, thoughtful technology, and doing meaningful work, we'd love to hear from you.</p>
-      <a href="support.html#contact" class="btn btn--outline" style="border-color:rgba(255,255,255,.5);color:#fff;">View Open Roles</a>
+      <a href="mailto:bundl.team.official@gmail.com" class="btn btn--outline" style="border-color:rgba(255,255,255,.5);color:#fff;">View Open Roles</a>
     </div>
   </div>
 </section>
@@ -539,7 +524,7 @@
   <div class="container">
     <div class="newsletter-block__inner fade-in">
       <h2>Stay Connected with Bundl</h2>
-      <p>Product updates, parenting insights, and safety research — delivered to your inbox monthly.</p>
+      <p>Product updates, parenting insights, and safety research, delivered to your inbox monthly.</p>
       <form class="newsletter-form" novalidate>
         <input type="email" placeholder="Your email address" autocomplete="email" required />
         <button type="submit" class="btn btn--primary">Subscribe</button>
@@ -551,46 +536,56 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="footer__top">
+    <div class="footer__grid">
       <div class="footer__brand">
-        <a href="index.html" class="footer__logo" aria-label="Bundl Home">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" aria-hidden="true">
-            <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
-            <circle cx="335" cy="48" r="7" fill="#7B5028"/>
-            <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
-            <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
-            <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
-            <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
-          </svg>
+        <a href="index.html" aria-label="Bundl Home">
+          <img src="images/bundl-logo.png" alt="Bundl" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" loading="lazy" />
         </a>
-        <p>For Your Bundl of Joy</p>
+        <p>A student-led startup building smart wearable baby monitoring that helps parents feel more informed, reassured, and at ease, because peace of mind should be accessible to every family.</p>
+                <div class="footer__social">
+          <a href="https://www.instagram.com/bundl_official_?igsh=cW13cmk4MHEyYXo%3D&utm_source=qr" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.facebook.com/share/1ERbwhmzVs/?mibextid=wwXIfr" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.linkedin.com/company/teambundl/" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
       </div>
-      <div class="footer__links">
-        <div class="footer__col">
-          <h5>Product</h5>
-          <a href="product.html">Shop Bundl</a>
-          <a href="how-it-works.html">How It Works</a>
-          <a href="product.html#specs">Specifications</a>
-        </div>
-        <div class="footer__col">
-          <h5>Learn</h5>
-          <a href="sids-safety.html">SIDS &amp; Safety</a>
-          <a href="education.html">Baby Care</a>
-          </div>
-        <div class="footer__col">
-          <h5>Company</h5>
-          <a href="healthcare.html">For Providers</a>
-          <a href="support.html">Support</a>
-        </div>
+      <div class="footer__col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="product.html">The Band</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="product.html#verification">Our Technology</a></li>
+          <li><a href="product.html#insights">Personalized Insights</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Learn</h5>
+        <ul>
+          <li><a href="sids-safety.html">SIDS &amp; Safety</a></li>
+          <li><a href="education.html">Baby Care</a></li>
+          <li><a href="healthcare.html">For Providers</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="support.html">Support Us</a></li>
+          <li><a href="support.html#team">Meet the Team</a></li>
+          <li><a href="support.html#waitlist">Support Our Mission</a></li>
+          <li><a href="mailto:bundl.team.official@gmail.com">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="support.html#waitlist">Join Waitlist</a></li>
+          <li><a href="https://gofund.me/33b133596" target="_blank" rel="noopener">GoFundMe</a></li>
+          <li><a href="support.html">Help Center</a></li>
+          <li><a href="mailto:bundl.team.official@gmail.com">Contact Us</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer__bottom">
-      <p>&copy; 2025 Bundl. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Medical Disclaimer</a></p>
+    <div class="footer__disclaimer">
+      <p>Bundl is a pre-launch startup product currently in prototype development. Bundl is designed to provide parents with real-time wellness data for informational purposes only. It is not a medical device and is not intended to diagnose, treat, cure, or prevent any medical condition. Always consult your pediatrician or qualified healthcare provider regarding your baby's health.</p>
     </div>
   </div>
 </footer>

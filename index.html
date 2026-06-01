@@ -1,14 +1,38 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BUNDL — Smart Baby Monitoring Ankle Band | For Your Bundl of Joy</title>
-  <meta name="description" content="Bundl is the smart wearable ankle band that monitors your baby's vitals 24/7 — heart rate, oxygen, temperature, and sleep. Real-time alerts delivered to your phone." />
+  <title>BUNDL — Smart Baby Monitoring Ankle Band | Peace of Mind for Parents</title>
+  <meta name="description" content="Bundl is the smart wearable ankle band helping parents feel informed and at ease — tracking your baby's vitals 24/7 with real-time alerts. Join our pre-launch waitlist." />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BUNDL — Smart Baby Monitoring for Every Family" />
+  <meta property="og:description" content="A student-built startup helping parents feel more informed and reassured about their baby's well-being. Join our pre-launch waitlist." />
+  <meta property="og:image" content="images/bundl-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Performance: Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Lora:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/mailerlite.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q9GLGL28F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6Q9GLGL28F');
+  </script>
+
+  <!-- ================================================
+       MAILERLITE UNIVERSAL PLACEHOLDER
+       Paste your MailerLite Universal script here
+       ================================================ -->
 </head>
 <body>
 
@@ -20,15 +44,14 @@
     </a>
     <nav class="header__nav" aria-label="Main navigation">
       <a href="index.html" class="active">Home</a>
-      <a href="product.html">Shop</a>
+      <a href="product.html">Product</a>
       <a href="how-it-works.html">How It Works</a>
       <a href="sids-safety.html">SIDS &amp; Safety</a>
       <a href="education.html">Baby Care</a>
       <a href="healthcare.html">For Providers</a>
-      <a href="support.html">Support</a>
+      <a href="support.html">Support Us</a>
     </nav>
     <div class="header__actions">
-      <a href="product.html" class="btn btn--primary btn--sm">Shop Now</a>
       <button class="header__hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -36,62 +59,62 @@
   </div>
 </header>
 
+<!-- MOBILE NAV -->
 <nav class="mobile-nav" aria-label="Mobile navigation">
   <a href="index.html">Home</a>
-  <a href="product.html">Shop</a>
+  <a href="product.html">Product</a>
   <a href="how-it-works.html">How It Works</a>
-  <a href="sids-safety.html">SIDS &amp; Baby Safety</a>
-  <a href="education.html">Baby Care Education</a>
-  <a href="healthcare.html">For Healthcare Providers</a>
-  <a href="support.html">Support</a>
+  <a href="sids-safety.html">SIDS &amp; Safety</a>
+  <a href="education.html">Baby Care</a>
+  <a href="healthcare.html">For Providers</a>
+  <a href="support.html">Support Us</a>
   <div class="mobile-nav__cta">
-    <a href="product.html" class="btn btn--primary btn--full">Shop Now</a>
-    <a href="sids-safety.html" class="btn btn--secondary btn--full">Learn About Baby Safety</a>
+    <a href="support.html" class="btn btn--primary btn--full">Support Us</a>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- STICKY MOBILE CTA (appears on scroll) -->
+<div class="sticky-mobile-cta" id="sticky-cta" aria-hidden="true">
+  <a href="#waitlist" class="btn btn--primary btn--full">Join the Waitlist</a>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
 <section class="hero" aria-label="Hero">
   <div class="hero__inner">
     <div class="hero__content">
 
-      <!-- Brand logo (tagline baked in) -->
+      <div class="hero__prelaunch-badge">
+        <span class="hero__prelaunch-dot" aria-hidden="true"></span>
+        Pre-Launch — Waitlist Now Open
+      </div>
+
       <div class="hero__brand-block">
         <img src="images/bundl-logo.png" class="hero__brand-logo" alt="Bundl — for your bundl of joy." />
       </div>
 
+      <p class="hero__desc">A smart wearable ankle band designed to help parents feel more informed and at ease, tracking your baby's heart rate, oxygen, temperature, and sleep, delivering personalized insights and real-time alerts sent directly to your phone.</p>
 
-<p class="hero__desc">Bundl is the smart wearable ankle band that monitors your baby's vitals 24/7 — heart rate, oxygen, temperature, and sleep — sending real-time alerts directly to your phone.</p>
       <div class="hero__actions">
-        <a href="product.html" class="btn btn--primary btn--lg">Shop Bundl</a>
-        <a href="sids-safety.html" class="btn btn--secondary btn--lg">Learn About Safety</a>
-      </div>
-      <div class="hero__trust">
-        <div class="hero__trust-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Comprehensive Monitoring
-        </div>
-        <div class="hero__trust-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          24–36 Hr Battery
-        </div>
-        <div class="hero__trust-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Encrypted Data
-        </div>
+        <a href="#waitlist" class="btn btn--primary btn--lg">Join the Waitlist</a>
+        <a href="support.html" class="btn btn--secondary btn--lg">Support Our Mission</a>
+        <a href="how-it-works.html" class="hero__learn-more">See how it works →</a>
+        <a href="mailto:bundl.team.official@gmail.com" class="hero__learn-more">Contact Our Team →</a>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- STATS BAR -->
+<!-- ============================================================
+     STATS BAR
+     ============================================================ -->
 <section class="stats-bar" aria-label="Key statistics">
   <div class="container">
     <div class="stats-bar__inner">
       <div class="stat-item fade-in">
-        <div class="stat-item__number">3.6M+</div>
-        <div class="stat-item__label">US Newborns per Year</div>
+        <div class="stat-item__number">2-Step</div>
+        <div class="stat-item__label">Verified Alert System</div>
       </div>
       <div class="stat-item fade-in fade-in--delay-1">
         <div class="stat-item__number">5</div>
@@ -103,55 +126,58 @@
       </div>
       <div class="stat-item fade-in fade-in--delay-3">
         <div class="stat-item__number">3</div>
-        <div class="stat-item__label">Material Comfort Layers</div>
+        <div class="stat-item__label">Comfort Material Layers</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRODUCT OVERVIEW -->
-<section class="section section--white" aria-labelledby="product-overview-heading">
+<!-- ============================================================
+     PRODUCT OVERVIEW
+     ============================================================ -->
+<section class="section section--white" aria-labelledby="product-overview-heading" style="background:#FFFDE7;">
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;">
       <div>
         <div class="fade-in" style="margin-bottom:32px;">
           <span class="eyebrow">The Product</span>
           <h2 id="product-overview-heading" style="margin-top:12px;">Smart Wearable Baby-Monitoring Ankle Band</h2>
-          <p style="margin-top:12px;">Bundl tracks the vitals that matter most — and puts the data in your hands the moment it matters.</p>
+          <p style="margin-top:12px;">Bundl tracks the vitals that matter most, putting the data in your hands the moment it matters.</p>
         </div>
         <div class="grid-3">
           <div class="feature-card fade-in">
             <div class="feature-card__icon feature-card__icon--pink">💗</div>
             <h3>Tracks Vitals</h3>
-            <p>Heart rate, blood oxygen (SpO2), skin temperature, motion and sleep stage — all monitored in real time from your baby's ankle.</p>
           </div>
           <div class="feature-card fade-in fade-in--delay-1">
             <div class="feature-card__icon feature-card__icon--blue">🔔</div>
-            <h3>Sends Alerts</h3>
-            <p>Instant push notifications when any reading falls outside healthy ranges. Designed to alert you when it matters — not cry wolf.</p>
+            <h3>Verified Alerts</h3>
           </div>
           <div class="feature-card fade-in fade-in--delay-2">
             <div class="feature-card__icon feature-card__icon--cream">📊</div>
-            <h3>Shares Insights</h3>
-            <p>View daily and weekly health trends. Share your baby's data directly with your pediatrician for more informed check-ups.</p>
+            <h3>Personal Insights</h3>
           </div>
         </div>
+        <div style="margin-top:32px;">
+          <a href="product.html" class="btn btn--secondary">See Full Product Details →</a>
+        </div>
       </div>
-      <div class="fade-in fade-in--delay-1" style="display:flex;align-items:center;justify-content:center;">
-        <img src="images/product-green-band.png" alt="Bundl smart ankle band" style="width:460px;max-width:100%;border-radius:var(--radius-xl);filter:drop-shadow(0 16px 40px rgba(60,35,10,0.15));">
+      <div class="fade-in fade-in--delay-1" style="display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,rgba(255,255,255,0.95) 25%,transparent 72%);border-radius:50%;">
+        <img src="images/g2.png" alt="Bundl smart ankle band" loading="lazy" style="width:660px;max-width:100%;border-radius:var(--radius-xl);filter:drop-shadow(0 16px 40px rgba(60,35,10,0.12)) drop-shadow(0 0 60px rgba(255,255,255,0.9));">
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- HOW IT WORKS -->
-<section class="section section--blue" aria-labelledby="how-it-works-heading">
+<!-- ============================================================
+     HOW IT WORKS
+     ============================================================ -->
+<section class="section section--blue" aria-labelledby="how-it-works-heading" id="how-it-works">
   <div class="container">
     <div class="section-header fade-in">
       <span class="eyebrow">How It Works</span>
       <h2 id="how-it-works-heading">From Band to Phone in Seconds</h2>
-      <p>Four simple steps — and Bundl does the rest.</p>
+      <p>Four simple steps, and Bundl does the rest.</p>
     </div>
     <div class="steps-wrapper">
       <div class="steps">
@@ -183,154 +209,143 @@
   </div>
 </section>
 
-<!-- TRIPLE LAYER COMFORT -->
-<section class="section section--cream" aria-labelledby="comfort-heading">
+
+<!-- ============================================================
+     PEDIATRICIAN ENDORSEMENT
+     ============================================================ -->
+<section class="section section--white" aria-labelledby="endorsement-heading">
   <div class="container">
     <div class="section-header fade-in">
-      <span class="eyebrow">Materials</span>
-      <h2 id="comfort-heading" style="margin-top:12px;">Triple-Layer Comfort System</h2>
+      <span class="eyebrow">Pediatrician Approved</span>
+      <h2 id="endorsement-heading">Validated by a Medical Professional</h2>
+      <p>Our approach, features, and mission have been reviewed and supported by an experienced pediatrician.</p>
     </div>
-    <div class="grid-2">
-      <div class="fade-in" style="display:flex;align-items:center;justify-content:center;">
-        <img src="images/product-mattress-layers.png"
-             alt="Exploded view of Bundl band's three-layer construction"
-             class="materials-img">
+
+    <div class="ped-endorsement-card fade-in">
+      <div class="ped-endorsement-card__badge">
+        <span class="ped-badge-icon">🩺</span>
+        Pediatrician Approved
       </div>
-      <div class="fade-in fade-in--delay-1">
-        <p style="margin:0 0 20px;">Every layer is chosen for your baby's delicate skin. Safe. Breathable. Certified.</p>
-        <div class="layers">
-          <div class="layer layer--outer">
-            <div class="layer__num">1</div>
-            <div class="layer__content">
-              <h4>TENCEL™ Lyocell — Outer Layer</h4>
-              <p>Botanical fibre from eucalyptus. 50% more breathable than cotton, naturally temperature-regulating, zero skin irritants.</p>
-            </div>
-          </div>
-          <div class="layer layer--middle">
-            <div class="layer__num">2</div>
-            <div class="layer__content">
-              <h4>Bamboo Cotton — Middle Layer</h4>
-              <p>Moisture-wicking and naturally antibacterial. Pulls sweat away from skin and stays odour-free through full-day wear.</p>
-            </div>
-          </div>
-          <div class="layer layer--inner">
-            <div class="layer__num">3</div>
-            <div class="layer__content">
-              <h4>Organic Cotton — Inner Layer</h4>
-              <p>GOTS certified, grown without pesticides. The softest layer sits directly against your baby's ankle skin.</p>
-            </div>
-          </div>
+
+      <blockquote class="ped-endorsement-card__quote">
+        "Anything that brings a mama peace and comfort — I'm here for it."
+      </blockquote>
+
+      <div class="ped-endorsement-card__author">
+        <div class="ped-endorsement-card__avatar"><img src="images/splinter.png" alt="Dr. Alice Splinter"></div>
+        <div class="ped-endorsement-card__author-info">
+          <div class="ped-endorsement-card__name">Dr. Alice Splinter, MD</div>
+          <div class="ped-endorsement-card__title">Pediatrician · 10+ Years of Practice</div>
+        </div>
+      </div>
+
+      <div class="ped-endorsement-card__details">
+        <div class="ped-detail-item">
+          <span class="ped-detail-icon">✓</span>
+          Reviewed Bundl's monitoring features and approach
+        </div>
+        <div class="ped-detail-item">
+          <span class="ped-detail-icon">✓</span>
+          Validated our two-step verification methodology
+        </div>
+        <div class="ped-detail-item">
+          <span class="ped-detail-icon">✓</span>
+          Supports our mission to make infant wellness more accessible
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SIDS PREVIEW -->
+<!-- ============================================================
+     SIDS PREVIEW
+     ============================================================ -->
 <section class="section section--white" aria-labelledby="sids-heading">
   <div class="container">
     <div class="sids-preview">
       <div class="fade-in">
         <span class="eyebrow">SIDS &amp; Safe Sleep</span>
         <h2 id="sids-heading" style="margin-top:12px;">Knowledge Is the First Step to Prevention</h2>
-        <p style="margin:16px 0 24px;">Around 3,500 infants die from sleep-related causes in the US each year. Understanding the risks — and knowing how to monitor — gives you the confidence to act fast when it matters.</p>
-        <div style="display:flex;gap:14px;flex-wrap:wrap;">
-          <a href="sids-safety.html" class="btn btn--primary">Learn About SIDS Prevention</a>
-          <a href="sids-safety.html#checklist" class="btn btn--secondary">Safe Sleep Checklist</a>
-        </div>
-        <div class="sids-preview__stats" style="margin-top:28px;">
-          <div class="sids-stat">
-            <div class="sids-stat__number">3,500</div>
-            <div class="sids-stat__label">Sleep-related infant deaths per year in the US</div>
-          </div>
-          <div class="sids-stat">
-            <div class="sids-stat__number">#1</div>
-            <div class="sids-stat__label">Cause of infant death ages 1–12 months</div>
-          </div>
-          <div class="sids-stat">
-            <div class="sids-stat__number">~50%</div>
-            <div class="sids-stat__label">Reduction since safe sleep campaigns began</div>
-          </div>
-          <div class="sids-stat">
-            <div class="sids-stat__number">24/7</div>
-            <div class="sids-stat__label">Continuous monitoring with Bundl</div>
-          </div>
-        </div>
+        <p style="margin:16px 0 24px;">Around 3,500 infants die from sleep-related causes in the US each year. Understanding the risks and knowing how to monitor gives you the confidence to act fast when it matters.</p>
+        <a href="sids-safety.html" class="btn btn--primary">Learn About SIDS Prevention</a>
       </div>
-      <div class="sids-visual fade-in fade-in--delay-1">
-        <h3>Safe Sleep Checklist</h3>
-        <ul class="safe-sleep-list">
-          <li><span class="check">✓</span> Always place baby on their back to sleep</li>
-          <li><span class="check">✓</span> Use a firm, flat sleep surface only</li>
-          <li><span class="check">✓</span> Keep sleep area clear of soft items</li>
-          <li><span class="check">✓</span> Maintain room temp 68–72°F</li>
-          <li><span class="check">✓</span> Share a room — not a bed</li>
-          <li><span class="check">✓</span> Use Bundl for continuous vital monitoring</li>
-        </ul>
-        <a href="sids-safety.html" class="btn btn--primary" style="margin-top:24px;width:100%;justify-content:center;">View Full Safety Guide</a>
+      <div class="sids-preview__stats fade-in fade-in--delay-1" style="margin-top:0;">
+        <div class="sids-stat">
+          <div class="sids-stat__number">3,500</div>
+          <div class="sids-stat__label">Sleep-related infant deaths per year in the US</div>
+        </div>
+        <div class="sids-stat">
+          <div class="sids-stat__number">#1</div>
+          <div class="sids-stat__label">Cause of infant death ages 1–12 months</div>
+        </div>
+        <div class="sids-stat">
+          <div class="sids-stat__number">~50%</div>
+          <div class="sids-stat__label">Reduction since safe sleep campaigns began</div>
+        </div>
+        <div class="sids-stat">
+          <div class="sids-stat__number">24/7</div>
+          <div class="sids-stat__label">Continuous monitoring with Bundl</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="section section--cream" aria-labelledby="testimonials-heading">
+<!-- ============================================================
+     EDUCATION HUB / BLOG PREVIEW
+     ============================================================ -->
+<section class="section section--cream" aria-labelledby="blog-heading">
   <div class="container">
     <div class="section-header fade-in">
-      <span class="eyebrow">Parent Reviews</span>
-      <h2 id="testimonials-heading">Trusted by Families Across the Country</h2>
+      <span class="eyebrow">Education Hub</span>
+      <h2 id="blog-heading">Learn from Our Resource Library</h2>
     </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card fade-in">
-        <div class="testimonial-card__stars">★★★★★</div>
-        <p class="testimonial-card__quote">"As a first-time mom, the anxiety was real. Bundl completely changed that for me. I sleep better knowing I'll be alerted if anything changes. Worth every penny."</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar">SM</div>
-          <div>
-            <div class="testimonial-card__name">Sarah M.</div>
-            <div class="testimonial-card__role">First-Time Mom · Austin, TX</div>
-          </div>
+    <div class="grid-3">
+      <article class="blog-card fade-in">
+        <div class="blog-card__thumb"><img src="images/heart baby.png" alt="Health Monitoring" loading="lazy"></div>
+        <div class="blog-card__body">
+          <div class="blog-card__cat">Health Monitoring</div>
+          <h3 class="blog-card__title">Understanding Your Baby's Heart Rate</h3>
+          <p class="blog-card__excerpt">Normal infant heart rates range from 100–160 BPM. Learn what's normal, what to watch for, and when to call your pediatrician.</p>
+          <a href="education.html" class="blog-card__link">Read Article →</a>
         </div>
-      </div>
-      <div class="testimonial-card fade-in fade-in--delay-1">
-        <div class="testimonial-card__stars">★★★★★</div>
-        <p class="testimonial-card__quote">"Our daughter has a heart condition and our pediatrician loves that we can share her overnight data directly from the app. This is next-level baby care."</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar testimonial-card__avatar--blue">DJ</div>
-          <div>
-            <div class="testimonial-card__name">David J.</div>
-            <div class="testimonial-card__role">Father of 2 · Chicago, IL</div>
-          </div>
+      </article>
+      <article class="blog-card fade-in fade-in--delay-1">
+        <div class="blog-card__thumb"><img src="images/sleepy baby.png" alt="Safe Sleep" loading="lazy"></div>
+        <div class="blog-card__body">
+          <div class="blog-card__cat">Safe Sleep</div>
+          <h3 class="blog-card__title">The Safe Sleep Checklist Every Parent Needs</h3>
+          <p class="blog-card__excerpt">Everything you need to know about creating a safe sleep environment, from sleep surface to room temperature and position.</p>
+          <a href="sids-safety.html" class="blog-card__link">Read Article →</a>
         </div>
-      </div>
-      <div class="testimonial-card fade-in fade-in--delay-2">
-        <div class="testimonial-card__stars">★★★★★</div>
-        <p class="testimonial-card__quote">"The dinosaur band is so cute! But beyond looks, the sleep stage tracking is genuinely impressive. I finally understand my son's patterns."</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar">PM</div>
-          <div>
-            <div class="testimonial-card__name">Priya M.</div>
-            <div class="testimonial-card__role">Mom · Seattle, WA</div>
-          </div>
+      </article>
+      <article class="blog-card fade-in fade-in--delay-2">
+        <div class="blog-card__thumb"><img src="images/motherbabysleep.png" alt="Data and Insights" loading="lazy"></div>
+        <div class="blog-card__body">
+          <div class="blog-card__cat">Data &amp; Insights</div>
+          <h3 class="blog-card__title">How to Read Your Baby's Sleep Stages</h3>
+          <p class="blog-card__excerpt">Deep sleep vs. light sleep: what the difference means for your baby's development and how Bundl tracks every phase.</p>
+          <a href="education.html" class="blog-card__link">Read Article →</a>
         </div>
-      </div>
+      </article>
     </div>
     <div style="text-align:center;margin-top:36px;">
-      </div>
+      <a href="education.html" class="btn btn--secondary">View All Articles</a>
+    </div>
   </div>
 </section>
 
-
-<!-- HEALTHCARE VALIDATION -->
+<!-- ============================================================
+     FOR PROVIDERS / HEALTHCARE
+     ============================================================ -->
 <section class="section section--white" aria-labelledby="healthcare-heading">
   <div class="container">
     <div class="healthcare-band fade-in">
-      <span class="eyebrow eyebrow--cream" style="background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);">For Healthcare Providers</span>
-      <h2 id="healthcare-heading" style="margin-top:12px;">Trusted by Parents, Backed by Science</h2>
-      <p>Bundl's clinical-grade data sharing lets pediatricians access detailed vital trends, helping them make more informed decisions at every check-up.</p>
+      <span class="eyebrow">For Providers</span>
+      <h2 id="healthcare-heading" style="margin-top:12px;">Designed with Clinicians in Mind</h2>
+      <p>Bundl's data-sharing framework lets pediatricians access detailed vital trends, helping them make more informed decisions at every check-up.</p>
       <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
         <a href="healthcare.html" class="btn btn--white">Learn More for Providers</a>
-        <a href="healthcare.html#contact" class="btn btn--pink">Contact Our Team</a>
       </div>
       <div class="healthcare-badges">
         <span class="healthcare-badge">HIPAA-Ready Framework</span>
@@ -342,128 +357,259 @@
   </div>
 </section>
 
-<!-- BLOG PREVIEW -->
-<section class="section section--cream" aria-labelledby="blog-heading">
+<!-- ============================================================
+     SUPPORT US — Team, Mission & Join
+     ============================================================ -->
+<section class="section section--cream" id="support-us" aria-labelledby="support-us-heading">
   <div class="container">
+
     <div class="section-header fade-in">
-      <span class="eyebrow">Education Hub</span>
-      <h2 id="blog-heading">Learn from Our Expert Library</h2>
+      <span class="eyebrow">Support Us</span>
+      <h2 id="support-us-heading">Built by Students, Driven by Purpose.</h2>
+      <p>A four-member student-led startup from Liberty Hill, Texas, building technology that helps families feel a little more supported.</p>
     </div>
-    <div class="grid-3">
-      <article class="blog-card fade-in">
-        <div class="blog-card__thumb blog-card__thumb--pink">💗</div>
-        <div class="blog-card__body">
-          <div class="blog-card__cat">Health Monitoring</div>
-          <h3 class="blog-card__title">Understanding Your Baby's Heart Rate</h3>
-          <p class="blog-card__excerpt">Normal infant heart rates range from 100–160 BPM. Learn what's normal, what to watch for, and when to call your pediatrician.</p>
-          <a href="education.html" class="blog-card__link">Read Article →</a>
-        </div>
-      </article>
-      <article class="blog-card fade-in fade-in--delay-1">
-        <div class="blog-card__thumb blog-card__thumb--blue">😴</div>
-        <div class="blog-card__body">
-          <div class="blog-card__cat">Safe Sleep</div>
-          <h3 class="blog-card__title">The Safe Sleep Checklist Every Parent Needs</h3>
-          <p class="blog-card__excerpt">Everything you need to know about creating a safe sleep environment — from sleep surface to room temperature and position.</p>
-          <a href="sids-safety.html" class="blog-card__link">Read Article →</a>
-        </div>
-      </article>
-      <article class="blog-card fade-in fade-in--delay-2">
-        <div class="blog-card__thumb blog-card__thumb--cream">📊</div>
-        <div class="blog-card__body">
-          <div class="blog-card__cat">Data &amp; Insights</div>
-          <h3 class="blog-card__title">How to Read Your Baby's Sleep Stages</h3>
-          <p class="blog-card__excerpt">Deep sleep vs. light sleep — what the difference means for your baby's development and how Bundl tracks every phase.</p>
-          <a href="education.html" class="blog-card__link">Read Article →</a>
-        </div>
-      </article>
+
+    <div class="team-section-header text-center">
+      <h3>Meet the Team</h3>
+      <p style="color:var(--text-light);margin-top:8px;">Four students. One shared mission. Endless heart.</p>
     </div>
-    <div style="text-align:center;margin-top:36px;">
-      <a href="education.html" class="btn btn--secondary">View All Articles</a>
+
+    <div class="team-cards-row">
+      <div class="team-member-card fade-in">
+        <div class="team-member-card__avatar"><img src="images/roo1.jpeg" alt="Roopali Rahul" loading="lazy"></div>
+        <div class="team-member-card__name">Roopali Rahul</div>
+        <div class="team-member-card__role">CEO</div>
+        <p class="team-member-card__bio">"Sometimes the littlest things take up the most room in your heart"<span class="team-member-card__quote-attr">— Winnie the Pooh</span></p>
+      </div>
+      <div class="team-member-card fade-in fade-in--delay-1">
+        <div class="team-member-card__avatar"><img src="images/meg1.jpeg" alt="Meghana Malkareddy" loading="lazy"></div>
+        <div class="team-member-card__name">Meghana Malkareddy</div>
+        <div class="team-member-card__role">CMO</div>
+        <p class="team-member-card__bio">"Babies are such a nice way to start people"<span class="team-member-card__quote-attr">— Finding Nemo</span></p>
+      </div>
+      <div class="team-member-card fade-in fade-in--delay-2">
+        <div class="team-member-card__avatar"><img src="images/flo1.jpeg" alt="Floristan Schwindt" loading="lazy"></div>
+        <div class="team-member-card__name">Floristan Schwindt</div>
+        <div class="team-member-card__role">CFO</div>
+        <p class="team-member-card__bio">"A baby fills a hole in your heart that you never knew was there"<span class="team-member-card__quote-attr">— One Tree Hill</span></p>
+      </div>
+      <div class="team-member-card fade-in fade-in--delay-3">
+        <div class="team-member-card__avatar"><img src="images/samantha1.jpeg" alt="Samantha Fraunhofer" loading="lazy"></div>
+        <div class="team-member-card__name">Samantha Fraunhofer</div>
+        <div class="team-member-card__role">COO</div>
+        <p class="team-member-card__bio">"You know what the great thing about babies is? They are like little bundles of hope."<span class="team-member-card__quote-attr">— Lish McBride</span></p>
+      </div>
     </div>
+
+    <div style="text-align:center;margin-top:36px;margin-bottom:64px;">
+      <a href="support.html" class="btn btn--secondary">Our Full Story &amp; Support Page →</a>
+    </div>
+
+    <div class="section-header fade-in">
+      <span class="eyebrow">Be Part of Something Meaningful</span>
+      <h2 id="join-heading" style="font-size:clamp(1.6rem,3vw,2.2rem);">Two Ways to Help Bundl Happen.</h2>
+      <p>Whether you sign up for updates or help fund our mission, every action moves us closer to helping families feel more at ease.</p>
+    </div>
+
+    <div class="join-donate-layout">
+
+      <!-- LEFT: Waitlist signup -->
+      <div class="join-donate-layout__left fade-in" id="waitlist">
+        <div class="join-panel">
+          <div class="join-panel__header">
+            <h3>Join the Waitlist</h3>
+            <p>Be first to know when Bundl launches: Kickstarter alerts, launch updates, and early access opportunities.</p>
+          </div>
+
+          <!-- ================================================
+               MAILERLITE EMBED
+               Replace the form below with your MailerLite embed code.
+               Go to: MailerLite → Forms → Embedded Forms → Copy Code
+               Paste it inside the .mailerlite-embed div below.
+               ================================================ -->
+          <div class="mailerlite-embed">
+            <div id="mlb2-42009777" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-42009777">
+              <div class="ml-form-align-center">
+                <div class="ml-form-embedWrapper embedForm">
+                  <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2387799/forms/189016167294174785/subscribe" data-code="" method="post" target="_blank">
+                      <div class="ml-form-formContent">
+                        <div class="ml-form-fieldRow">
+                          <div class="ml-field-group ml-field-name ml-validate-required">
+                            <label>How are you interested in Bundl?</label>
+                            <select class="custom-select" name="fields[name]" aria-label="name" aria-required="true">
+                              <option value="">-</option>
+                              <option>Parent / Expecting Parent</option>
+                              <option>Friend / Family Supporter</option>
+                              <option>Healthcare Professional</option>
+                              <option>Interested in partnership / investment opportunities</option>
+                              <option>Other</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="ml-form-fieldRow ml-last-item">
+                          <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                            <label>Email</label>
+                            <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="email">
+                          </div>
+                        </div>
+                      </div>
+                      <input type="hidden" name="ml-submit" value="1">
+                      <div class="ml-form-embedSubmit">
+                        <button type="submit" class="primary">Subscribe</button>
+                        <button disabled="disabled" style="display: none;" type="button" class="loading">
+                          <div class="ml-form-embedSubmitLoad"></div>
+                          <span class="sr-only">Loading...</span>
+                        </button>
+                      </div>
+                      <input type="hidden" name="anticsrf" value="true">
+                    </form>
+                  </div>
+                  <div class="ml-form-successBody row-success" style="display: none">
+                    <div class="ml-form-successContent">
+                      <h4>Thank you!</h4>
+                      <p>You have successfully joined our waitlist.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end .mailerlite-embed -->
+
+          <div class="waitlist-perks">
+            <div class="waitlist-perk">Early access to launch</div>
+            <div class="waitlist-perk">Kickstarter alerts</div>
+            <div class="waitlist-perk">Fundraiser announcements</div>
+            <div class="waitlist-perk">Exclusive supporter perks</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Donate / GoFundMe -->
+      <div class="join-donate-layout__right fade-in fade-in--delay-1" id="support">
+        <div class="donate-panel">
+          <div class="donate-panel__header">
+            <div class="gofundme-card__badge">
+              <span class="gofundme-card__badge-dot"></span>
+              Currently: Prototype Stage
+            </div>
+            <h3>Support Our Mission</h3>
+            <p>We're a student startup building Bundl with limited resources but unlimited determination. Your contribution, large or small, helps us get one step closer.</p>
+          </div>
+
+          <div class="donate-panel__image">
+            <img src="images/grp1.jpg" alt="A baby sleeping peacefully" loading="lazy" />
+          </div>
+
+          <div class="gofundme-funding-list">
+            <div class="gofundme-funding-item">Prototype development and testing</div>
+            <div class="gofundme-funding-item">Manufacturing and material sourcing</div>
+            <div class="gofundme-funding-item">Safety validation and compliance testing</div>
+            <div class="gofundme-funding-item">App development and beta testing</div>
+            <div class="gofundme-funding-item">Kickstarter campaign preparation and launch</div>
+          </div>
+
+          <div class="donate-panel__actions">
+            <!-- Replace href below with your actual GoFundMe URL -->
+            <a href="https://gofund.me/33b133596" class="btn btn--primary btn--full" target="_blank" rel="noopener" aria-label="Donate on GoFundMe">Donate on GoFundMe →</a>
+          </div>
+
+          <div class="gofundme-impact">
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Backed by a community that cares</div>
+            </div>
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Helps families afford monitoring</div>
+            </div>
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Student-built, community-backed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end .join-donate-layout -->
+
+    <div style="text-align:center;margin-top:40px;">
+      <div style="display:inline-block;padding:20px 40px;border:2px solid var(--brown);border-radius:var(--radius-lg);background:rgba(92,51,24,0.05);">
+        <p style="font-size:1.15rem;font-weight:600;color:var(--brown);margin:0 0 6px;">Have another way you'd like to support Bundl, or just curious about what we're building?</p>
+        <p style="font-size:0.95rem;color:var(--text-medium);margin:0;">Whether you're a healthcare provider, researcher, potential partner, or simply someone who believes in our mission — we'd love to hear from you. <a href="mailto:bundl.team.official@gmail.com" style="color:var(--brown);text-decoration:underline;text-underline-offset:3px;">Contact our team →</a></p>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- NEWSLETTER -->
-<section class="section section--white" aria-labelledby="newsletter-heading">
-  <div class="container">
-    <div class="newsletter-block fade-in">
-      <span class="eyebrow">Stay Informed</span>
-      <h2 id="newsletter-heading" style="margin-top:12px;">Stay in the Loop</h2>
-      <p>Expert baby care tips, product updates, and safe sleep guides — delivered to your inbox.</p>
-      <form class="newsletter-form" novalidate>
-        <input type="email" placeholder="Enter your email address" aria-label="Email address" required />
-        <button type="submit" class="btn btn--primary">Subscribe</button>
-      </form>
-      <p style="font-size:0.78rem;color:var(--text-muted);margin-top:14px;">No spam, ever. Unsubscribe anytime.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
 <footer class="footer">
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
         <a href="index.html" aria-label="Bundl Home">
-          <img src="images/bundl-logo.png" alt="Bundl" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" />
+          <img src="images/bundl-logo.png" alt="Bundl" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" loading="lazy" />
         </a>
-        <p>Smart wearable baby-monitoring ankle band. Tracks vitals, sends alerts, and shares insights — so you can parent with confidence.</p>
-        <div class="footer__social">
-          <a href="https://www.instagram.com/bundl_official_" class="footer__social-link" aria-label="Instagram">📷</a>
-          <a href="#" class="footer__social-link" aria-label="Facebook">f</a>
-          <a href="#" class="footer__social-link" aria-label="LinkedIn">in</a>
+        <p>A student-led startup building smart wearable baby monitoring that helps parents feel more informed, reassured, and at ease, because peace of mind should be accessible to every family.</p>
+                <div class="footer__social">
+          <a href="https://www.instagram.com/bundl_official_?igsh=cW13cmk4MHEyYXo%3D&utm_source=qr" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.facebook.com/share/1ERbwhmzVs/?mibextid=wwXIfr" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.linkedin.com/company/teambundl/" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
         </div>
       </div>
       <div class="footer__col">
         <h5>Product</h5>
         <ul>
-          <li><a href="product.html">Shop Bundl</a></li>
+          <li><a href="product.html">The Band</a></li>
           <li><a href="how-it-works.html">How It Works</a></li>
-          <li><a href="product.html">Specifications</a></li>
-          <li><a href="product.html">FAQ</a></li>
+          <li><a href="product.html#verification">Our Technology</a></li>
+          <li><a href="product.html#insights">Personalized Insights</a></li>
         </ul>
       </div>
       <div class="footer__col">
         <h5>Learn</h5>
         <ul>
-          <li><a href="sids-safety.html">SIDS &amp; Baby Safety</a></li>
-          <li><a href="education.html">Baby Care Education</a></li>
+          <li><a href="sids-safety.html">SIDS &amp; Safety</a></li>
+          <li><a href="education.html">Baby Care</a></li>
           <li><a href="healthcare.html">For Providers</a></li>
-          <li></li>
         </ul>
       </div>
       <div class="footer__col">
         <h5>Company</h5>
         <ul>
-          <li></li>
-          </ul>
+          <li><a href="support.html">Support Us</a></li>
+          <li><a href="support.html#team">Meet the Team</a></li>
+          <li><a href="support.html#waitlist">Support Our Mission</a></li>
+          <li><a href="mailto:bundl.team.official@gmail.com">Contact Us</a></li>
+        </ul>
       </div>
       <div class="footer__col">
         <h5>Support</h5>
         <ul>
+          <li><a href="#waitlist">Join Waitlist</a></li>
+          <li><a href="https://gofund.me/33b133596" target="_blank" rel="noopener">GoFundMe</a></li>
           <li><a href="support.html">Help Center</a></li>
-          <li><a href="support.html#contact">Contact Us</a></li>
-          <li><a href="support.html#returns">Returns &amp; Warranty</a></li>
-          <li><a href="support.html#app">App Support</a></li>
+          <li><a href="mailto:bundl.team.official@gmail.com">Contact Us</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer__bottom">
-      <p>© 2025 Bundl. All rights reserved. For Your Bundl of Joy.</p>
-      <div class="footer__legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Medical Disclaimer</a>
-        <a href="#">Cookie Policy</a>
-      </div>
-    </div>
     <div class="footer__disclaimer">
-      <p>Bundl is designed to provide parents with real-time wellness data for informational purposes only. It is not a medical device and is not intended to diagnose, treat, cure, or prevent any medical condition. Always consult your pediatrician or qualified healthcare provider regarding your baby's health.</p>
+      <p>Bundl is a pre-launch startup product currently in prototype development. Bundl is designed to provide parents with real-time wellness data for informational purposes only. It is not a medical device and is not intended to diagnose, treat, cure, or prevent any medical condition. Always consult your pediatrician or qualified healthcare provider regarding your baby's health.</p>
     </div>
   </div>
 </footer>
 
+<script>
+  function ml_webform_success_42009777() {
+    var $ = ml_jQuery || jQuery;
+    $('.ml-subscribe-form-42009777 .row-success').show();
+    $('.ml-subscribe-form-42009777 .row-form').hide();
+  }
+</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
+<script>
+  fetch("https://assets.mailerlite.com/jsonp/2387799/forms/189016167294174785/takel")
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>

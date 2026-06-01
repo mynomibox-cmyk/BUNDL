@@ -1,41 +1,44 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>For Healthcare Providers — Partner with Bundl</title>
+  <title>For Providers — Partner with Bundl</title>
   <meta name="description" content="Bundl for pediatricians, neonatologists, and perinatal care teams. Learn how our infant wellness data supports clinical decision-making and request a sample device." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/mailerlite.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q9GLGL28F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6Q9GLGL28F');
+  </script>
   <style>
     /* ── Healthcare page styles ── */
     .hcp-hero {
       background:
-        linear-gradient(135deg, rgba(42,74,90,0.88) 0%, rgba(92,51,24,0.88) 100%),
+        linear-gradient(rgba(254,252,232,0.86) 0%, rgba(214,239,247,0.80) 50%, rgba(250,217,232,0.82) 100%),
         url('../images/lifestyle-mother-baby.png') center / cover no-repeat;
       padding: 100px 0 80px;
       text-align: center;
-      color: #fff;
     }
     .hcp-hero__eyebrow {
       font-size: .78rem;
       font-weight: 600;
       letter-spacing: .1em;
       text-transform: uppercase;
-      color: #A8D5E2;
+      color: #5C3318;
       margin-bottom: 1rem;
     }
-    .hcp-hero h1 { font-size: clamp(2rem,4.5vw,3.2rem); color: #fff; margin-bottom: 1.2rem; }
-    .hcp-hero p { max-width: 620px; margin: 0 auto 2.5rem; color: rgba(255,255,255,.8); font-size: 1.05rem; line-height: 1.8; }
+    .hcp-hero h1 { font-size: clamp(2rem,4.5vw,3.2rem); color: #5C3318; margin-bottom: 1.2rem; }
+    .hcp-hero p { max-width: 620px; margin: 0 auto 2.5rem; color: #6b5c50; font-size: 1.05rem; line-height: 1.8; }
     .hcp-hero__ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn--white {
-      background: #fff;
-      color: #5C3318;
-      border: none;
-    }
-    .btn--white:hover { background: #fefce8; }
 
     /* Trust bar */
     .hcp-trust-bar {
@@ -68,7 +71,6 @@
       padding: 80px 0;
     }
     .hcp-section--alt { background: #fefce8; }
-    .hcp-section--dark { background: #2a4a5a; color: #fff; }
     .hcp-section__inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -96,12 +98,46 @@
       background: rgba(255,255,255,.08);
       border: 1px solid rgba(255,255,255,.15);
       border-radius: 16px;
-      padding: 1.8rem;
+      overflow: hidden;
       color: #fff;
     }
+    .hcp-value-card__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.8rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .hcp-value-card__header:hover {
+      background: rgba(255,255,255,.05);
+    }
     .hcp-value-card__icon { font-size: 1.8rem; margin-bottom: 1rem; }
-    .hcp-value-card h4 { font-size: 1rem; color: #A8D5E2; margin-bottom: .5rem; }
-    .hcp-value-card p { font-size: .88rem; line-height: 1.6; color: rgba(255,255,255,.75); margin: 0; }
+    .hcp-value-card h4 { font-size: 1rem; color: #A8D5E2; margin-bottom: 0; text-align: center; }
+    .hcp-value-chevron {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,.5);
+      transition: transform 0.3s ease;
+    }
+    .hcp-value-card.open .hcp-value-chevron {
+      transform: rotate(180deg);
+    }
+    .hcp-value-card__content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    .hcp-value-card.open .hcp-value-card__content {
+      max-height: 400px;
+    }
+    .hcp-value-card__content-inner {
+      padding: 0 1.8rem 1.8rem;
+    }
+    .hcp-value-card__content-inner p { font-size: .88rem; line-height: 1.6; color: rgba(255,255,255,.75); margin: 0; text-align: center; }
 
     /* Data sharing */
     .data-share-layout {
@@ -190,8 +226,17 @@
     .use-case-card {
       background: #fff;
       border-radius: 16px;
-      padding: 1.8rem;
       border: 1px solid #f0e8e0;
+      overflow: hidden;
+    }
+    .use-case-card__header {
+      padding: 1.8rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .use-case-card__header:hover {
+      background: #fefce8;
     }
     .use-case-card__tag {
       display: inline-block;
@@ -207,8 +252,30 @@
     .use-case-card__tag--primary { background: #fad9e8; color: #8a1a4a; }
     .use-case-card__tag--sleep { background: #fefce8; color: #8a6a0a; }
     .use-case-card__tag--perinatal { background: #e8f5e9; color: #1a6b3a; }
-    .use-case-card h4 { color: #5C3318; font-size: 1rem; margin-bottom: .5rem; }
-    .use-case-card p { color: #6b5c50; font-size: .88rem; line-height: 1.6; margin: 0; }
+    .use-case-card h4 { color: #5C3318; font-size: 1rem; margin-bottom: 0; }
+    .use-case-chevron {
+      position: absolute;
+      top: 1.8rem;
+      right: 1.8rem;
+      font-size: 0.75rem;
+      color: #7a6a60;
+      transition: transform 0.3s ease;
+    }
+    .use-case-card.open .use-case-chevron {
+      transform: rotate(180deg);
+    }
+    .use-case-card__content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    .use-case-card.open .use-case-card__content {
+      max-height: 400px;
+    }
+    .use-case-card__content-inner {
+      padding: 0 1.8rem 1.8rem;
+    }
+    .use-case-card__content-inner p { color: #6b5c50; font-size: .88rem; line-height: 1.6; margin: 0; }
 
     /* Testimonials */
     .hcp-testimonials {
@@ -350,31 +417,18 @@
 <header class="header" id="header">
   <div class="header__inner">
     <a href="index.html" class="header__logo" aria-label="Bundl Home">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" aria-hidden="true">
-        <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
-        <circle cx="335" cy="48" r="7" fill="#7B5028"/>
-        <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
-        <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
-        <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
-        <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
-      </svg>
+      <img src="images/bundl-logo.png" class="header__logo-img" alt="Bundl" />
     </a>
     <nav class="header__nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="product.html">Shop</a>
+      <a href="product.html">Product</a>
       <a href="how-it-works.html">How It Works</a>
       <a href="sids-safety.html">SIDS &amp; Safety</a>
       <a href="education.html">Baby Care</a>
       <a href="healthcare.html" class="active">For Providers</a>
-      <a href="support.html">Support</a>
+      <a href="support.html">Support Us</a>
     </nav>
     <div class="header__actions">
-      <a href="#sample-request" class="btn btn--primary btn--sm">Request Sample</a>
       <button class="header__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -382,12 +436,12 @@
 
 <nav class="mobile-nav" aria-label="Mobile navigation">
   <a href="index.html">Home</a>
-  <a href="product.html">Shop</a>
+  <a href="product.html">Product</a>
   <a href="how-it-works.html">How It Works</a>
   <a href="sids-safety.html">SIDS &amp; Safety</a>
   <a href="education.html">Baby Care</a>
   <a href="healthcare.html">For Providers</a>
-  <a href="support.html">Support</a>
+  <a href="support.html">Support Us</a>
 </nav>
 
 <!-- Hero -->
@@ -395,10 +449,10 @@
   <div class="container">
     <div class="hcp-hero__eyebrow">For Healthcare Professionals</div>
     <h1>Continuous Infant Wellness Data<br>That Empowers Your Practice</h1>
-    <p>Bundl gives your patients' families real-time vital monitoring between appointments — and gives you the longitudinal trend data that makes well-baby visits more meaningful than ever.</p>
+    <p>Bundl gives your patients' families real-time vital monitoring between appointments and gives you the longitudinal trend data that makes well-baby visits more meaningful than ever.</p>
     <div class="hcp-hero__ctas">
-      <a href="#sample-request" class="btn btn--white">Request a Sample Device</a>
-      <a href="#data-sharing" class="btn btn--outline" style="border-color:rgba(255,255,255,.5);color:#fff;">View Data Sharing Features</a>
+      <a href="#data-sharing" class="btn btn--primary">View Data Sharing Features</a>
+      <a href="#waitlist" class="btn btn--outline">Join Waitlist</a>
     </div>
   </div>
 </section>
@@ -406,7 +460,7 @@
 <!-- Trust bar -->
 <div class="hcp-trust-bar">
   <div class="hcp-trust-bar__inner">
-    <div class="hcp-trust-item"><span class="hcp-trust-item__icon">🔒</span> AES-256 Encrypted Data</div>
+    <div class="hcp-trust-item"><span class="hcp-trust-item__icon">🔒</span> Encrypted Data</div>
     <div class="hcp-trust-item"><span class="hcp-trust-item__icon">📊</span> 8-Week Trend Reports</div>
     <div class="hcp-trust-item"><span class="hcp-trust-item__icon">📱</span> Shareable PDF Exports</div>
     <div class="hcp-trust-item"><span class="hcp-trust-item__icon">⚡</span> BLE 5.0 Low Latency</div>
@@ -414,54 +468,12 @@
   </div>
 </div>
 
-<!-- Why Bundl for providers -->
-<section class="hcp-section hcp-section--dark">
-  <div class="hcp-section__inner">
-    <div class="hcp-section__header hcp-section__header--light fade-in">
-      <h2>Why Healthcare Providers Recommend Bundl</h2>
-      <p>Bundl is a wellness monitoring tool — not a diagnostic device. But the longitudinal data it generates has real clinical value when families share it with their care team.</p>
-    </div>
-    <div class="hcp-value-grid">
-      <div class="hcp-value-card fade-in">
-        <div class="hcp-value-card__icon">📈</div>
-        <h4>Longitudinal Trend Data</h4>
-        <p>Rather than single-point readings, Bundl provides weeks of continuous heart rate, SpO₂, temperature, and movement data — a picture of how a baby's vitals change over time, not just in-office snapshots.</p>
-      </div>
-      <div class="hcp-value-card fade-in">
-        <div class="hcp-value-card__icon">🛌</div>
-        <h4>Sleep Architecture Insights</h4>
-        <p>Detailed sleep phase data, wake events, and total sleep duration across weeks. Useful for evaluating sleep concerns, colic patterns, and developmental sleep transitions.</p>
-      </div>
-      <div class="hcp-value-card fade-in">
-        <div class="hcp-value-card__icon">😌</div>
-        <h4>Reduced Parental Anxiety</h4>
-        <p>Families with high parental anxiety, NICU graduates, and at-risk infants benefit significantly from continuous monitoring. Reduced anxiety correlates with better follow-through on medical advice.</p>
-      </div>
-      <div class="hcp-value-card fade-in">
-        <div class="hcp-value-card__icon">🤝</div>
-        <h4>Shared Decision-Making</h4>
-        <p>Data-informed conversations lead to better outcomes. When parents come to appointments with 8 weeks of trend data, the quality of clinical discussion improves meaningfully.</p>
-      </div>
-      <div class="hcp-value-card fade-in">
-        <div class="hcp-value-card__icon">👶</div>
-        <h4>NICU Transition Support</h4>
-        <p>For NICU graduates transitioning home, Bundl provides a monitored bridge. Families feel safer, and you receive data that can inform post-discharge follow-up timing and intensity.</p>
-      </div>
-      <div class="hcp-value-card fade-in">
-        <div class="hcp-value-card__icon">📋</div>
-        <h4>Pre-Visit Data Sharing</h4>
-        <p>Families can share a Bundl health summary with your office before the appointment — so you arrive at the visit already familiar with the data and ready to address what matters.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Data sharing -->
 <section class="hcp-section" id="data-sharing">
   <div class="hcp-section__inner">
     <div class="hcp-section__header hcp-section__header--dark fade-in">
       <h2>What Data Can Families Share With You?</h2>
-      <p>Bundl's data sharing is parent-controlled and privacy-first. Families choose what to share, when, and with whom — you receive clean, readable reports.</p>
+      <p>Bundl's data sharing is parent-controlled and privacy-first. Families choose what to share, when, and with whom. You receive clean, readable reports.</p>
     </div>
     <div class="data-share-layout fade-in">
       <div class="data-share-text">
@@ -543,249 +555,214 @@
   </div>
 </section>
 
-<!-- Use Cases -->
-<section class="hcp-section hcp-section--alt">
-  <div class="hcp-section__inner">
-    <div class="hcp-section__header hcp-section__header--dark fade-in">
-      <h2>Clinical Use Cases</h2>
-      <p>How different care teams are incorporating Bundl data into their practice.</p>
-    </div>
-    <div class="use-case-grid">
-      <div class="use-case-card fade-in">
-        <span class="use-case-card__tag use-case-card__tag--nicu">NICU Discharge</span>
-        <h4>Post-NICU Home Monitoring</h4>
-        <p>For NICU graduates going home without an apnea monitor, Bundl provides continuous SpO₂ and heart rate awareness during the highest-risk transition period. Families report significantly reduced anxiety, and trend data informs post-discharge follow-up scheduling.</p>
-      </div>
-      <div class="use-case-card fade-in">
-        <span class="use-case-card__tag use-case-card__tag--primary">Primary Pediatrics</span>
-        <h4>Enhanced Well-Baby Visits</h4>
-        <p>Pediatricians using Bundl-shared data report that their 2-month, 4-month, and 6-month visits include substantially richer conversations. Sleep data, temperature trends, and movement patterns provide context that single-point office readings cannot.</p>
-      </div>
-      <div class="use-case-card fade-in">
-        <span class="use-case-card__tag use-case-card__tag--sleep">Sleep Medicine</span>
-        <h4>Infant Sleep Consultations</h4>
-        <p>Sleep consultants use Bundl's sleep phase data to identify wake windows, cycle lengths, and sleep architecture changes over time — giving parents actionable, data-informed guidance rather than generic schedules.</p>
-      </div>
-      <div class="use-case-card fade-in">
-        <span class="use-case-card__tag use-case-card__tag--perinatal">Perinatal Mental Health</span>
-        <h4>Postpartum Anxiety Support</h4>
-        <p>For families experiencing postpartum anxiety (PPA), Bundl monitoring reduces compulsive checking behaviors when parents have access to real data. Perinatal mental health providers can recommend Bundl as a tangible anxiety-reduction tool.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Provider testimonials -->
-<section class="hcp-section">
-  <div class="hcp-section__inner">
-    <div class="hcp-section__header hcp-section__header--dark fade-in">
-      <h2>Voices from the Clinical Community</h2>
-    </div>
-    <div class="hcp-testimonials">
-      <div class="hcp-testimonial fade-in">
-        <p class="hcp-testimonial__text">When parents share Bundl reports with me before a 4-month visit, I walk in knowing their baby's SpO₂ trends, sleep architecture, and any temperature events over the past 8 weeks. It changes everything about what we can discuss in 20 minutes.</p>
-        <div class="hcp-testimonial__author">Dr. Priya Nair, MD</div>
-        <div class="hcp-testimonial__role">Pediatric Sleep Specialist, Boston Children's Hospital</div>
-      </div>
-      <div class="hcp-testimonial fade-in">
-        <p class="hcp-testimonial__text">I recommend Bundl to every family discharging from our NICU. The transition home is the scariest moment for these parents — they've had continuous monitoring for weeks. Bundl bridges that gap in a way that's practical, comfortable, and honest about what it can and can't do.</p>
-        <div class="hcp-testimonial__author">Alicia Grant, RN, MSN</div>
-        <div class="hcp-testimonial__role">Neonatal Nurse Practitioner, Stanford Medicine</div>
-      </div>
-      <div class="hcp-testimonial fade-in">
-        <p class="hcp-testimonial__text">As a perinatal psychologist, I appreciate that Bundl provides information without amplifying alarm. I've seen it reduce nighttime checking frequency in mothers with PPA — not because they're ignoring the baby, but because they have real data telling them everything is okay right now.</p>
-        <div class="hcp-testimonial__author">Dr. Marcus Chen, PsyD</div>
-        <div class="hcp-testimonial__role">Perinatal Mental Health, UCSF</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Lifestyle strip -->
-<div class="lifestyle-strip" aria-hidden="true">
-  <img src="images/lifestyle-mother-baby.png" alt="">
-  <div class="lifestyle-strip__overlay">
-    <div class="lifestyle-strip__text">
-      <h2>Continuous Data. Confident Clinicians. Thriving Babies.</h2>
-      <p>Bundl bridges the gap between home monitoring and clinical insight — giving healthcare providers the longitudinal data they need.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Partnership tiers -->
-<section class="hcp-section hcp-section--alt">
-  <div class="hcp-section__inner">
-    <div class="hcp-section__header hcp-section__header--dark fade-in">
-      <h2>Partnership Programs</h2>
-      <p>Bundl offers three partnership levels for healthcare organizations, from individual practice recommendations to formal research collaborations.</p>
-    </div>
-    <div class="partnership-grid">
-      <div class="partnership-card partnership-card--standard fade-in">
-        <span class="partnership-card__badge">Standard</span>
-        <h4>Provider Referral</h4>
-        <ul>
-          <li>Free sample device for your practice</li>
-          <li>Digital educational materials for patients</li>
-          <li>Dedicated provider support line</li>
-          <li>Patient discount code (10% off)</li>
-        </ul>
-        <a href="#sample-request" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">Get Started</a>
-      </div>
-      <div class="partnership-card partnership-card--clinical fade-in">
-        <span class="partnership-card__badge">Clinical Partner</span>
-        <h4>Practice Integration</h4>
-        <ul>
-          <li>Everything in Standard</li>
-          <li>Group practice onboarding session</li>
-          <li>Co-branded patient education materials</li>
-          <li>Quarterly data insights for enrolled patients</li>
-          <li>Priority support and product roadmap input</li>
-        </ul>
-        <a href="#sample-request" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">Apply Now</a>
-      </div>
-      <div class="partnership-card partnership-card--research fade-in">
-        <span class="partnership-card__badge">Research</span>
-        <h4>Research Collaboration</h4>
-        <ul>
-          <li>Everything in Clinical Partner</li>
-          <li>API access for research data integration</li>
-          <li>Custom data export configurations</li>
-          <li>IRB study support and data agreements</li>
-          <li>Joint publication opportunities</li>
-          <li>Complimentary devices for study cohort</li>
-        </ul>
-        <a href="#sample-request" class="btn btn--outline" style="border-color:rgba(255,255,255,.5);color:#fff;width:100%;justify-content:center;">Contact Research Team</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Sample request form -->
-<section class="hcp-section" id="sample-request">
-  <div class="hcp-section__inner">
-    <div class="sample-form-box fade-in">
-      <h3>Request a Sample Device</h3>
-      <p>We offer complimentary sample devices to qualified healthcare providers. Complete the form below and our clinical partnerships team will reach out within 2 business days.</p>
-
-      <form class="contact-form" novalidate>
-        <div class="form-grid">
-          <div class="form-field">
-            <label for="hcp-first">First Name *</label>
-            <input type="text" id="hcp-first" name="first" placeholder="Dr. Priya" required />
-          </div>
-          <div class="form-field">
-            <label for="hcp-last">Last Name *</label>
-            <input type="text" id="hcp-last" name="last" placeholder="Nair" required />
-          </div>
-        </div>
-        <div class="form-grid">
-          <div class="form-field">
-            <label for="hcp-email">Work Email *</label>
-            <input type="email" id="hcp-email" name="email" placeholder="you@clinic.com" required />
-          </div>
-          <div class="form-field">
-            <label for="hcp-phone">Phone</label>
-            <input type="tel" id="hcp-phone" name="phone" placeholder="(555) 000-0000" />
-          </div>
-        </div>
-        <div class="form-grid">
-          <div class="form-field">
-            <label for="hcp-title">Title / Role *</label>
-            <select id="hcp-title" name="title" required>
-              <option value="">Select role…</option>
-              <option>Pediatrician (MD/DO)</option>
-              <option>Neonatologist</option>
-              <option>Neonatal Nurse Practitioner</option>
-              <option>Pediatric Nurse</option>
-              <option>Pediatric Sleep Specialist</option>
-              <option>Perinatal Mental Health Provider</option>
-              <option>Midwife / OB-GYN</option>
-              <option>Family Physician</option>
-              <option>Other Clinical Provider</option>
-              <option>Researcher / Academic</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="hcp-practice">Practice / Institution *</label>
-            <input type="text" id="hcp-practice" name="practice" placeholder="Boston Children's Hospital" required />
-          </div>
-        </div>
-        <div class="form-grid form-grid--full">
-          <div class="form-field">
-            <label for="hcp-interest">How do you see Bundl fitting your practice?</label>
-            <textarea id="hcp-interest" name="interest" placeholder="E.g. post-NICU discharge counseling, well-baby visit data, postpartum anxiety support…"></textarea>
-          </div>
-        </div>
-        <div class="form-submit-area">
-          <button type="submit" class="btn btn--primary">Submit Request</button>
-          <p class="form-disclaimer">By submitting this form you agree to our Privacy Policy. We'll contact you within 2 business days. Sample devices are available to licensed healthcare professionals in the US and UK. Bundl is a wellness monitor and is not a medical device.</p>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- Footer CTA -->
-<section class="newsletter-block">
+<!-- ============================================================
+     JOIN WAITLIST + DONATE — Combined End-of-Page Section
+     ============================================================ -->
+<section class="section section--cream" id="waitlist" aria-labelledby="join-heading">
   <div class="container">
-    <div class="newsletter-block__inner fade-in">
-      <h2>Stay Current with Bundl Research</h2>
-      <p>Subscribe to our quarterly clinical newsletter — new infant wellness data, partnerships, and educational resources for healthcare providers.</p>
-      <form class="newsletter-form" novalidate>
-        <input type="email" placeholder="Your work email address" autocomplete="email" required />
-        <button type="submit" class="btn btn--primary">Subscribe</button>
-      </form>
-      <p style="font-size:.78rem;margin-top:.8rem;opacity:.65;">For healthcare professionals. No spam. Unsubscribe anytime.</p>
+
+    <div class="section-header fade-in">
+      <span class="eyebrow">Be Part of Something Meaningful</span>
+      <h2 id="join-heading">Join Us: Two Ways to Help Bundl Happen.</h2>
+      <p>Whether you sign up for updates or help fund our mission, every action moves us closer to helping families feel more at ease.</p>
     </div>
+
+    <div class="join-donate-layout">
+
+      <!-- LEFT: Waitlist signup -->
+      <div class="join-donate-layout__left fade-in">
+        <div class="join-panel">
+          <div class="join-panel__header">
+            <h3>Join the Waitlist</h3>
+            <p>Be first to know when Bundl launches: Kickstarter alerts, launch updates, and early access opportunities.</p>
+          </div>
+
+          <!-- ================================================
+               MAILERLITE EMBED
+               Replace the form below with your MailerLite embed code.
+               Go to: MailerLite → Forms → Embedded Forms → Copy Code
+               Paste it inside the .mailerlite-embed div below.
+               ================================================ -->
+          <div class="mailerlite-embed">
+            <div id="mlb2-42009777" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-42009777">
+              <div class="ml-form-align-center">
+                <div class="ml-form-embedWrapper embedForm">
+                  <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2387799/forms/189016167294174785/subscribe" data-code="" method="post" target="_blank">
+                      <div class="ml-form-formContent">
+                        <div class="ml-form-fieldRow">
+                          <div class="ml-field-group ml-field-name ml-validate-required">
+                            <label>How are you interested in Bundl?</label>
+                            <select class="custom-select" name="fields[name]" aria-label="name" aria-required="true">
+                              <option value="">-</option>
+                              <option>Parent / Expecting Parent</option>
+                              <option>Friend / Family Supporter</option>
+                              <option>Healthcare Professional</option>
+                              <option>Interested in partnership / investment opportunities</option>
+                              <option>Other</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="ml-form-fieldRow ml-last-item">
+                          <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                            <label>Email</label>
+                            <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="email">
+                          </div>
+                        </div>
+                      </div>
+                      <input type="hidden" name="ml-submit" value="1">
+                      <div class="ml-form-embedSubmit">
+                        <button type="submit" class="primary">Subscribe</button>
+                        <button disabled="disabled" style="display: none;" type="button" class="loading">
+                          <div class="ml-form-embedSubmitLoad"></div>
+                          <span class="sr-only">Loading...</span>
+                        </button>
+                      </div>
+                      <input type="hidden" name="anticsrf" value="true">
+                    </form>
+                  </div>
+                  <div class="ml-form-successBody row-success" style="display: none">
+                    <div class="ml-form-successContent">
+                      <h4>Thank you!</h4>
+                      <p>You have successfully joined our waitlist.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end .mailerlite-embed -->
+
+          <div class="waitlist-perks">
+            <div class="waitlist-perk">Early access to launch</div>
+            <div class="waitlist-perk">Kickstarter alerts</div>
+            <div class="waitlist-perk">Fundraiser announcements</div>
+            <div class="waitlist-perk">Exclusive supporter perks</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Donate / GoFundMe -->
+      <div class="join-donate-layout__right fade-in fade-in--delay-1" id="support">
+        <div class="donate-panel">
+          <div class="donate-panel__header">
+            <div class="gofundme-card__badge">
+              <span class="gofundme-card__badge-dot"></span>
+              Currently: Prototype Stage
+            </div>
+            <h3>Support Our Mission</h3>
+            <p>We're a student startup building Bundl with limited resources but unlimited determination. Your contribution, large or small, helps us get one step closer.</p>
+          </div>
+
+          <div class="donate-panel__image">
+            <img src="images/grp1.jpg" alt="A baby sleeping peacefully" loading="lazy" />
+          </div>
+
+          <div class="gofundme-funding-list">
+            <div class="gofundme-funding-item">Prototype development and testing</div>
+            <div class="gofundme-funding-item">Manufacturing and material sourcing</div>
+            <div class="gofundme-funding-item">Safety validation and compliance testing</div>
+            <div class="gofundme-funding-item">App development and beta testing</div>
+            <div class="gofundme-funding-item">Kickstarter campaign preparation and launch</div>
+          </div>
+
+          <div class="donate-panel__actions">
+            <!-- Replace href below with your actual GoFundMe URL -->
+            <a href="https://gofund.me/33b133596" class="btn btn--primary btn--full" target="_blank" rel="noopener" aria-label="Donate on GoFundMe">Donate on GoFundMe →</a>
+          </div>
+
+          <div class="gofundme-impact">
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Backed by a community that cares</div>
+            </div>
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Helps families afford monitoring</div>
+            </div>
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Student-built, community-backed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end .join-donate-layout -->
+
+    <div style="text-align:center;margin-top:40px;">
+      <div style="display:inline-block;padding:20px 40px;border:2px solid var(--brown);border-radius:var(--radius-lg);background:rgba(92,51,24,0.05);">
+        <p style="font-size:1.15rem;font-weight:600;color:var(--brown);margin:0 0 6px;">Have another way you'd like to support Bundl, or just curious about what we're building?</p>
+        <p style="font-size:0.95rem;color:var(--text-medium);margin:0;">Whether you're a healthcare provider, researcher, potential partner, or simply someone who believes in our mission — we'd love to hear from you. <a href="mailto:bundl.team.official@gmail.com" style="color:var(--brown);text-decoration:underline;text-underline-offset:3px;">Contact our team →</a></p>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <footer class="footer">
   <div class="container">
-    <div class="footer__top">
+    <div class="footer__grid">
       <div class="footer__brand">
-        <a href="index.html" class="footer__logo" aria-label="Bundl Home">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" aria-hidden="true">
-            <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
-            <circle cx="335" cy="48" r="7" fill="#7B5028"/>
-            <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
-            <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
-            <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
-            <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
-          </svg>
+        <a href="index.html" aria-label="Bundl Home">
+          <img src="images/bundl-logo.png" alt="Bundl" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" loading="lazy" />
         </a>
-        <p>For Your Bundl of Joy</p>
+        <p>A student-led startup building smart wearable baby monitoring that helps parents feel more informed, reassured, and at ease, because peace of mind should be accessible to every family.</p>
+                <div class="footer__social">
+          <a href="https://www.instagram.com/bundl_official_?igsh=cW13cmk4MHEyYXo%3D&utm_source=qr" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.facebook.com/share/1ERbwhmzVs/?mibextid=wwXIfr" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.linkedin.com/company/teambundl/" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
       </div>
-      <div class="footer__links">
-        <div class="footer__col">
-          <h5>Product</h5>
-          <a href="product.html">Shop Bundl</a>
-          <a href="how-it-works.html">How It Works</a>
-          <a href="product.html#specs">Specifications</a>
-        </div>
-        <div class="footer__col">
-          <h5>Learn</h5>
-          <a href="sids-safety.html">SIDS &amp; Safety</a>
-          <a href="education.html">Baby Care</a>
-          </div>
-        <div class="footer__col">
-          <h5>Company</h5>
-          <a href="healthcare.html">For Providers</a>
-          <a href="support.html">Support</a>
-        </div>
+      <div class="footer__col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="product.html">The Band</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="product.html#verification">Our Technology</a></li>
+          <li><a href="product.html#insights">Personalized Insights</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Learn</h5>
+        <ul>
+          <li><a href="sids-safety.html">SIDS &amp; Safety</a></li>
+          <li><a href="education.html">Baby Care</a></li>
+          <li><a href="healthcare.html">For Providers</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="support.html">Support Us</a></li>
+          <li><a href="support.html#team">Meet the Team</a></li>
+          <li><a href="support.html#waitlist">Support Our Mission</a></li>
+          <li><a href="mailto:bundl.team.official@gmail.com">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="support.html#waitlist">Join Waitlist</a></li>
+          <li><a href="https://gofund.me/33b133596" target="_blank" rel="noopener">GoFundMe</a></li>
+          <li><a href="support.html">Help Center</a></li>
+          <li><a href="mailto:bundl.team.official@gmail.com">Contact Us</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer__bottom">
-      <p>&copy; 2025 Bundl. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Medical Disclaimer</a></p>
+    <div class="footer__disclaimer">
+      <p>Bundl is a pre-launch startup product currently in prototype development. Bundl is designed to provide parents with real-time wellness data for informational purposes only. It is not a medical device and is not intended to diagnose, treat, cure, or prevent any medical condition. Always consult your pediatrician or qualified healthcare provider regarding your baby's health.</p>
     </div>
   </div>
 </footer>
 
+<script>
+  function ml_webform_success_42009777() {
+    var $ = ml_jQuery || jQuery;
+    $('.ml-subscribe-form-42009777 .row-success').show();
+    $('.ml-subscribe-form-42009777 .row-form').hide();
+  }
+</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
+<script>
+  fetch("https://assets.mailerlite.com/jsonp/2387799/forms/189016167294174785/takel")
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>

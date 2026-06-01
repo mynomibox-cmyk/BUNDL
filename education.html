@@ -1,14 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baby Care Education Center — Newborn &amp; Infant Health | Bundl</title>
-  <meta name="description" content="Evidence-based guides for new parents: newborn basics, sleep and development, health monitoring, and parenting insights — all written with pediatric guidance." />
+  <title>Baby Care Center — Newborn &amp; Infant Health | Bundl</title>
+  <meta name="description" content="Evidence-based guides for new parents: newborn basics, sleep and development, health monitoring, and parenting insights, all written with pediatric guidance." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/mailerlite.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q9GLGL28F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6Q9GLGL28F');
+  </script>
   <style>
     /* ── Education page styles ── */
     .edu-hero {
@@ -355,31 +365,18 @@
 <header class="header" id="header">
   <div class="header__inner">
     <a href="index.html" class="header__logo" aria-label="Bundl Home">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" aria-hidden="true">
-        <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
-        <circle cx="335" cy="48" r="7" fill="#7B5028"/>
-        <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
-        <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-        <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
-        <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
-        <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
-      </svg>
+      <img src="images/bundl-logo.png" class="header__logo-img" alt="Bundl" />
     </a>
     <nav class="header__nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="product.html">Shop</a>
+      <a href="product.html">Product</a>
       <a href="how-it-works.html">How It Works</a>
       <a href="sids-safety.html">SIDS &amp; Safety</a>
       <a href="education.html" class="active">Baby Care</a>
       <a href="healthcare.html">For Providers</a>
-      <a href="support.html">Support</a>
+      <a href="support.html">Support Us</a>
     </nav>
     <div class="header__actions">
-      <a href="product.html" class="btn btn--primary btn--sm">Shop Now</a>
       <button class="header__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -387,18 +384,18 @@
 
 <nav class="mobile-nav" aria-label="Mobile navigation">
   <a href="index.html">Home</a>
-  <a href="product.html">Shop</a>
+  <a href="product.html">Product</a>
   <a href="how-it-works.html">How It Works</a>
   <a href="sids-safety.html">SIDS &amp; Safety</a>
   <a href="education.html">Baby Care</a>
   <a href="healthcare.html">For Providers</a>
-  <a href="support.html">Support</a>
+  <a href="support.html">Support Us</a>
 </nav>
 
 <!-- Hero -->
 <section class="edu-hero">
   <div class="container">
-    <div class="edu-hero__eyebrow">Baby Care Education Center</div>
+    <div class="edu-hero__eyebrow">Baby Care Center</div>
     <h1>Everything You Need to Know.<br>Nothing You Don't.</h1>
     <p>Evidence-based guides for new parents, written with pediatric guidance and designed for the moments when you need clear answers fast.</p>
     <form class="edu-hero__search" role="search" onsubmit="return false;">
@@ -420,15 +417,6 @@
     <a href="#health-monitoring" class="edu-cat-btn">
       <span class="edu-cat-btn__emoji">💓</span> Health Monitoring
     </a>
-    <a href="#feeding" class="edu-cat-btn">
-      <span class="edu-cat-btn__emoji">🍼</span> Feeding
-    </a>
-    <a href="#milestones" class="edu-cat-btn">
-      <span class="edu-cat-btn__emoji">🌟</span> Milestones
-    </a>
-    <a href="#parenting-insights" class="edu-cat-btn">
-      <span class="edu-cat-btn__emoji">💡</span> Parenting Insights
-    </a>
   </div>
 </div>
 
@@ -440,54 +428,42 @@
         <h2>👶 Newborn Basics</h2>
         <p>The essential things to know in the first 30 days</p>
       </div>
-      <a href="#" class="edu-section__view-all">View all articles →</a>
+      <a href="https://www.healthychildren.org/English/ages-stages/baby/Pages/default.aspx" target="_blank" rel="noopener noreferrer" class="edu-section__view-all">View all articles →</a>
     </div>
 
     <div class="featured-article fade-in">
-      <div class="featured-article__visual">🌅</div>
+      <div class="featured-article__visual" style="background: linear-gradient(rgba(255,255,255,0.28), rgba(255,255,255,0.28)), url('images/nbb.png') center / cover no-repeat;"></div>
       <div class="featured-article__body">
         <span class="featured-article__badge">Featured Guide</span>
-        <h3>Your Baby's First 7 Days: What to Expect Hour by Hour</h3>
-        <p>The first week is overwhelming — a blur of feeds, diaper changes, and contradictory advice. This guide walks you through what's normal, what's worth watching, and what requires a call to your doctor.</p>
-        <a href="#" class="btn btn--outline" style="border-color:rgba(255,255,255,.5);color:#fff;padding:.6em 1.4em;font-size:.88rem;">Read Guide →</a>
+        <h3>What's Actually Normal for a Newborn? Understanding Sleep, Feeding, Breathing &amp; Vital Signs</h3>
+        <p>Newborns can seem unpredictable in the first days home. This guide covers the basics: how much they sleep, how often they feed, what breathing looks like, and which vital sign ranges are completely normal for a healthy baby.</p>
+        <a href="https://www.healthychildren.org/English/ages-stages/baby/Pages/default.aspx" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="border-color:rgba(255,255,255,.5);color:#fff;padding:.6em 1.4em;font-size:.88rem;">Read Guide →</a>
       </div>
     </div>
 
     <div class="article-grid">
-      <a href="#" class="article-card fade-in">
-        <div class="article-card__visual article-card__visual--blue">😴</div>
+      <a href="https://my.clevelandclinic.org/health/articles/vital-signs" target="_blank" rel="noopener noreferrer" class="article-card fade-in">
+        <div class="article-card__visual" style="background: linear-gradient(rgba(255,255,255,0.28), rgba(255,255,255,0.28)), url('images/nbs1.png') center / cover no-repeat;"></div>
         <div class="article-card__body">
-          <div class="article-card__category">Newborn Basics</div>
-          <div class="article-card__title">Why Newborns Sleep So Much (And Why That's Normal)</div>
-          <p class="article-card__excerpt">Newborns sleep 16–20 hours a day. Understanding sleep cycles, wake windows, and the difference between deep and light sleep sets the foundation for healthy habits.</p>
+          <div class="article-card__category">Newborn Foundations</div>
+          <div class="article-card__title">Newborn Vital Signs Explained: Heart Rate, Breathing Rate, Temperature &amp; Oxygen Levels</div>
+          <p class="article-card__excerpt">Heart rate, breathing rate, temperature, and oxygen levels all look very different in a newborn than in older children. Learn the normal ranges, what causes variations, and when a reading should prompt a call to your pediatrician.</p>
         </div>
         <div class="article-card__footer">
-          <span>Newborn</span>
-          <span class="article-card__read-time">5 min read</span>
+          <span>0–3 months</span>
+          <span class="article-card__read-time">6 min read</span>
         </div>
       </a>
-      <a href="#" class="article-card fade-in">
-        <div class="article-card__visual article-card__visual--pink">🩺</div>
+      <a href="https://www.hopkinsmedicine.org/health/wellness-and-prevention/infant-sleep" target="_blank" rel="noopener noreferrer" class="article-card fade-in">
+        <div class="article-card__visual" style="background: linear-gradient(rgba(255,255,255,0.28), rgba(255,255,255,0.28)), url('images/nbs2.png') center / cover no-repeat;"></div>
         <div class="article-card__body">
-          <div class="article-card__category">Newborn Basics</div>
-          <div class="article-card__title">Understanding Your Newborn's Vital Signs</div>
-          <p class="article-card__excerpt">What are normal heart rate, breathing rate, and temperature ranges for a newborn? A plain-language guide to the numbers that matter.</p>
+          <div class="article-card__category">Newborn Foundations</div>
+          <div class="article-card__title">Your Baby Changes Every Day: How Newborn Development Shapes Sleep, Movement &amp; Behavior</div>
+          <p class="article-card__excerpt">Newborn development happens fast. Understanding how rapid neurological and physical changes affect sleep patterns, movement, and behavior helps parents know what to expect week by week.</p>
         </div>
         <div class="article-card__footer">
           <span>0–3 months</span>
           <span class="article-card__read-time">7 min read</span>
-        </div>
-      </a>
-      <a href="#" class="article-card fade-in">
-        <div class="article-card__visual article-card__visual--cream">🦶</div>
-        <div class="article-card__body">
-          <div class="article-card__category">Newborn Basics</div>
-          <div class="article-card__title">Safe Swaddling: Benefits, Technique &amp; When to Stop</div>
-          <p class="article-card__excerpt">Swaddling can soothe a newborn and support better sleep — but improper technique carries risks. Here's the right way to swaddle safely.</p>
-        </div>
-        <div class="article-card__footer">
-          <span>0–3 months</span>
-          <span class="article-card__read-time">4 min read</span>
         </div>
       </a>
     </div>
@@ -502,42 +478,42 @@
         <h2>🌙 Sleep &amp; Development</h2>
         <p>Evidence-based sleep guidance from newborn to toddler</p>
       </div>
-      <a href="#" class="edu-section__view-all">View all articles →</a>
+      <a href="https://www.healthychildren.org/English/ages-stages/baby/Pages/default.aspx" target="_blank" rel="noopener noreferrer" class="edu-section__view-all">View all articles →</a>
     </div>
     <div class="article-grid">
-      <a href="#" class="article-card fade-in">
-        <div class="article-card__visual article-card__visual--blue">🌙</div>
+      <a href="https://www.hopkinsmedicine.org/health/wellness-and-prevention/infant-sleep" target="_blank" rel="noopener noreferrer" class="article-card fade-in">
+        <div class="article-card__visual" style="background: linear-gradient(rgba(255,255,255,0.28), rgba(255,255,255,0.28)), url('images/sd1.png') center / cover no-repeat;"></div>
         <div class="article-card__body">
-          <div class="article-card__category">Sleep</div>
-          <div class="article-card__title">Sleep Regressions Explained: Ages, Causes &amp; How to Cope</div>
-          <p class="article-card__excerpt">The 4-month, 8-month, and 18-month regressions feel like going backward — but they're developmental leaps in disguise. What's happening in baby's brain, and what you can do.</p>
+          <div class="article-card__category">Sleep &amp; Development</div>
+          <div class="article-card__title">Why Babies Sleep So Much: The Science Behind Infant Sleep</div>
+          <p class="article-card__excerpt">Newborns sleep 16 to 20 hours a day for a reason. This guide explains the role of sleep in brain development, how infant sleep differs from adult sleep, and why those long stretches matter.</p>
         </div>
         <div class="article-card__footer">
-          <span>4–18 months</span>
-          <span class="article-card__read-time">8 min read</span>
-        </div>
-      </a>
-      <a href="#" class="article-card fade-in">
-        <div class="article-card__visual article-card__visual--pink">⏰</div>
-        <div class="article-card__body">
-          <div class="article-card__category">Sleep</div>
-          <div class="article-card__title">Wake Windows by Age: The Simple Guide to Timing Naps</div>
-          <p class="article-card__excerpt">The single most effective tool for preventing overtiredness and improving nap success is understanding your baby's wake window. Here's exactly what to aim for each month.</p>
-        </div>
-        <div class="article-card__footer">
-          <span>0–12 months</span>
+          <span>Newborn</span>
           <span class="article-card__read-time">6 min read</span>
         </div>
       </a>
-      <a href="#" class="article-card fade-in">
-        <div class="article-card__visual article-card__visual--green">🛌</div>
+      <a href="https://www.stanfordchildrens.org/en/service/pediatric-sleep" target="_blank" rel="noopener noreferrer" class="article-card fade-in">
+        <div class="article-card__visual" style="background: linear-gradient(rgba(255,255,255,0.28), rgba(255,255,255,0.28)), url('images/sd2.png') center / cover no-repeat;"></div>
         <div class="article-card__body">
-          <div class="article-card__category">Sleep Environment</div>
-          <div class="article-card__title">Creating a Sleep-Optimal Nursery: Light, Sound &amp; Temperature</div>
-          <p class="article-card__excerpt">Small environmental tweaks can make a measurable difference in how long your baby sleeps. From blackout blinds to white noise machines — what's worth it and what's not.</p>
+          <div class="article-card__category">Sleep &amp; Development</div>
+          <div class="article-card__title">Infant Sleep Cycles Explained: What Happens While Your Baby Sleeps</div>
+          <p class="article-card__excerpt">Babies cycle through light and deep sleep differently than adults, which explains why they stir frequently. Learn what's happening in each stage and how sleep architecture changes in the first year.</p>
         </div>
         <div class="article-card__footer">
-          <span>All ages</span>
+          <span>0–12 months</span>
+          <span class="article-card__read-time">5 min read</span>
+        </div>
+      </a>
+      <a href="https://www.healthychildren.org/English/healthy-living/sleep/Pages/default.aspx" target="_blank" rel="noopener noreferrer" class="article-card fade-in">
+        <div class="article-card__visual" style="background: linear-gradient(rgba(255,255,255,0.28), rgba(255,255,255,0.28)), url('images/sd3.png') center / cover no-repeat;"></div>
+        <div class="article-card__body">
+          <div class="article-card__category">Sleep &amp; Development</div>
+          <div class="article-card__title">Signs Your Baby May Be Overtired (Before the Fussiness Starts)</div>
+          <p class="article-card__excerpt">An overtired baby is harder to settle than a tired one. Knowing the early cues that signal it's time to sleep, before fussiness peaks, makes a real difference in your baby's ability to settle and rest well.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>0–12 months</span>
           <span class="article-card__read-time">5 min read</span>
         </div>
       </a>
@@ -547,7 +523,7 @@
       <div class="bundl-tip__icon">📱</div>
       <div>
         <strong>Bundl Sleep Data Tip</strong>
-        Use your Bundl app's sleep timeline to identify your baby's natural sleep cycle length. Most babies cycle every 45–50 minutes — knowing when they'll surface to light sleep lets you plan your response.
+        Use your Bundl app's sleep timeline to identify your baby's natural sleep cycle length. Most babies cycle every 45–50 minutes. Knowing when they'll surface to light sleep lets you plan your response.
       </div>
     </div>
   </div>
@@ -561,295 +537,257 @@
         <h2>💓 Health Monitoring</h2>
         <p>Understanding the numbers that tell you how your baby is doing</p>
       </div>
-      <a href="#" class="edu-section__view-all">View all articles →</a>
+      <a href="https://www.healthychildren.org/English/ages-stages/baby/Pages/default.aspx" target="_blank" rel="noopener noreferrer" class="edu-section__view-all">View all articles →</a>
     </div>
     <div class="article-grid">
-      <a href="#" class="article-card fade-in">
-        <div class="article-card__visual article-card__visual--blue">💓</div>
-        <div class="article-card__body">
-          <div class="article-card__category">Heart Rate</div>
-          <div class="article-card__title">Normal Baby Heart Rates by Age: A Complete Reference</div>
-          <p class="article-card__excerpt">From 120–160 bpm in newborns to 70–120 bpm by age 1, here's what normal looks like — and what patterns warrant a call to your pediatrician.</p>
-        </div>
-        <div class="article-card__footer">
-          <span>0–12 months</span>
-          <span class="article-card__read-time">6 min read</span>
-        </div>
-      </a>
-      <a href="#" class="article-card fade-in">
-        <div class="article-card__visual article-card__visual--pink">🫁</div>
+      <a href="https://my.clevelandclinic.org/health/diagnostics/21481-pulse-oximetry" target="_blank" rel="noopener noreferrer" class="article-card fade-in">
+        <div class="article-card__visual" style="background: linear-gradient(rgba(255,255,255,0.28), rgba(255,255,255,0.28)), url('images/hm1.png') center / cover no-repeat;"></div>
         <div class="article-card__body">
           <div class="article-card__category">Oxygen &amp; Breathing</div>
-          <div class="article-card__title">SpO₂ in Infants: What Oxygen Saturation Means &amp; When to Act</div>
-          <p class="article-card__excerpt">Most healthy infants have SpO₂ readings of 95–100%. Understanding what this means, why it fluctuates, and when variations are clinically significant.</p>
+          <div class="article-card__title">Understanding Infant Oxygen Saturation (SpO₂): What Every Parent Should Know</div>
+          <p class="article-card__excerpt">SpO₂ monitoring measures how much oxygen is in your baby's blood. This guide explains what normal readings look like, what causes fluctuations, and what levels should prompt immediate attention.</p>
         </div>
         <div class="article-card__footer">
           <span>0–12 months</span>
-          <span class="article-card__read-time">7 min read</span>
-        </div>
-      </a>
-      <a href="#" class="article-card fade-in">
-        <div class="article-card__visual article-card__visual--cream">🌡️</div>
-        <div class="article-card__body">
-          <div class="article-card__category">Temperature</div>
-          <div class="article-card__title">Baby Fever 101: Normal Temperatures, When to Worry, &amp; How to Take a Reading</div>
-          <p class="article-card__excerpt">A rectal temperature of 100.4°F (38°C) or above is a fever in a baby. Why fever is different for newborns vs. older infants, and how to respond.</p>
-        </div>
-        <div class="article-card__footer">
-          <span>0–12 months</span>
-          <span class="article-card__read-time">8 min read</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Feeding -->
-<section class="edu-section edu-section--alt" id="feeding">
-  <div class="edu-section__inner">
-    <div class="edu-section__header fade-in">
-      <div class="edu-section__header-text">
-        <h2>🍼 Feeding Your Baby</h2>
-        <p>From first latch to first solids — evidence-based feeding guidance</p>
-      </div>
-    </div>
-    <div class="feeding-grid">
-      <div class="feeding-card feeding-card--breastfeed fade-in">
-        <h4>🤱 Breastfeeding</h4>
-        <p>Breastmilk provides complete nutrition for the first 6 months. Feed on demand (typically every 1.5–3 hours for newborns). Signs of adequate intake: 6+ wet diapers/day and steady weight gain after day 5.</p>
-        <div class="feeding-card__tip">💡 Bundl's sleep data can help you track feeding and sleep patterns together to identify your baby's natural rhythm.</div>
-      </div>
-      <div class="feeding-card feeding-card--formula fade-in">
-        <h4>🍶 Formula Feeding</h4>
-        <p>Commercial formula is a safe, nutritionally complete alternative to breastmilk. Newborns typically take 1–3 oz per feed, building to 4–6 oz by 2 months. Never water down formula — it's nutritionally incomplete when diluted.</p>
-        <div class="feeding-card__tip">💡 Track feeding volumes alongside Bundl's SpO₂ data — some changes in oxygen patterns correlate with feeding position.</div>
-      </div>
-      <div class="feeding-card feeding-card--solid fade-in">
-        <h4>🥕 Starting Solids</h4>
-        <p>The AAP recommends starting single-ingredient purees around 6 months — when baby can sit with support, shows interest in food, and has good head control. Rice cereal is no longer recommended as a first food.</p>
-        <div class="feeding-card__tip">💡 Introduction of solid foods often coincides with sleep pattern changes. Bundl's trend data can help you distinguish developmental shifts from feeding-related disruptions.</div>
-      </div>
-      <div class="feeding-card feeding-card--water fade-in">
-        <h4>💧 Water &amp; Other Drinks</h4>
-        <p>No water for babies under 6 months — breastmilk and formula provide all the hydration they need. Small amounts of water can be introduced with solid foods at 6 months. No juice under 12 months; limit it significantly until age 3.</p>
-        <div class="feeding-card__tip">💡 Dehydration in infants can affect temperature regulation. If Bundl's temperature readings seem elevated, adequate hydration is worth checking.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Milestones -->
-<section class="edu-section" id="milestones">
-  <div class="edu-section__inner">
-    <div class="edu-section__header">
-      <div class="edu-section__header-text">
-        <h2>🌟 Developmental Milestones</h2>
-        <p>What to expect and when to mention it to your doctor</p>
-      </div>
-    </div>
-    <p style="color:#7a6a60;font-size:.88rem;margin-bottom:2rem;">Remember: developmental ranges are wide. These are general guidelines — every baby develops at their own pace. Always discuss concerns with your pediatrician, not the internet.</p>
-    <div class="milestone-timeline fade-in">
-      <div class="milestone-item">
-        <div class="milestone-age">1 month</div>
-        <div class="milestone-dot"></div>
-        <div class="milestone-content">
-          <h4>First Responses</h4>
-          <p>Startles to sounds, focuses on faces 8–12 inches away, moves all limbs equally, cries to communicate needs.</p>
-          <div class="milestone-tags">
-            <span class="milestone-tag milestone-tag--physical">Physical</span>
-            <span class="milestone-tag milestone-tag--social">Social</span>
-          </div>
-        </div>
-      </div>
-      <div class="milestone-item">
-        <div class="milestone-age">2 months</div>
-        <div class="milestone-dot"></div>
-        <div class="milestone-content">
-          <h4>First Smiles</h4>
-          <p>Social smiling begins, begins to follow objects with eyes, makes cooing sounds, holds head up briefly during tummy time.</p>
-          <div class="milestone-tags">
-            <span class="milestone-tag milestone-tag--social">Social</span>
-            <span class="milestone-tag milestone-tag--cognitive">Cognitive</span>
-          </div>
-        </div>
-      </div>
-      <div class="milestone-item">
-        <div class="milestone-age">4 months</div>
-        <div class="milestone-dot"></div>
-        <div class="milestone-content">
-          <h4>Active Engagement</h4>
-          <p>Holds head steady, reaches for objects, laughs and squeals, recognizes familiar faces, pushes up on forearms during tummy time.</p>
-          <div class="milestone-tags">
-            <span class="milestone-tag milestone-tag--physical">Physical</span>
-            <span class="milestone-tag milestone-tag--cognitive">Cognitive</span>
-            <span class="milestone-tag milestone-tag--social">Social</span>
-          </div>
-        </div>
-      </div>
-      <div class="milestone-item">
-        <div class="milestone-age">6 months</div>
-        <div class="milestone-dot"></div>
-        <div class="milestone-content">
-          <h4>Sitting &amp; Babbling</h4>
-          <p>Sits with support, transfers objects hand to hand, begins babbling consonant sounds, recognizes own name, starts solid foods.</p>
-          <div class="milestone-tags">
-            <span class="milestone-tag milestone-tag--physical">Physical</span>
-            <span class="milestone-tag milestone-tag--cognitive">Language</span>
-          </div>
-        </div>
-      </div>
-      <div class="milestone-item">
-        <div class="milestone-age">9 months</div>
-        <div class="milestone-dot"></div>
-        <div class="milestone-content">
-          <h4>Mobility &amp; Object Permanence</h4>
-          <p>Crawls (or finds another way to move), pulls to stand, pincer grasp developing, understands "no", waves bye-bye.</p>
-          <div class="milestone-tags">
-            <span class="milestone-tag milestone-tag--physical">Physical</span>
-            <span class="milestone-tag milestone-tag--cognitive">Cognitive</span>
-          </div>
-        </div>
-      </div>
-      <div class="milestone-item">
-        <div class="milestone-age">12 months</div>
-        <div class="milestone-dot"></div>
-        <div class="milestone-content">
-          <h4>First Steps &amp; Words</h4>
-          <p>May take first steps, says "mama" and "dada" with meaning, uses cups and spoons, follows simple one-step commands, points at objects of interest.</p>
-          <div class="milestone-tags">
-            <span class="milestone-tag milestone-tag--physical">Physical</span>
-            <span class="milestone-tag milestone-tag--cognitive">Language</span>
-            <span class="milestone-tag milestone-tag--social">Social</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Lifestyle strip -->
-<div class="lifestyle-strip" aria-hidden="true">
-  <img src="images/lifestyle-babies.png" alt="">
-  <div class="lifestyle-strip__overlay">
-    <div class="lifestyle-strip__text">
-      <h2>Knowledge Grows With Your Baby</h2>
-      <p>Every article, every insight — curated by pediatric experts to help you understand your baby's unique journey.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Parenting Insights -->
-<section class="edu-section edu-section--alt" id="parenting-insights">
-  <div class="edu-section__inner">
-    <div class="edu-section__header">
-      <div class="edu-section__header-text">
-        <h2>💡 Parenting Insights</h2>
-        <p>Perspectives on the emotional and practical side of new parenthood</p>
-      </div>
-      <a href="#" class="edu-section__view-all">View all articles →</a>
-    </div>
-    <div class="article-grid">
-      <a href="#" class="article-card fade-in">
-        <div class="article-card__visual article-card__visual--pink">🧠</div>
-        <div class="article-card__body">
-          <div class="article-card__category">Mental Health</div>
-          <div class="article-card__title">Postpartum Anxiety: What It Is, How to Recognize It, and When to Seek Help</div>
-          <p class="article-card__excerpt">Postpartum anxiety is more common than postpartum depression — and less talked about. Signs, strategies, and resources for parents experiencing persistent worry or fear.</p>
-        </div>
-        <div class="article-card__footer">
-          <span>Parents</span>
-          <span class="article-card__read-time">9 min read</span>
-        </div>
-      </a>
-      <a href="#" class="article-card fade-in">
-        <div class="article-card__visual article-card__visual--cream">🤝</div>
-        <div class="article-card__body">
-          <div class="article-card__category">Relationship</div>
-          <div class="article-card__title">Parenting as a Team: Sharing the Mental Load After Baby</div>
-          <p class="article-card__excerpt">Division of night shifts, feeding duties, and monitoring responsibilities — how couples navigate the first year without burning out or building resentment.</p>
-        </div>
-        <div class="article-card__footer">
-          <span>Partners</span>
-          <span class="article-card__read-time">7 min read</span>
-        </div>
-      </a>
-      <a href="#" class="article-card fade-in">
-        <div class="article-card__visual article-card__visual--blue">🌿</div>
-        <div class="article-card__body">
-          <div class="article-card__category">Wellbeing</div>
-          <div class="article-card__title">Sleep Deprivation in New Parents: Real Effects and Small Strategies</div>
-          <p class="article-card__excerpt">Chronic sleep deprivation affects cognition, emotional regulation, and physical health. Evidence-based micro-strategies to protect your functioning while caring for a newborn.</p>
-        </div>
-        <div class="article-card__footer">
-          <span>Parents</span>
           <span class="article-card__read-time">6 min read</span>
         </div>
       </a>
+      <a href="https://my.clevelandclinic.org/health/articles/heart-rate" target="_blank" rel="noopener noreferrer" class="article-card fade-in">
+        <div class="article-card__visual" style="background: linear-gradient(rgba(255,255,255,0.28), rgba(255,255,255,0.28)), url('images/hm3.png') center / cover no-repeat;"></div>
+        <div class="article-card__body">
+          <div class="article-card__category">Heart Rate</div>
+          <div class="article-card__title">Normal Baby Heart Rate by Age: During Sleep, Feeding &amp; Activity</div>
+          <p class="article-card__excerpt">A newborn's resting heart rate is naturally higher than an adult's and changes with activity and sleep. Here's the complete breakdown by age, plus what patterns during feeding and rest actually mean.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>0–12 months</span>
+          <span class="article-card__read-time">6 min read</span>
+        </div>
+      </a>
+      <a href="https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/default.aspx" target="_blank" rel="noopener noreferrer" class="article-card fade-in">
+        <div class="article-card__visual" style="background: linear-gradient(rgba(255,255,255,0.28), rgba(255,255,255,0.28)), url('images/hm2.png') center / cover no-repeat;"></div>
+        <div class="article-card__body">
+          <div class="article-card__category">Temperature</div>
+          <div class="article-card__title">Understanding Your Baby's Temperature: What's Normal and When to Call the Pediatrician</div>
+          <p class="article-card__excerpt">Fever in a newborn is handled differently than in older children. This guide covers normal temperature ranges, how to take an accurate reading, and the specific thresholds that require a call to your baby's doctor.</p>
+        </div>
+        <div class="article-card__footer">
+          <span>0–12 months</span>
+          <span class="article-card__read-time">7 min read</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- Newsletter -->
-<section class="newsletter-block">
+<!-- ============================================================
+     JOIN WAITLIST + DONATE — Combined End-of-Page Section
+     ============================================================ -->
+<section class="section section--cream" id="waitlist" aria-labelledby="join-heading">
   <div class="container">
-    <div class="newsletter-block__inner fade-in">
-      <h2>New Articles Every Month</h2>
-      <p>Evidence-based parenting guides, delivered to your inbox. No overwhelm, no noise — just the things you actually need to know.</p>
-      <form class="newsletter-form" novalidate>
-        <input type="email" placeholder="Your email address" autocomplete="email" required />
-        <button type="submit" class="btn btn--primary">Subscribe</button>
-      </form>
-      <p style="font-size:.78rem;margin-top:.8rem;opacity:.65;">No spam, ever. Unsubscribe anytime.</p>
+
+    <div class="section-header fade-in">
+      <span class="eyebrow">Be Part of Something Meaningful</span>
+      <h2 id="join-heading">Join Us: Two Ways to Help Bundl Happen.</h2>
+      <p>Whether you sign up for updates or help fund our mission, every action moves us closer to helping families feel more at ease.</p>
     </div>
+
+    <div class="join-donate-layout">
+
+      <!-- LEFT: Waitlist signup -->
+      <div class="join-donate-layout__left fade-in">
+        <div class="join-panel">
+          <div class="join-panel__header">
+            <h3>Join the Waitlist</h3>
+            <p>Be first to know when Bundl launches: Kickstarter alerts, launch updates, and early access opportunities.</p>
+          </div>
+
+          <!-- ================================================
+               MAILERLITE EMBED
+               Replace the form below with your MailerLite embed code.
+               Go to: MailerLite → Forms → Embedded Forms → Copy Code
+               Paste it inside the .mailerlite-embed div below.
+               ================================================ -->
+          <div class="mailerlite-embed">
+            <div id="mlb2-42009777" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-42009777">
+              <div class="ml-form-align-center">
+                <div class="ml-form-embedWrapper embedForm">
+                  <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2387799/forms/189016167294174785/subscribe" data-code="" method="post" target="_blank">
+                      <div class="ml-form-formContent">
+                        <div class="ml-form-fieldRow">
+                          <div class="ml-field-group ml-field-name ml-validate-required">
+                            <label>How are you interested in Bundl?</label>
+                            <select class="custom-select" name="fields[name]" aria-label="name" aria-required="true">
+                              <option value="">-</option>
+                              <option>Parent / Expecting Parent</option>
+                              <option>Friend / Family Supporter</option>
+                              <option>Healthcare Professional</option>
+                              <option>Interested in partnership / investment opportunities</option>
+                              <option>Other</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="ml-form-fieldRow ml-last-item">
+                          <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                            <label>Email</label>
+                            <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="email">
+                          </div>
+                        </div>
+                      </div>
+                      <input type="hidden" name="ml-submit" value="1">
+                      <div class="ml-form-embedSubmit">
+                        <button type="submit" class="primary">Subscribe</button>
+                        <button disabled="disabled" style="display: none;" type="button" class="loading">
+                          <div class="ml-form-embedSubmitLoad"></div>
+                          <span class="sr-only">Loading...</span>
+                        </button>
+                      </div>
+                      <input type="hidden" name="anticsrf" value="true">
+                    </form>
+                  </div>
+                  <div class="ml-form-successBody row-success" style="display: none">
+                    <div class="ml-form-successContent">
+                      <h4>Thank you!</h4>
+                      <p>You have successfully joined our waitlist.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end .mailerlite-embed -->
+
+          <div class="waitlist-perks">
+            <div class="waitlist-perk">Early access to launch</div>
+            <div class="waitlist-perk">Kickstarter alerts</div>
+            <div class="waitlist-perk">Fundraiser announcements</div>
+            <div class="waitlist-perk">Exclusive supporter perks</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Donate / GoFundMe -->
+      <div class="join-donate-layout__right fade-in fade-in--delay-1" id="support">
+        <div class="donate-panel">
+          <div class="donate-panel__header">
+            <div class="gofundme-card__badge">
+              <span class="gofundme-card__badge-dot"></span>
+              Currently: Prototype Stage
+            </div>
+            <h3>Support Our Mission</h3>
+            <p>We're a student startup building Bundl with limited resources but unlimited determination. Your contribution, large or small, helps us get one step closer.</p>
+          </div>
+
+          <div class="donate-panel__image">
+            <img src="images/grp1.jpg" alt="A baby sleeping peacefully" loading="lazy" />
+          </div>
+
+          <div class="gofundme-funding-list">
+            <div class="gofundme-funding-item">Prototype development and testing</div>
+            <div class="gofundme-funding-item">Manufacturing and material sourcing</div>
+            <div class="gofundme-funding-item">Safety validation and compliance testing</div>
+            <div class="gofundme-funding-item">App development and beta testing</div>
+            <div class="gofundme-funding-item">Kickstarter campaign preparation and launch</div>
+          </div>
+
+          <div class="donate-panel__actions">
+            <!-- Replace href below with your actual GoFundMe URL -->
+            <a href="https://gofund.me/33b133596" class="btn btn--primary btn--full" target="_blank" rel="noopener" aria-label="Donate on GoFundMe">Donate on GoFundMe →</a>
+          </div>
+
+          <div class="gofundme-impact">
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Backed by a community that cares</div>
+            </div>
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Helps families afford monitoring</div>
+            </div>
+            <div class="gofundme-impact-item">
+              <div class="gofundme-impact-item__label">Student-built, community-backed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end .join-donate-layout -->
+
+    <div style="text-align:center;margin-top:40px;">
+      <div style="display:inline-block;padding:20px 40px;border:2px solid var(--brown);border-radius:var(--radius-lg);background:rgba(92,51,24,0.05);">
+        <p style="font-size:1.15rem;font-weight:600;color:var(--brown);margin:0 0 6px;">Have another way you'd like to support Bundl, or just curious about what we're building?</p>
+        <p style="font-size:0.95rem;color:var(--text-medium);margin:0;">Whether you're a healthcare provider, researcher, potential partner, or simply someone who believes in our mission — we'd love to hear from you. <a href="mailto:bundl.team.official@gmail.com" style="color:var(--brown);text-decoration:underline;text-underline-offset:3px;">Contact our team →</a></p>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <footer class="footer">
   <div class="container">
-    <div class="footer__top">
+    <div class="footer__grid">
       <div class="footer__brand">
-        <a href="index.html" class="footer__logo" aria-label="Bundl Home">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" aria-hidden="true">
-            <text x="8" y="228" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="130" font-weight="700" fill="#7B5028" letter-spacing="-1">Bundl</text>
-            <circle cx="335" cy="48" r="7" fill="#7B5028"/>
-            <line x1="335" y1="55" x2="218" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="335" y1="55" x2="408" y2="128" stroke="#7B5028" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="218" y1="128" x2="408" y2="128" stroke="#7B5028" stroke-width="7" stroke-linecap="round"/>
-            <line x1="240" y1="128" x2="236" y2="169" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <line x1="320" y1="128" x2="328" y2="167" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <line x1="390" y1="128" x2="406" y2="163" stroke="#7B5028" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
-            <path d="M202,202 Q202,190 212,188 Q210,177 222,176 Q224,167 236,168 Q248,167 251,176 Q263,177 262,188 Q272,190 270,202 Z" fill="#9EC8DC"/>
-            <path d="M328,167 C302,167 294,192 328,218 C318,216 314,206 314,192 C314,178 318,168 328,167Z" fill="#D4B040"/>
-            <polygon points="406,163 411,177 425,177 414,186 418,199 406,191 394,199 398,186 387,177 401,177" fill="#F0AABC"/>
-          </svg>
+        <a href="index.html" aria-label="Bundl Home">
+          <img src="images/bundl-logo.png" alt="Bundl" style="height:40px;filter:brightness(0) invert(1);opacity:0.85;" loading="lazy" />
         </a>
-        <p>For Your Bundl of Joy</p>
+        <p>A student-led startup building smart wearable baby monitoring that helps parents feel more informed, reassured, and at ease, because peace of mind should be accessible to every family.</p>
+                <div class="footer__social">
+          <a href="https://www.instagram.com/bundl_official_?igsh=cW13cmk4MHEyYXo%3D&utm_source=qr" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.facebook.com/share/1ERbwhmzVs/?mibextid=wwXIfr" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.linkedin.com/company/teambundl/" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
       </div>
-      <div class="footer__links">
-        <div class="footer__col">
-          <h5>Product</h5>
-          <a href="product.html">Shop Bundl</a>
-          <a href="how-it-works.html">How It Works</a>
-          <a href="product.html#specs">Specifications</a>
-        </div>
-        <div class="footer__col">
-          <h5>Learn</h5>
-          <a href="sids-safety.html">SIDS &amp; Safety</a>
-          <a href="education.html">Baby Care</a>
-          </div>
-        <div class="footer__col">
-          <h5>Company</h5>
-          <a href="healthcare.html">For Providers</a>
-          <a href="support.html">Support</a>
-        </div>
+      <div class="footer__col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="product.html">The Band</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="product.html#verification">Our Technology</a></li>
+          <li><a href="product.html#insights">Personalized Insights</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Learn</h5>
+        <ul>
+          <li><a href="sids-safety.html">SIDS &amp; Safety</a></li>
+          <li><a href="education.html">Baby Care</a></li>
+          <li><a href="healthcare.html">For Providers</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="support.html">Support Us</a></li>
+          <li><a href="support.html#team">Meet the Team</a></li>
+          <li><a href="support.html#waitlist">Support Our Mission</a></li>
+          <li><a href="mailto:bundl.team.official@gmail.com">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="support.html#waitlist">Join Waitlist</a></li>
+          <li><a href="https://gofund.me/33b133596" target="_blank" rel="noopener">GoFundMe</a></li>
+          <li><a href="support.html">Help Center</a></li>
+          <li><a href="mailto:bundl.team.official@gmail.com">Contact Us</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer__bottom">
-      <p>&copy; 2025 Bundl. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Medical Disclaimer</a></p>
+    <div class="footer__disclaimer">
+      <p>Bundl is a pre-launch startup product currently in prototype development. Bundl is designed to provide parents with real-time wellness data for informational purposes only. It is not a medical device and is not intended to diagnose, treat, cure, or prevent any medical condition. Always consult your pediatrician or qualified healthcare provider regarding your baby's health.</p>
     </div>
   </div>
 </footer>
 
+<script>
+  function ml_webform_success_42009777() {
+    var $ = ml_jQuery || jQuery;
+    $('.ml-subscribe-form-42009777 .row-success').show();
+    $('.ml-subscribe-form-42009777 .row-form').hide();
+  }
+</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
+<script>
+  fetch("https://assets.mailerlite.com/jsonp/2387799/forms/189016167294174785/takel")
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
