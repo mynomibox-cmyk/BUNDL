@@ -824,6 +824,14 @@ p {
 .feature-card__icon--cream { background: var(--cream-dark); }
 .feature-card__icon--mint  { background: #D4EDD4; }
 
+.product-overview-grid .feature-card__icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(92,51,24,0.75);
+}
+
 .feature-card h3 { font-size: 1.15rem; margin-bottom: 10px; text-align: center; }
 .feature-card p  { font-size: 0.91rem; color: var(--text-light); line-height: 1.65; text-align: center; }
 
@@ -1184,9 +1192,9 @@ p {
 }
 
 .healthcare-badge {
-  background: rgba(37, 99, 235, 0.18);
-  border: 1px solid rgba(37, 99, 235, 0.45);
-  color: #1e3a8a;
+  background: var(--blue-light);
+  border: 1px solid var(--blue);
+  color: var(--blue-dark);
   padding: 8px 18px;
   border-radius: var(--radius-full);
   font-size: 0.83rem;
@@ -1906,6 +1914,23 @@ p {
 }
 
 /* =====================================================
+   LUCIDE ICON SYSTEM
+   ===================================================== */
+svg.lucide { display: inline-flex; vertical-align: middle; flex-shrink: 0; }
+.tech-icon svg.lucide                { width: 17px; height: 17px; color: var(--brown); stroke-width: 1.75; }
+.step__circle svg.lucide             { width: 32px; height: 32px; stroke-width: 1.4; }
+.verify-step__icon svg.lucide        { width: 22px; height: 22px; stroke-width: 1.75; }
+.differentiator__icon svg.lucide     { width: 24px; height: 24px; stroke-width: 1.75; }
+.insight-feature-card__icon svg.lucide { width: 28px; height: 28px; stroke-width: 1.5; color: var(--brown); }
+.risk-card__icon svg.lucide          { width: 26px; height: 26px; stroke-width: 1.5; }
+.bundl-helps-card__icon svg.lucide   { width: 26px; height: 26px; stroke-width: 1.5; }
+.resource-link-card__icon svg.lucide { width: 24px; height: 24px; stroke-width: 1.75; }
+.hcp-trust-item__icon svg.lucide     { width: 17px; height: 17px; stroke-width: 1.75; }
+.ped-badge-icon svg.lucide           { width: 17px; height: 17px; stroke-width: 2; }
+.edu-cat-icon svg.lucide             { width: 18px; height: 18px; stroke-width: 1.75; }
+.inline-icon svg.lucide              { width: 16px; height: 16px; stroke-width: 2; vertical-align: -3px; }
+
+/* =====================================================
    HEALTHCARE PAGE
    ===================================================== */
 .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
@@ -2548,6 +2573,7 @@ section.newsletter-block {
   height: auto;
   display: block;
   margin-bottom: 2px;
+  filter: brightness(0.72);
 }
 
 .header__logo-img {
@@ -3831,5 +3857,155 @@ img[loading="lazy"].loaded { opacity: 1; }
   .join-panel,
   .donate-panel {
     padding: 28px 20px;
+  }
+}
+
+/* =====================================================
+   PHONE-ONLY MOBILE FIXES
+   All rules are scoped to touch/small-screen only —
+   no effect on desktop layout.
+   ===================================================== */
+
+/* ── 1. Team / feature cards: kill hover glow on touch screens ───
+   Tapping on mobile triggers :hover and it sticks, making the
+   tapped card appear "glowing" while others look dimmed.         */
+@media (hover: none) {
+  .team-member-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-card);
+  }
+  .team-member-card:hover .team-member-card__avatar {
+    transform: none;
+  }
+  .feature-card:hover,
+  .differentiator:hover,
+  .blog-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-card);
+  }
+}
+
+/* ── 2. Hero: show the product on the right of the background ────
+   The background image (scaleX-flipped) shows the product on the
+   right side. background-position 20% shifts the visible window
+   leftward in pre-flip space → reveals product on the right.    */
+@media (max-width: 640px) {
+  .hero::after {
+    background-position: 20% 30%;
+  }
+  /* Soften gradient overlay on mobile so background shows through */
+  .hero::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(254,252,232,0.52) 0%,
+      rgba(254,252,232,0.35) 60%,
+      rgba(254,252,232,0.18) 100%
+    );
+  }
+}
+
+/* ── 3. Hero text: darker description + centred prelaunch badge ── */
+@media (max-width: 900px) {
+  .hero__prelaunch-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero__desc {
+    color: var(--text-dark);
+    text-shadow: 0 1px 6px rgba(255,255,255,0.7);
+  }
+}
+
+/* ── 4. Hero spacing tightening on very small phones ─────────── */
+@media (max-width: 480px) {
+  .hero__content { gap: 12px; }
+  .hero__actions { gap: 8px; }
+  .section-header { margin-bottom: 32px; }
+}
+
+/* ── 5. Contact-team link: stands out in the hero actions ─────── */
+.hero__contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--brown);
+  background: rgba(255,255,255,0.82);
+  border: 2px solid var(--brown);
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  transition: var(--ease);
+  align-self: center;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.hero__contact-link:hover {
+  background: var(--brown);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ── 6. Product overview: desktop grid (3 children: heading / image / cards) */
+@media (min-width: 641px) {
+  .product-overview-grid {
+    display: grid !important;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 24px 48px;
+    align-items: start;
+  }
+  .product-overview-heading {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .product-overview-cards {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .product-overview-image {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+}
+
+/* ── 7. Product overview: phone layout ───────────────────────────
+   Phone order: heading → band image (centred) → 3 cards (row)   */
+@media (max-width: 640px) {
+  .product-overview-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: center !important;
+  }
+  .product-overview-heading { order: 1; width: 100%; }
+  .product-overview-image   { order: 2; width: 100%; border-radius: 0 !important; justify-content: center; }
+  .product-overview-cards   { order: 3; width: 100%; }
+
+  /* Three feature cards stay in a single horizontal row */
+  .product-overview-grid .grid-3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px;
+  }
+  /* Compact cards to fit 3-up on a narrow phone */
+  .product-overview-grid .feature-card {
+    padding: 14px 6px;
+    border-radius: var(--radius-md);
+  }
+  .product-overview-grid .feature-card__icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(92,51,24,0.75);
+    font-size: 1.1rem;
+    margin: 0 auto 8px;
+  }
+  .product-overview-grid .feature-card h3 {
+    font-size: 0.7rem;
+    margin-bottom: 0;
+    line-height: 1.3;
   }
 }

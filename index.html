@@ -6,12 +6,54 @@
   <title>BUNDL — Smart Baby Monitoring Ankle Band | Peace of Mind for Parents</title>
   <meta name="description" content="Bundl is the smart wearable ankle band helping parents feel informed and at ease — tracking your baby's vitals 24/7 with real-time alerts. Join our pre-launch waitlist." />
 
+  <!-- Canonical -->
+  <link rel="canonical" href="https://joinbundl.com/" />
+
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Bundl" />
   <meta property="og:title" content="BUNDL — Smart Baby Monitoring for Every Family" />
   <meta property="og:description" content="A student-built startup helping parents feel more informed and reassured about their baby's well-being. Join our pre-launch waitlist." />
-  <meta property="og:image" content="images/bundl-logo.png" />
+  <meta property="og:url" content="https://joinbundl.com/" />
+  <meta property="og:image" content="https://joinbundl.com/images/bundl-logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BUNDL — Smart Baby Monitoring for Every Family" />
+  <meta name="twitter:description" content="A student-built startup helping parents feel more informed and reassured about their baby's well-being. Join our pre-launch waitlist." />
+  <meta name="twitter:image" content="https://joinbundl.com/images/bundl-logo.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://joinbundl.com/#organization",
+        "name": "Bundl",
+        "url": "https://joinbundl.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://joinbundl.com/images/bundl-logo.png"
+        },
+        "description": "Smart wearable ankle band that monitors infant vitals 24/7 — heart rate, SpO2, temperature, motion, and sleep.",
+        "foundingLocation": { "@type": "Place", "name": "Liberty Hill, TX" },
+        "email": "bundl.team.official@gmail.com",
+        "sameAs": [
+          "https://www.instagram.com/bundl_official_",
+          "https://www.facebook.com/share/1ERbwhmzVs/",
+          "https://www.linkedin.com/company/teambundl/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://joinbundl.com/#website",
+        "name": "Bundl",
+        "url": "https://joinbundl.com",
+        "publisher": { "@id": "https://joinbundl.com/#organization" }
+      }
+    ]
+  }
+  </script>
 
   <!-- Performance: Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -94,13 +136,12 @@
         <img src="images/bundl-logo.png" class="hero__brand-logo" alt="Bundl — for your bundl of joy." />
       </div>
 
-      <p class="hero__desc">A smart wearable ankle band designed to help parents feel more informed and at ease, tracking your baby's heart rate, oxygen, temperature, and sleep, delivering personalized insights and real-time alerts sent directly to your phone.</p>
+      <p class="hero__desc">A smart baby monitoring ankle band designed to help parents feel more informed and at ease, tracking your baby's heart rate, oxygen, temperature, and sleep, delivering personalized insights and real-time alerts sent directly to your phone.</p>
 
       <div class="hero__actions">
         <a href="#waitlist" class="btn btn--primary btn--lg">Join the Waitlist</a>
         <a href="support.html" class="btn btn--secondary btn--lg">Support Our Mission</a>
-        <a href="how-it-works.html" class="hero__learn-more">See how it works →</a>
-        <a href="mailto:bundl.team.official@gmail.com" class="hero__learn-more">Contact Our Team →</a>
+        <a href="mailto:bundl.team.official@gmail.com" class="hero__contact-link"><i data-lucide="mail" class="inline-icon"></i> Contact Our Team</a>
       </div>
     </div>
   </div>
@@ -137,33 +178,33 @@
      ============================================================ -->
 <section class="section section--white" aria-labelledby="product-overview-heading" style="background:#FFFDE7;">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;">
-      <div>
-        <div class="fade-in" style="margin-bottom:32px;">
-          <span class="eyebrow">The Product</span>
-          <h2 id="product-overview-heading" style="margin-top:12px;">Smart Wearable Baby-Monitoring Ankle Band</h2>
-          <p style="margin-top:12px;">Bundl tracks the vitals that matter most, putting the data in your hands the moment it matters.</p>
-        </div>
+    <div class="product-overview-grid">
+      <div class="product-overview-heading fade-in">
+        <span class="eyebrow">The Product</span>
+        <h2 id="product-overview-heading" style="margin-top:12px;">Smart Wearable Baby-Monitoring Ankle Band</h2>
+        <p style="margin-top:12px;">Bundl tracks the vitals that matter most, putting the data in your hands the moment it matters.</p>
+      </div>
+      <div class="product-overview-image fade-in fade-in--delay-1" style="display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,rgba(255,255,255,0.95) 25%,transparent 72%);border-radius:50%;">
+        <img src="images/g2.png" alt="Bundl smart ankle band" loading="lazy" style="width:660px;max-width:100%;border-radius:var(--radius-xl);filter:drop-shadow(0 16px 40px rgba(60,35,10,0.12)) drop-shadow(0 0 60px rgba(255,255,255,0.9));">
+      </div>
+      <div class="product-overview-cards">
         <div class="grid-3">
           <div class="feature-card fade-in">
-            <div class="feature-card__icon feature-card__icon--pink">💗</div>
+            <div class="feature-card__icon feature-card__icon--pink"><img src="images/heart vitals.png" alt="Tracks Vitals" style="width:100%;height:100%;object-fit:cover;transform:scale(1.08);"></div>
             <h3>Tracks Vitals</h3>
           </div>
           <div class="feature-card fade-in fade-in--delay-1">
-            <div class="feature-card__icon feature-card__icon--blue">🔔</div>
+            <div class="feature-card__icon feature-card__icon--blue"><img src="images/phone alerts.png" alt="Verified Alerts" style="width:100%;height:100%;object-fit:cover;transform:scale(1.18);"></div>
             <h3>Verified Alerts</h3>
           </div>
           <div class="feature-card fade-in fade-in--delay-2">
-            <div class="feature-card__icon feature-card__icon--cream">📊</div>
+            <div class="feature-card__icon feature-card__icon--cream"><img src="images/insights.png" alt="Personal Insights" style="width:100%;height:100%;object-fit:cover;transform:scale(1.25);"></div>
             <h3>Personal Insights</h3>
           </div>
         </div>
         <div style="margin-top:32px;">
           <a href="product.html" class="btn btn--secondary">See Full Product Details →</a>
         </div>
-      </div>
-      <div class="fade-in fade-in--delay-1" style="display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,rgba(255,255,255,0.95) 25%,transparent 72%);border-radius:50%;">
-        <img src="images/g2.png" alt="Bundl smart ankle band" loading="lazy" style="width:660px;max-width:100%;border-radius:var(--radius-xl);filter:drop-shadow(0 16px 40px rgba(60,35,10,0.12)) drop-shadow(0 0 60px rgba(255,255,255,0.9));">
       </div>
     </div>
   </div>
@@ -182,22 +223,22 @@
     <div class="steps-wrapper">
       <div class="steps">
         <div class="step fade-in">
-          <div class="step__circle">🤱</div>
+          <div class="step__circle"><i data-lucide="watch"></i></div>
           <span class="step__num">Step 01</span>
           <h4>Wear</h4>
         </div>
         <div class="step fade-in fade-in--delay-1">
-          <div class="step__circle">📡</div>
+          <div class="step__circle"><i data-lucide="activity"></i></div>
           <span class="step__num">Step 02</span>
           <h4>Monitor</h4>
         </div>
         <div class="step fade-in fade-in--delay-2">
-          <div class="step__circle">🔔</div>
+          <div class="step__circle"><i data-lucide="bell"></i></div>
           <span class="step__num">Step 03</span>
           <h4>Get Alerts</h4>
         </div>
         <div class="step fade-in fade-in--delay-3">
-          <div class="step__circle">🏥</div>
+          <div class="step__circle"><i data-lucide="share-2"></i></div>
           <span class="step__num">Step 04</span>
           <h4>Share Insights</h4>
         </div>
@@ -223,7 +264,7 @@
 
     <div class="ped-endorsement-card fade-in">
       <div class="ped-endorsement-card__badge">
-        <span class="ped-badge-icon">🩺</span>
+        <span class="ped-badge-icon"><i data-lucide="stethoscope"></i></span>
         Pediatrician Approved
       </div>
 
@@ -254,6 +295,57 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TEAM / SUPPORT INTRO  (moved here from bottom of page)
+     ============================================================ -->
+<section class="section section--cream" aria-labelledby="support-us-heading">
+  <div class="container">
+
+    <div class="section-header fade-in">
+      <span class="eyebrow">Support Us</span>
+      <h2 id="support-us-heading">Built by Students, Driven by Purpose.</h2>
+      <p>A four-member student-led startup from Liberty Hill, Texas, building technology that helps families feel a little more supported.</p>
+    </div>
+
+    <div class="team-section-header text-center">
+      <h3>Meet the Team</h3>
+      <p style="color:var(--text-light);margin-top:8px;">Four students. One shared mission. Endless heart.</p>
+    </div>
+
+    <div class="team-cards-row">
+      <div class="team-member-card fade-in">
+        <div class="team-member-card__avatar"><img src="images/roo1.jpeg" alt="Roopali Rahul" loading="lazy"></div>
+        <div class="team-member-card__name">Roopali Rahul</div>
+        <div class="team-member-card__role">CEO</div>
+        <p class="team-member-card__bio">"Sometimes the littlest things take up the most room in your heart"<span class="team-member-card__quote-attr">— Winnie the Pooh</span></p>
+      </div>
+      <div class="team-member-card fade-in fade-in--delay-1">
+        <div class="team-member-card__avatar"><img src="images/meg1.jpeg" alt="Meghana Malkareddy" loading="lazy"></div>
+        <div class="team-member-card__name">Meghana Malkareddy</div>
+        <div class="team-member-card__role">CMO</div>
+        <p class="team-member-card__bio">"Babies are such a nice way to start people"<span class="team-member-card__quote-attr">— Finding Nemo</span></p>
+      </div>
+      <div class="team-member-card fade-in fade-in--delay-2">
+        <div class="team-member-card__avatar"><img src="images/flo1.jpeg" alt="Floristan Schwindt" loading="lazy"></div>
+        <div class="team-member-card__name">Floristan Schwindt</div>
+        <div class="team-member-card__role">CFO</div>
+        <p class="team-member-card__bio">"A baby fills a hole in your heart that you never knew was there"<span class="team-member-card__quote-attr">— One Tree Hill</span></p>
+      </div>
+      <div class="team-member-card fade-in fade-in--delay-3">
+        <div class="team-member-card__avatar"><img src="images/samantha1.jpeg" alt="Samantha Fraunhofer" loading="lazy"></div>
+        <div class="team-member-card__name">Samantha Fraunhofer</div>
+        <div class="team-member-card__role">COO</div>
+        <p class="team-member-card__bio">"You know what the great thing about babies is? They are like little bundles of hope."<span class="team-member-card__quote-attr">— Lish McBride</span></p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:36px;">
+      <a href="support.html" class="btn btn--secondary">Our Full Story &amp; Support Page →</a>
+    </div>
+
   </div>
 </section>
 
@@ -358,52 +450,10 @@
 </section>
 
 <!-- ============================================================
-     SUPPORT US — Team, Mission & Join
+     SUPPORT US — Join & Donate
      ============================================================ -->
-<section class="section section--cream" id="support-us" aria-labelledby="support-us-heading">
+<section class="section section--cream" id="support-us">
   <div class="container">
-
-    <div class="section-header fade-in">
-      <span class="eyebrow">Support Us</span>
-      <h2 id="support-us-heading">Built by Students, Driven by Purpose.</h2>
-      <p>A four-member student-led startup from Liberty Hill, Texas, building technology that helps families feel a little more supported.</p>
-    </div>
-
-    <div class="team-section-header text-center">
-      <h3>Meet the Team</h3>
-      <p style="color:var(--text-light);margin-top:8px;">Four students. One shared mission. Endless heart.</p>
-    </div>
-
-    <div class="team-cards-row">
-      <div class="team-member-card fade-in">
-        <div class="team-member-card__avatar"><img src="images/roo1.jpeg" alt="Roopali Rahul" loading="lazy"></div>
-        <div class="team-member-card__name">Roopali Rahul</div>
-        <div class="team-member-card__role">CEO</div>
-        <p class="team-member-card__bio">"Sometimes the littlest things take up the most room in your heart"<span class="team-member-card__quote-attr">— Winnie the Pooh</span></p>
-      </div>
-      <div class="team-member-card fade-in fade-in--delay-1">
-        <div class="team-member-card__avatar"><img src="images/meg1.jpeg" alt="Meghana Malkareddy" loading="lazy"></div>
-        <div class="team-member-card__name">Meghana Malkareddy</div>
-        <div class="team-member-card__role">CMO</div>
-        <p class="team-member-card__bio">"Babies are such a nice way to start people"<span class="team-member-card__quote-attr">— Finding Nemo</span></p>
-      </div>
-      <div class="team-member-card fade-in fade-in--delay-2">
-        <div class="team-member-card__avatar"><img src="images/flo1.jpeg" alt="Floristan Schwindt" loading="lazy"></div>
-        <div class="team-member-card__name">Floristan Schwindt</div>
-        <div class="team-member-card__role">CFO</div>
-        <p class="team-member-card__bio">"A baby fills a hole in your heart that you never knew was there"<span class="team-member-card__quote-attr">— One Tree Hill</span></p>
-      </div>
-      <div class="team-member-card fade-in fade-in--delay-3">
-        <div class="team-member-card__avatar"><img src="images/samantha1.jpeg" alt="Samantha Fraunhofer" loading="lazy"></div>
-        <div class="team-member-card__name">Samantha Fraunhofer</div>
-        <div class="team-member-card__role">COO</div>
-        <p class="team-member-card__bio">"You know what the great thing about babies is? They are like little bundles of hope."<span class="team-member-card__quote-attr">— Lish McBride</span></p>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:36px;margin-bottom:64px;">
-      <a href="support.html" class="btn btn--secondary">Our Full Story &amp; Support Page →</a>
-    </div>
 
     <div class="section-header fade-in">
       <span class="eyebrow">Be Part of Something Meaningful</span>
@@ -491,7 +541,7 @@
           <div class="donate-panel__header">
             <div class="gofundme-card__badge">
               <span class="gofundme-card__badge-dot"></span>
-              Currently: Prototype Stage
+              Currently: Pre-Seed Stage
             </div>
             <h3>Support Our Mission</h3>
             <p>We're a student startup building Bundl with limited resources but unlimited determination. Your contribution, large or small, helps us get one step closer.</p>
@@ -611,5 +661,7 @@
   fetch("https://assets.mailerlite.com/jsonp/2387799/forms/189016167294174785/takel")
 </script>
 <script src="js/main.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

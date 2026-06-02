@@ -5,6 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SIDS &amp; Safety — Understanding &amp; Prevention | Bundl</title>
   <meta name="description" content="Comprehensive SIDS education and safe sleep guidelines. Learn how to reduce risk, create a safe sleep environment, and how Bundl monitoring supports informed parenting." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://joinbundl.com/sids-safety" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Bundl" />
+  <meta property="og:title" content="SIDS &amp; Safety — Understanding &amp; Prevention | Bundl" />
+  <meta property="og:description" content="Comprehensive SIDS education and safe sleep guidelines. Learn how to reduce risk, create a safe sleep environment, and how Bundl monitoring supports informed parenting." />
+  <meta property="og:url" content="https://joinbundl.com/sids-safety" />
+  <meta property="og:image" content="https://joinbundl.com/images/bundl-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SIDS &amp; Safety — Understanding &amp; Prevention | Bundl" />
+  <meta name="twitter:description" content="Comprehensive SIDS education and safe sleep guidelines. Learn how to reduce risk and create a safe sleep environment for your baby." />
+  <meta name="twitter:image" content="https://joinbundl.com/images/bundl-logo.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "SIDS & Safety — Understanding & Prevention",
+    "url": "https://joinbundl.com/sids-safety",
+    "description": "Comprehensive SIDS education and safe sleep guidelines for parents.",
+    "publisher": { "@id": "https://joinbundl.com/#organization" },
+    "isPartOf": { "@id": "https://joinbundl.com/#website" }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -27,6 +56,22 @@
         url('../images/lifestyle-mother-baby.png') center / cover no-repeat;
       padding: 100px 0 72px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .sids-hero__bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .sids-hero .container {
+      position: relative;
+      z-index: 1;
     }
     .sids-hero__badge {
       display: inline-block;
@@ -431,6 +476,7 @@
 
 <!-- Hero -->
 <section class="sids-hero">
+  <img src="images/sleepy baby.png" alt="" class="sids-hero__bg-img" aria-hidden="true">
   <div class="container">
     <span class="sids-hero__badge">Education &amp; Safety</span>
     <h1>Understanding SIDS<br>&amp; Safe Sleep</h1>
@@ -485,32 +531,32 @@
     </div>
     <div class="risk-grid">
       <div class="risk-card fade-in">
-        <div class="risk-card__icon risk-card__icon--age">👶</div>
+        <div class="risk-card__icon risk-card__icon--age"><i data-lucide="baby"></i></div>
         <h4>Age</h4>
         <p>Risk is highest between 1 and 4 months of age. About 90% of SIDS deaths occur in the first 6 months of life. The risk decreases significantly after 6 months.</p>
       </div>
       <div class="risk-card fade-in">
-        <div class="risk-card__icon risk-card__icon--sleep">😴</div>
+        <div class="risk-card__icon risk-card__icon--sleep"><i data-lucide="moon"></i></div>
         <h4>Sleep Position</h4>
         <p>Stomach sleeping increases risk significantly. Side sleeping is also riskier than back sleeping. Always place babies on their backs to sleep until age 1.</p>
       </div>
       <div class="risk-card fade-in">
-        <div class="risk-card__icon risk-card__icon--smoke">🚫</div>
+        <div class="risk-card__icon risk-card__icon--smoke"><i data-lucide="ban"></i></div>
         <h4>Smoke Exposure</h4>
         <p>Prenatal or postnatal exposure to cigarette smoke significantly increases SIDS risk. This includes secondhand smoke exposure in the home environment.</p>
       </div>
       <div class="risk-card fade-in">
-        <div class="risk-card__icon risk-card__icon--heat">🌡️</div>
+        <div class="risk-card__icon risk-card__icon--heat"><i data-lucide="thermometer"></i></div>
         <h4>Overheating</h4>
         <p>Babies who become too hot during sleep face elevated risk. Overdressing, heavy blankets, and warm room temperatures are contributing factors.</p>
       </div>
       <div class="risk-card fade-in">
-        <div class="risk-card__icon risk-card__icon--prenatal">🏥</div>
+        <div class="risk-card__icon risk-card__icon--prenatal"><i data-lucide="building-2"></i></div>
         <h4>Prenatal Factors</h4>
         <p>Premature birth, low birth weight, multiple birth (twins, triplets), and inadequate prenatal care are associated with higher SIDS risk.</p>
       </div>
       <div class="risk-card fade-in">
-        <div class="risk-card__icon risk-card__icon--bed">🛏️</div>
+        <div class="risk-card__icon risk-card__icon--bed"><i data-lucide="bed-single"></i></div>
         <h4>Sleep Environment</h4>
         <p>Soft bedding, pillows, bumper pads, loose objects in the crib, and bed-sharing on soft surfaces all increase risk. A firm, flat surface is safest.</p>
       </div>
@@ -643,42 +689,42 @@
   <div class="sids-section__inner">
     <div class="sids-section__header fade-in">
       <h2>How Bundl Supports Informed Parenting</h2>
-      <p>Bundl does not prevent SIDS. No consumer device can. But Bundl helps parents stay aware, informed, and connected to their baby's wellbeing so you can respond quickly when something doesn't seem right.</p>
+      <p>Bundl does not claim to prevent SIDS — and no consumer device can. Bundl is designed to help parents feel in control by continuously monitoring the factors that affect their baby's wellbeing, putting real-time data in your hands and helping you act quickly when something doesn't seem right.</p>
     </div>
     <div class="bundl-helps-grid">
       <div class="bundl-helps-card fade-in">
-        <div class="bundl-helps-card__icon">💓</div>
+        <div class="bundl-helps-card__icon"><i data-lucide="heart"></i></div>
         <h4>Continuous Heart Rate Awareness</h4>
         <p>Tracks heart rate through the night, giving you real-time insight and alerting you when readings drift outside normal ranges for your baby's age.</p>
       </div>
       <div class="bundl-helps-card fade-in">
-        <div class="bundl-helps-card__icon">🫁</div>
+        <div class="bundl-helps-card__icon"><i data-lucide="wind"></i></div>
         <h4>Oxygen Saturation (SpO₂) Monitoring</h4>
         <p>Monitors blood oxygen levels continuously. Low SpO₂ alerts can indicate breathing changes that may warrant attention. Always confirm with your pediatrician.</p>
       </div>
       <div class="bundl-helps-card fade-in">
-        <div class="bundl-helps-card__icon">🌡️</div>
+        <div class="bundl-helps-card__icon"><i data-lucide="thermometer"></i></div>
         <h4>Skin Temperature Tracking</h4>
         <p>Continuous skin temperature monitoring helps you detect overheating trends early, one of the modifiable SIDS risk factors, before they become concerning.</p>
       </div>
       <div class="bundl-helps-card fade-in">
-        <div class="bundl-helps-card__icon">🏃</div>
+        <div class="bundl-helps-card__icon"><i data-lucide="activity"></i></div>
         <h4>Movement Detection</h4>
         <p>Detects when baby is still for extended periods or shows unusual movement patterns, prompting parents to check in. Not a substitute for in-person supervision.</p>
       </div>
       <div class="bundl-helps-card fade-in">
-        <div class="bundl-helps-card__icon">😴</div>
+        <div class="bundl-helps-card__icon"><i data-lucide="moon"></i></div>
         <h4>Sleep Pattern Insights</h4>
         <p>Tracks sleep phases, wake events, and total sleep duration over time, giving you data to share with your pediatrician at well-baby visits.</p>
       </div>
       <div class="bundl-helps-card fade-in">
-        <div class="bundl-helps-card__icon">📊</div>
+        <div class="bundl-helps-card__icon"><i data-lucide="bar-chart-2"></i></div>
         <h4>Shareable Health Reports</h4>
         <p>Generates trend reports you can share with your baby's doctor. More data means more informed conversations and better care, with no guesswork at appointments.</p>
       </div>
     </div>
     <div class="medical-disclaimer" style="margin-top:2.5rem">
-      <div class="medical-disclaimer__icon">⚠️</div>
+      <div class="medical-disclaimer__icon"><i data-lucide="alert-triangle"></i></div>
       <div>
         <h4>Important: Bundl is a Wellness Monitor, Not a Medical Device</h4>
         <p>Bundl has not been evaluated by the FDA and is not intended to diagnose, treat, cure, or prevent any disease or condition, including SIDS. Alert thresholds are informational and should not be used as the sole basis for medical decisions. Always consult your pediatrician or call 911 in an emergency.</p>
@@ -696,28 +742,28 @@
     </div>
     <div class="resource-links fade-in">
       <a href="https://www.aap.org/?srsltid=AfmBOoqF4AHtGOY5IRW606zQarDNZkoW1967suajfDqu3RjTm8eXwSY8" target="_blank" rel="noopener noreferrer" class="resource-link-card">
-        <div class="resource-link-card__icon">🏥</div>
+        <div class="resource-link-card__icon"><i data-lucide="building-2"></i></div>
         <div class="resource-link-card__text">
           <h5>American Academy of Pediatrics</h5>
           <p>Safe sleep guidelines and infant health resources</p>
         </div>
       </a>
       <a href="https://www.nichd.nih.gov/" target="_blank" rel="noopener noreferrer" class="resource-link-card">
-        <div class="resource-link-card__icon">🔬</div>
+        <div class="resource-link-card__icon"><i data-lucide="microscope"></i></div>
         <div class="resource-link-card__text">
           <h5>National Institute of Child Health</h5>
           <p>NICHD Safe to Sleep® public education campaign</p>
         </div>
       </a>
       <a href="https://firstcandle.org/" target="_blank" rel="noopener noreferrer" class="resource-link-card">
-        <div class="resource-link-card__icon">💛</div>
+        <div class="resource-link-card__icon"><i data-lucide="heart"></i></div>
         <div class="resource-link-card__text">
           <h5>First Candle</h5>
           <p>SIDS and infant death support and education</p>
         </div>
       </a>
       <a href="https://www.cdc.gov/sudden-infant-death/index.html" target="_blank" rel="noopener noreferrer" class="resource-link-card">
-        <div class="resource-link-card__icon">🌐</div>
+        <div class="resource-link-card__icon"><i data-lucide="globe"></i></div>
         <div class="resource-link-card__text">
           <h5>CDC — Sudden Unexpected Infant Death</h5>
           <p>National statistics and prevention guidance</p>
@@ -819,7 +865,7 @@
           <div class="donate-panel__header">
             <div class="gofundme-card__badge">
               <span class="gofundme-card__badge-dot"></span>
-              Currently: Prototype Stage
+              Currently: Pre-Seed Stage
             </div>
             <h3>Support Our Mission</h3>
             <p>We're a student startup building Bundl with limited resources but unlimited determination. Your contribution, large or small, helps us get one step closer.</p>
@@ -935,6 +981,8 @@
 <script>
   fetch("https://assets.mailerlite.com/jsonp/2387799/forms/189016167294174785/takel")
 </script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script src="js/main.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

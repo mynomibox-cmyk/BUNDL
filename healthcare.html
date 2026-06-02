@@ -5,6 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>For Providers — Partner with Bundl</title>
   <meta name="description" content="Bundl for pediatricians, neonatologists, and perinatal care teams. Learn how our infant wellness data supports clinical decision-making and request a sample device." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://joinbundl.com/healthcare" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Bundl" />
+  <meta property="og:title" content="For Providers — Partner with Bundl" />
+  <meta property="og:description" content="Bundl for pediatricians, neonatologists, and perinatal care teams. Learn how our infant wellness data supports clinical decision-making." />
+  <meta property="og:url" content="https://joinbundl.com/healthcare" />
+  <meta property="og:image" content="https://joinbundl.com/images/bundl-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="For Providers — Partner with Bundl" />
+  <meta name="twitter:description" content="Bundl for pediatricians, neonatologists, and perinatal care teams. Infant wellness data that supports clinical decision-making." />
+  <meta name="twitter:image" content="https://joinbundl.com/images/bundl-logo.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "For Providers — Partner with Bundl",
+    "url": "https://joinbundl.com/healthcare",
+    "description": "Bundl for pediatricians, neonatologists, and perinatal care teams. Infant wellness data that supports clinical decision-making.",
+    "publisher": { "@id": "https://joinbundl.com/#organization" },
+    "isPartOf": { "@id": "https://joinbundl.com/#website" }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -27,6 +56,22 @@
         url('../images/lifestyle-mother-baby.png') center / cover no-repeat;
       padding: 100px 0 80px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hcp-hero__bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .hcp-hero .container {
+      position: relative;
+      z-index: 1;
     }
     .hcp-hero__eyebrow {
       font-size: .78rem;
@@ -446,6 +491,7 @@
 
 <!-- Hero -->
 <section class="hcp-hero">
+  <img src="images/pd.png" alt="" class="hcp-hero__bg-img" aria-hidden="true">
   <div class="container">
     <div class="hcp-hero__eyebrow">For Healthcare Professionals</div>
     <h1>Continuous Infant Wellness Data<br>That Empowers Your Practice</h1>
@@ -460,11 +506,11 @@
 <!-- Trust bar -->
 <div class="hcp-trust-bar">
   <div class="hcp-trust-bar__inner">
-    <div class="hcp-trust-item"><span class="hcp-trust-item__icon">🔒</span> Encrypted Data</div>
-    <div class="hcp-trust-item"><span class="hcp-trust-item__icon">📊</span> 8-Week Trend Reports</div>
-    <div class="hcp-trust-item"><span class="hcp-trust-item__icon">📱</span> Shareable PDF Exports</div>
-    <div class="hcp-trust-item"><span class="hcp-trust-item__icon">⚡</span> BLE 5.0 Low Latency</div>
-    <div class="hcp-trust-item"><span class="hcp-trust-item__icon">🩺</span> Pediatrician Reviewed</div>
+    <div class="hcp-trust-item"><span class="hcp-trust-item__icon"><i data-lucide="lock"></i></span> Encrypted Data</div>
+    <div class="hcp-trust-item"><span class="hcp-trust-item__icon"><i data-lucide="bar-chart-2"></i></span> 8-Week Trend Reports</div>
+    <div class="hcp-trust-item"><span class="hcp-trust-item__icon"><i data-lucide="smartphone"></i></span> Shareable PDF Exports</div>
+    <div class="hcp-trust-item"><span class="hcp-trust-item__icon"><i data-lucide="zap"></i></span> BLE 5.0 Low Latency</div>
+    <div class="hcp-trust-item"><span class="hcp-trust-item__icon"><i data-lucide="stethoscope"></i></span> Pediatrician Reviewed</div>
   </div>
 </div>
 
@@ -647,7 +693,7 @@
           <div class="donate-panel__header">
             <div class="gofundme-card__badge">
               <span class="gofundme-card__badge-dot"></span>
-              Currently: Prototype Stage
+              Currently: Pre-Seed Stage
             </div>
             <h3>Support Our Mission</h3>
             <p>We're a student startup building Bundl with limited resources but unlimited determination. Your contribution, large or small, helps us get one step closer.</p>
@@ -763,6 +809,8 @@
 <script>
   fetch("https://assets.mailerlite.com/jsonp/2387799/forms/189016167294174785/takel")
 </script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script src="js/main.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

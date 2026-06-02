@@ -5,6 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baby Care Center — Newborn &amp; Infant Health | Bundl</title>
   <meta name="description" content="Evidence-based guides for new parents: newborn basics, sleep and development, health monitoring, and parenting insights, all written with pediatric guidance." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://joinbundl.com/education" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Bundl" />
+  <meta property="og:title" content="Baby Care Center — Newborn &amp; Infant Health | Bundl" />
+  <meta property="og:description" content="Evidence-based guides for new parents: newborn basics, sleep and development, health monitoring, and parenting insights, all written with pediatric guidance." />
+  <meta property="og:url" content="https://joinbundl.com/education" />
+  <meta property="og:image" content="https://joinbundl.com/images/bundl-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Baby Care Center — Newborn &amp; Infant Health | Bundl" />
+  <meta name="twitter:description" content="Evidence-based guides for new parents: newborn basics, sleep and development, health monitoring, and parenting insights." />
+  <meta name="twitter:image" content="https://joinbundl.com/images/bundl-logo.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Baby Care Center — Newborn & Infant Health",
+    "url": "https://joinbundl.com/education",
+    "description": "Evidence-based guides for new parents on newborn health, sleep, and development.",
+    "publisher": { "@id": "https://joinbundl.com/#organization" },
+    "isPartOf": { "@id": "https://joinbundl.com/#website" }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -27,6 +56,22 @@
         url('../images/lifestyle-babies.png') center / cover no-repeat;
       padding: 100px 0 72px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .edu-hero__bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .edu-hero .container {
+      position: relative;
+      z-index: 1;
     }
     .edu-hero__eyebrow {
       font-size: .78rem;
@@ -394,13 +439,15 @@
 
 <!-- Hero -->
 <section class="edu-hero">
+  <img src="images/lifestyle-mother-baby.png" alt="" class="edu-hero__bg-img" aria-hidden="true">
   <div class="container">
     <div class="edu-hero__eyebrow">Baby Care Center</div>
     <h1>Everything You Need to Know.<br>Nothing You Don't.</h1>
     <p>Evidence-based guides for new parents, written with pediatric guidance and designed for the moments when you need clear answers fast.</p>
+    <p style="font-size:.9rem;color:#7a6a60;margin-top:-.6rem;margin-bottom:1.8rem;">The tips here are general — with a Bundl band, our app delivers personalized insights tailored to your baby.</p>
     <form class="edu-hero__search" role="search" onsubmit="return false;">
       <input type="search" placeholder="Search articles (e.g. 'tummy time')" aria-label="Search articles" />
-      <button type="submit" aria-label="Search">🔍</button>
+      <button type="submit" aria-label="Search"><i data-lucide="search" style="width:16px;height:16px;"></i></button>
     </form>
   </div>
 </section>
@@ -409,13 +456,13 @@
 <div class="edu-categories">
   <div class="edu-categories__inner">
     <a href="#newborn-basics" class="edu-cat-btn active">
-      <span class="edu-cat-btn__emoji">👶</span> Newborn Basics
+      <i data-lucide="baby" class="edu-cat-icon"></i> Newborn Basics
     </a>
     <a href="#sleep-development" class="edu-cat-btn">
-      <span class="edu-cat-btn__emoji">🌙</span> Sleep &amp; Development
+      <i data-lucide="moon" class="edu-cat-icon"></i> Sleep &amp; Development
     </a>
     <a href="#health-monitoring" class="edu-cat-btn">
-      <span class="edu-cat-btn__emoji">💓</span> Health Monitoring
+      <i data-lucide="heart" class="edu-cat-icon"></i> Health Monitoring
     </a>
   </div>
 </div>
@@ -425,7 +472,7 @@
   <div class="edu-section__inner">
     <div class="edu-section__header">
       <div class="edu-section__header-text">
-        <h2>👶 Newborn Basics</h2>
+        <h2>Newborn Basics</h2>
         <p>The essential things to know in the first 30 days</p>
       </div>
       <a href="https://www.healthychildren.org/English/ages-stages/baby/Pages/default.aspx" target="_blank" rel="noopener noreferrer" class="edu-section__view-all">View all articles →</a>
@@ -475,7 +522,7 @@
   <div class="edu-section__inner">
     <div class="edu-section__header">
       <div class="edu-section__header-text">
-        <h2>🌙 Sleep &amp; Development</h2>
+        <h2>Sleep &amp; Development</h2>
         <p>Evidence-based sleep guidance from newborn to toddler</p>
       </div>
       <a href="https://www.healthychildren.org/English/ages-stages/baby/Pages/default.aspx" target="_blank" rel="noopener noreferrer" class="edu-section__view-all">View all articles →</a>
@@ -520,7 +567,7 @@
     </div>
 
     <div class="bundl-tip fade-in">
-      <div class="bundl-tip__icon">📱</div>
+      <div class="bundl-tip__icon"><i data-lucide="smartphone"></i></div>
       <div>
         <strong>Bundl Sleep Data Tip</strong>
         Use your Bundl app's sleep timeline to identify your baby's natural sleep cycle length. Most babies cycle every 45–50 minutes. Knowing when they'll surface to light sleep lets you plan your response.
@@ -534,7 +581,7 @@
   <div class="edu-section__inner">
     <div class="edu-section__header">
       <div class="edu-section__header-text">
-        <h2>💓 Health Monitoring</h2>
+        <h2>Health Monitoring</h2>
         <p>Understanding the numbers that tell you how your baby is doing</p>
       </div>
       <a href="https://www.healthychildren.org/English/ages-stages/baby/Pages/default.aspx" target="_blank" rel="noopener noreferrer" class="edu-section__view-all">View all articles →</a>
@@ -672,7 +719,7 @@
           <div class="donate-panel__header">
             <div class="gofundme-card__badge">
               <span class="gofundme-card__badge-dot"></span>
-              Currently: Prototype Stage
+              Currently: Pre-Seed Stage
             </div>
             <h3>Support Our Mission</h3>
             <p>We're a student startup building Bundl with limited resources but unlimited determination. Your contribution, large or small, helps us get one step closer.</p>
@@ -788,6 +835,8 @@
 <script>
   fetch("https://assets.mailerlite.com/jsonp/2387799/forms/189016167294174785/takel")
 </script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script src="js/main.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>
