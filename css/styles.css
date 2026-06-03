@@ -826,6 +826,8 @@ p {
 
 .product-overview-grid .feature-card {
   aspect-ratio: 1;
+  max-width: 130px;
+  padding: 14px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -833,11 +835,17 @@ p {
 }
 
 .product-overview-grid .feature-card__icon {
-  width: 100px;
-  height: 100px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid rgba(92,51,24,0.75);
+  margin: 0 auto 10px;
+}
+
+.product-overview-grid .feature-card h3 {
+  font-size: 0.82rem;
+  margin-bottom: 0;
 }
 
 .feature-card h3 { font-size: 1.15rem; margin-bottom: 10px; text-align: center; }
@@ -3959,7 +3967,7 @@ img[loading="lazy"].loaded { opacity: 1; }
 @media (min-width: 641px) {
   .product-overview-grid {
     display: grid !important;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1.4fr;
     grid-template-rows: auto auto;
     gap: 24px 48px;
     align-items: start;
