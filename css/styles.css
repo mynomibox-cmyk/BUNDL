@@ -510,7 +510,7 @@ p {
 
 .hero__desc {
   font-size: 1.08rem;
-  color: var(--text-medium);
+  color: #9c7b6e;
   max-width: 500px;
   line-height: 1.72;
 }
@@ -823,6 +823,14 @@ p {
 .feature-card__icon--blue  { background: var(--blue-light); }
 .feature-card__icon--cream { background: var(--cream-dark); }
 .feature-card__icon--mint  { background: #D4EDD4; }
+
+.product-overview-grid .feature-card {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .product-overview-grid .feature-card__icon {
   width: 100px;
@@ -3991,6 +3999,7 @@ img[loading="lazy"].loaded { opacity: 1; }
   }
   /* Compact cards to fit 3-up on a narrow phone */
   .product-overview-grid .feature-card {
+    aspect-ratio: unset;
     padding: 14px 6px;
     border-radius: var(--radius-md);
   }
