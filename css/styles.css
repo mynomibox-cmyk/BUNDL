@@ -3377,11 +3377,6 @@ section.newsletter-block {
 .team-member-card:nth-child(3)::before { background: linear-gradient(90deg, var(--blue), var(--blue-light)); }
 .team-member-card:nth-child(4)::before { background: linear-gradient(90deg, #48BB78, #C6F6D5); }
 
-.team-member-card:hover {
-  transform: translateY(-7px);
-  box-shadow: var(--shadow-md);
-}
-
 .team-member-card__avatar {
   width: 120px;
   height: 120px;
@@ -3407,7 +3402,13 @@ section.newsletter-block {
 
 .team-member-card:nth-child(2) .team-member-card__avatar img { object-position: center 35%; }
 
-.team-member-card:hover .team-member-card__avatar { transform: scale(1.07); }
+@media (hover: hover) and (pointer: fine) {
+  .team-member-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow-md);
+  }
+  .team-member-card:hover .team-member-card__avatar { transform: scale(1.07); }
+}
 
 .team-member-card__name {
   font-family: var(--font-heading);
@@ -3882,17 +3883,10 @@ img[loading="lazy"].loaded { opacity: 1; }
    no effect on desktop layout.
    ===================================================== */
 
-/* ── 1. Team / feature cards: kill hover glow on touch screens ───
-   Tapping on mobile triggers :hover and it sticks, making the
-   tapped card appear "glowing" while others look dimmed.         */
+/* ── 1. Feature/blog cards: kill hover glow on touch screens ────
+   Team card hover is already scoped to (hover: hover) and (pointer: fine).
+   These selectors handle remaining card types.                   */
 @media (hover: none) {
-  .team-member-card:hover {
-    transform: none;
-    box-shadow: var(--shadow-card);
-  }
-  .team-member-card:hover .team-member-card__avatar {
-    transform: none;
-  }
   .feature-card:hover,
   .differentiator:hover,
   .blog-card:hover {
